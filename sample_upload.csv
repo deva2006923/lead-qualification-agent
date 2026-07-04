@@ -1,0 +1,6 @@
+company_id,company_name,industry,company_size,website_visits,demo_requested,source,response_time_hours,days_since_last_contact,sales_person_id
+CMP-9001,Acme Health Systems,Healthcare,Enterprise,45,Yes,Referral,1.5,2,SP-03
+CMP-9002,Apex Global Retailers,Retail,Small,5,No,Organic,24.0,15,SP-01
+CMP-9003,InnoTech Manufacturers,Manufacturing,Mid,18,Yes,Paid,6.2,4,SP-04
+CMP-9004,Zenith Financial Group,Finance,Enterprise,28,No,Referral,0.8,3,SP-05
+CMP-9005,Nova Softwares Corp,SaaS,Mid,12,Yes,Cold Outreach,14.5,1,SP-02

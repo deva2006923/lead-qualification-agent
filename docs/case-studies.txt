@@ -1,0 +1,100 @@
+CUSTOMER CASE STUDIES
+======================
+
+Case Study 1: Meridian Financial — FinTech SaaS
+-------------------------------------------------
+Company: Meridian Financial Technologies
+Industry: Financial Services / SaaS
+Size: 320 employees, Series B ($45M raised)
+Team: 18 Account Executives, 12 SDRs
+
+Challenge:
+Meridian's SDR team was manually triaging 800–1,200 inbound leads per month from content marketing and paid search. The scoring rubric was a spreadsheet-based point system built 3 years ago that didn't account for behavioral signals like website revisits or demo requests. As a result, reps were spending 40% of their time on leads that never converted, while high-intent Enterprise prospects were waiting 48–72 hours for follow-up. Pipeline conversion rate from MQL to Opportunity was 8.3% — well below the industry benchmark of 13%.
+
+Solution:
+Meridian imported 18 months of historical lead data (14,000 records) into our platform. The ML pipeline trained on their actual conversion history, incorporating behavioral signals (website visits, email opens, demo requests) and firmographic data (company size, industry, funding stage). The RAG system was loaded with Meridian's competitive battle cards and pricing FAQs.
+
+Results (6-Month Post-Implementation):
+- MQL-to-Opportunity conversion rate: 8.3% → 14.7% (+77% improvement)
+- Average response time to high-intent leads: 72 hours → 4.2 hours
+- SDR productivity: 22% more opportunities generated with same headcount
+- Rep satisfaction: 4.2/5.0 (up from 2.9/5.0) — reps reported feeling more confident in which leads to prioritize
+- Time saved on lead triage: ~12 hours/rep/week reallocated to high-value activity
+
+Key Quote:
+"We were leaving money on the table every week because our old scoring model couldn't tell the difference between a curious SMB and a serious Enterprise buyer. The AI explanations changed how our reps think about prioritization — they now understand why a lead is hot, not just that it is." — VP of Sales, Meridian Financial Technologies
+
+Recommended Use Case: Financial services companies with high inbound volume and complex buyer profiles where speed-to-lead and accurate qualification directly impact revenue.
+
+---
+
+Case Study 2: NovaBuild Construction Tech
+------------------------------------------
+Company: NovaBuild Technologies
+Industry: Construction Technology / SaaS
+Size: 85 employees, Series A ($12M raised)
+Team: 6 Account Executives, 4 SDRs
+
+Challenge:
+NovaBuild sells project management software to mid-market and enterprise general contractors. Their sales cycle averages 90 days and involves multiple stakeholders (IT, Operations, Finance). Their CRM data was sparse — leads came from trade shows, referrals, and cold outbound, and there was no standardized lead quality assessment. AEs were pursuing every lead equally, resulting in a 5.1% overall conversion rate and high quota attainment variance across reps.
+
+The biggest pain point: reps didn't know what to say at each stage of the deal, particularly when dealing with procurement objections around budget and vendor comparison.
+
+Solution:
+NovaBuild implemented our platform with 2 years of deal data (1,800 records). Given the sparse feature set, the ML pipeline's Random Forest model performed best (F1: 0.71 vs XGBoost's 0.68). The knowledge base was populated with construction-specific case studies, ROI calculators, and competitive battlecards against Procore and Autodesk Build.
+
+The RAG-powered "recommend action" feature became the team's primary use case — when a rep prepared for a stakeholder call, they queried the system for talking points tailored to the prospect's company profile, and the system surfaced relevant construction case studies and objection-handling scripts.
+
+Results (4-Month Post-Implementation):
+- Overall conversion rate: 5.1% → 7.8% (+53%)
+- Average deal cycle: 90 days → 74 days (-18%)
+- Quota attainment variance: ±34% → ±18% (better consistency across reps)
+- Highest impact: referral leads now identified as 2.4x more likely to convert, allowing dedicated fast-lane follow-up
+
+Key Quote:
+"The recommended action feature is like having a senior AE available 24/7. New reps on our team ramp 30% faster because the system tells them exactly what playbook to run and drafts the first email for them." — Head of Sales, NovaBuild Technologies
+
+Recommended Use Case: B2B SaaS companies with longer sales cycles and complex multi-stakeholder deals where reps need contextual guidance, not just lead scores.
+
+---
+
+Case Study 3: PulseHealth Medical Devices
+------------------------------------------
+Company: PulseHealth Diagnostics
+Industry: Healthcare Technology / Medical Devices
+Size: 560 employees, publicly traded (NASDAQ: PLSH)
+Team: 45 Territory Account Managers, 15 Inside Sales Reps
+
+Challenge:
+PulseHealth sells diagnostic monitoring devices to hospital networks and large physician group practices. Their sales motion involves heavy compliance requirements — HIPAA-compliant communications, evidence-based clinical claims, and procurement committees that can take 6-18 months to complete an evaluation. Lead quality was highly variable: a single hospital system contract is worth $400K–$2M, while individual clinic sales average $8K.
+
+The challenge: TAMs were not distinguishing between high-value health system prospects and low-value clinic leads until 3-4 meetings in. The cost of misallocated senior sales time was estimated at $1.8M annually in opportunity cost.
+
+Solution:
+PulseHealth deployed our Enterprise plan with custom model training on 5 years of historical deal data (6,200 records). Key features added to the ML model: organization type (health system / physician group / ASC / clinic), bed count, EHR vendor (Epic/Cerner/Meditech), buying committee size, and prior technology vendor relationships.
+
+The RAG knowledge base was loaded with clinical evidence summaries, health system vs. clinic ROI models, and competitive comparison against GE Healthcare and Philips diagnostic solutions.
+
+Critically, the HIPAA-compliant deployment option was used: all data processing runs within PulseHealth's AWS VPC with no external data transfer.
+
+Results (12-Month Post-Implementation):
+- Revenue attributable to AI-prioritized leads: $4.2M incremental (vs. control group)
+- Misallocated senior TAM time: reduced by 61%
+- Health system win rate: 22% → 31% (+41%)
+- Average deal size growth: +12% (TAMs focused on larger accounts)
+- Implementation ROI: 8.3x in Year 1
+
+Key Quote:
+"Our enterprise deal velocity improved because TAMs stopped guessing which health systems were serious. The platform identified buying signals we were completely missing — like when a health system visited our clinical outcomes page three times in a week. That's a call to make today, not next quarter." — Chief Revenue Officer, PulseHealth Diagnostics
+
+Recommended Use Case: Enterprise healthcare, medical device, and life sciences companies with long complex sales cycles, large average contract values, and compliance-driven procurement processes. Also applicable to any high-ACV B2B sale where misallocating senior sales time has significant revenue impact.
+
+---
+
+Common Patterns Across All Case Studies
+-----------------------------------------
+1. Speed-to-lead improvement is the fastest ROI driver — all three customers reduced time-to-follow-up on high-intent leads by 60-85%.
+2. Rep confidence and consistency improve when the AI explains WHY a lead is prioritized, not just giving a score.
+3. The RAG recommendation feature is highly valued in complex, multi-stakeholder sales (construction, healthcare).
+4. Feedback loops matter — models retrained on 3-6 months of post-implementation conversion data show 15-25% further improvement in F1 score.
+5. Implementation is consistently described as faster than expected: 1-2 days for import + setup vs. weeks for traditional CRM rollouts.

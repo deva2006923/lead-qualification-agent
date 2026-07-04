@@ -1,0 +1,83 @@
+PRICING FAQ & NEGOTIATION PLAYBOOK
+====================================
+
+Plan Overview
+-------------
+Starter Plan — $49/user/month
+- Up to 500 scored leads/month
+- Basic AI explanations
+- CSV import/export
+- Email support
+- Best for: SDRs and small sales teams just getting started with AI-powered qualification
+
+Growth Plan — $99/user/month
+- Unlimited scored leads
+- Full LLM explanations + recommended actions
+- Draft email generation
+- RAG-powered chat assistant
+- Feedback loop & model retraining
+- Priority chat + email support
+- Best for: Growing B2B sales teams with 5-50 reps
+
+Enterprise Plan — $249/user/month (minimum 10 seats)
+- Everything in Growth
+- Custom ML model training on your historical CRM data
+- SSO (SAML, OIDC)
+- Dedicated customer success manager
+- SLA: 99.9% uptime, <2hr response time
+- On-premise deployment option
+- Custom integrations (Salesforce, HubSpot, Outreach, Salesloft)
+- Best for: Revenue teams at scale (50+ reps) with complex compliance requirements
+
+Annual Discount
+---------------
+All plans are available with annual billing at a 20% discount vs monthly pricing:
+- Starter Annual: $39/user/month (billed $468/user/year)
+- Growth Annual: $79/user/month (billed $948/user/year)
+- Enterprise Annual: $199/user/month (billed $2,388/user/year)
+
+Free Trial Policy
+-----------------
+We offer a 14-day free trial with full Growth plan features. No credit card required. Leads import limit during trial: 200 rows. The trial includes access to all AI features including LLM explanations, RAG recommendations, and the chat assistant.
+
+Extended trials (30 days) are available for Enterprise prospects evaluated through the sales team.
+
+Volume Discounts
+----------------
+For teams with 25+ seats: 10% additional discount on top of any plan.
+For teams with 50+ seats: 15% additional discount.
+For teams with 100+ seats: 20% additional discount. Contact sales for a custom quote.
+Volume discounts stack with annual billing discounts for maximum savings.
+
+Startup Program
+---------------
+Seed-stage startups (<$2M raised, <2 years old) qualify for 50% off Growth plan for the first year. Apply via our startup program page with AngelList/Crunchbase profile.
+
+Nonprofit Discount
+------------------
+Registered nonprofit organizations receive 30% off any plan. Proof of 501(c)(3) or equivalent required.
+
+Common Objections & Responses
+-------------------------------
+
+Objection: "Your pricing is higher than HubSpot."
+Response: HubSpot Sales Hub Professional is $90/user/month and does not include ML scoring, LLM explanations, or RAG-powered recommendations. Our Growth plan at $99/user/month delivers capabilities that would cost $200+/user/month if assembled from HubSpot + Einstein + a third-party AI tool. Most customers see payback within 60 days through improved conversion rates.
+
+Objection: "We want to try before we commit."
+Response: Absolutely — that's what our 14-day free trial is for, and it requires no credit card. For Enterprise accounts, we can extend to a 30-day pilot with dedicated onboarding support.
+
+Objection: "We're a small team, $49/user still feels like a lot."
+Response: On the Starter plan, a team of 3 reps pays $147/month total. If the platform helps close even one additional deal per quarter that wouldn't have been prioritized otherwise, ROI is typically immediate. We can also discuss a month-to-month trial at standard pricing with no lock-in.
+
+Objection: "Can we negotiate the Enterprise price?"
+Response: Enterprise pricing is negotiable for multi-year commitments (2-3 year deals), large seat counts (100+), and strategic partnerships. Typical negotiable range is 10-25% off list price for qualified enterprise accounts. All negotiations go through your Account Executive.
+
+Objection: "We already pay for Salesforce/HubSpot."
+Response: Our platform integrates via CSV import today and via native API sync (Salesforce, HubSpot) on Enterprise. Many customers run us alongside their existing CRM — we handle the AI scoring and prioritization layer, while the CRM manages pipeline tracking. The net cost is incremental, but the lift in conversion rate (typically 15-30% improvement in rep efficiency) far exceeds the additional spend.
+
+Billing & Contracts
+--------------------
+- Billing is monthly or annual (invoiced). Credit card or ACH for monthly; wire/ACH + Net-30 invoicing available for annual Enterprise contracts.
+- Seats can be added at any time (prorated to current billing period). Seat reductions take effect at renewal.
+- 30-day cancellation notice required for monthly plans. Annual plans are non-refundable after 30 days.
+- Data export is always available regardless of plan status. We do not hold your data hostage.

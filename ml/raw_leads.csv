@@ -1,0 +1,1501 @@
+company_id,company_name,sales_person_id,assigned_sales_person,company_size,industry,website_visits,demo_requested,source,response_time_hours,days_since_last_contact,converted
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Small,Retail,11,Yes,Referral,4.1,1,0
+CMP-1002,Blake and Sons,SP-04,Divya Reddy,Mid,Manufacturing,43,No,Organic,5.7,3,0
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,5,No,Paid,3.6,4,0
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Mid,Manufacturing,9,No,Organic,1.1,10,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Small,Retail,20,No,Cold Outreach,2.5,12,0
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Small,Finance,29,Yes,Organic,26.1,4,1
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,18,No,Cold Outreach,54.1,10,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,5,No,Organic,7.6,18,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Small,Healthcare,20,Yes,Organic,104.0,15,1
+CMP-1010,Umbrella Corp,SP-04,Divya Reddy,Small,Manufacturing,16,No,Referral,1.8,5,0
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Enterprise,Healthcare,1,No,Paid,9.4,14,0
+CMP-1012,Pied Piper,SP-05,Karthik S,Enterprise,Finance,15,No,Organic,19.8,15,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,2,Yes,Organic,24.3,4,1
+CMP-1014,Stark Industries,SP-02,Priya Menon,Enterprise,SaaS,17,Yes,Paid,1.9,4,1
+CMP-1015,Wayne Enterprises,SP-04,Divya Reddy,Enterprise,Manufacturing,25,No,Referral,5.0,23,1
+CMP-1016,Soylent Corp,SP-01,Rahul Kumar,Enterprise,Retail,2,Yes,Paid,13.4,18,0
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Small,Healthcare,4,Yes,Paid,9.9,29,0
+CMP-1018,Cyberdyne Systems,SP-04,Divya Reddy,Mid,Manufacturing,43,No,Paid,7.0,7,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,9,Yes,Referral,7.8,24,1
+CMP-1020,Aperture Science,SP-05,Karthik S,Small,Finance,4,No,Cold Outreach,34.4,3,0
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Small,Healthcare,10,Yes,Referral,43.3,4,1
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Small,Healthcare,1,No,Referral,6.2,11,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,2,No,Cold Outreach,2.9,26,0
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Small,Healthcare,10,No,Cold Outreach,6.6,1,1
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Enterprise,Healthcare,6,No,Paid,54.6,22,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Mid,SaaS,28,No,Organic,0.5,2,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Small,SaaS,15,No,Paid,6.1,13,0
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Small,Manufacturing,23,No,Referral,20.2,1,0
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Small,SaaS,6,No,Cold Outreach,23.9,16,0
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Mid,Finance,16,Yes,Organic,0.6,11,1
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Enterprise,Retail,6,Yes,Cold Outreach,63.3,6,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Enterprise,Retail,6,No,Organic,9.1,2,0
+CMP-1033,Omni Consumer Products,SP-03,Arjun Nair,Enterprise,Healthcare,2,No,Referral,110.7,2,0
+CMP-1034,Virtucon,SP-04,Divya Reddy,Enterprise,Manufacturing,15,No,Referral,8.3,17,0
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Enterprise,Retail,9,No,Paid,25.2,13,1
+CMP-1001,Davis and Sons,SP-05,Karthik S,Enterprise,Finance,2,No,Paid,0.9,7,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Small,Healthcare,1,No,Organic,10.7,2,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Mid,SaaS,2,Yes,Referral,18.2,8,1
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Mid,Retail,5,No,Paid,7.6,6,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Small,Retail,15,No,Cold Outreach,4.6,2,0
+CMP-1006,CloudNine SaaS,SP-04,Divya Reddy,Mid,Manufacturing,4,No,Referral,32.1,9,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,18,Yes,Paid,3.0,1,1
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Enterprise,Manufacturing,2,No,Paid,15.4,2,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Small,Healthcare,1,No,Referral,23.6,7,1
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,13,Yes,Organic,21.2,29,1
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Small,Healthcare,10,No,Paid,11.7,33,0
+CMP-1012,Pied Piper,SP-02,Priya Menon,Small,SaaS,1,Yes,Organic,27.6,1,1
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Enterprise,SaaS,4,Yes,Cold Outreach,28.6,10,0
+CMP-1014,Stark Industries,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Organic,39.5,47,0
+CMP-1015,Wayne Enterprises,SP-04,Divya Reddy,Small,Manufacturing,33,No,Paid,13.4,14,1
+CMP-1016,Soylent Corp,SP-01,Rahul Kumar,Small,Retail,22,No,Paid,54.2,5,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Enterprise,SaaS,36,No,Paid,20.4,10,1
+CMP-1018,Cyberdyne Systems,SP-05,Karthik S,Small,Finance,17,No,Referral,37.4,1,0
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Small,Healthcare,27,No,Paid,3.0,2,1
+CMP-1020,Aperture Science,SP-02,Priya Menon,Mid,SaaS,15,Yes,Organic,41.4,13,1
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Small,Retail,6,No,Paid,70.6,43,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,10,No,Referral,56.8,2,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Small,Finance,2,Yes,Organic,25.1,14,1
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Enterprise,Finance,25,Yes,Organic,79.3,1,0
+CMP-1025,Vandelay Industries,SP-01,Rahul Kumar,Small,Retail,60,Yes,Paid,19.4,35,1
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Mid,Healthcare,12,No,Paid,55.5,1,0
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Enterprise,Retail,12,Yes,Paid,5.0,7,1
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Mid,SaaS,52,No,Cold Outreach,18.4,4,1
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Mid,SaaS,21,No,Cold Outreach,31.0,10,0
+CMP-1030,Pinnacle Capital,SP-01,Rahul Kumar,Enterprise,Retail,1,No,Organic,39.9,44,0
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Mid,Finance,23,No,Cold Outreach,15.2,6,0
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Small,Retail,99,No,Cold Outreach,19.5,15,1
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Enterprise,SaaS,2,No,Paid,22.4,3,1
+CMP-1034,Virtucon,SP-05,Karthik S,Mid,Finance,14,No,Organic,35.5,8,1
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Mid,Healthcare,7,Yes,Cold Outreach,0.7,15,0
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,21.4,5,0
+CMP-1002,Blake and Sons,SP-05,Karthik S,Enterprise,Finance,19,No,Paid,23.4,20,1
+CMP-1003,Doyle Ltd,SP-01,Rahul Kumar,Small,Retail,4,No,Paid,93.9,7,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Mid,SaaS,2,Yes,Organic,4.0,2,1
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Small,Finance,8,No,Cold Outreach,4.5,3,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,2,Yes,Organic,14.8,3,1
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Mid,Healthcare,20,No,Organic,2.0,21,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,17,Yes,Cold Outreach,5.6,5,1
+CMP-1009,Initech LLC,SP-05,Karthik S,Mid,Finance,17,Yes,Paid,7.0,13,0
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Mid,Healthcare,8,No,Organic,6.7,4,0
+CMP-1011,Veer Technologies,SP-05,Karthik S,Small,Finance,5,Yes,Organic,53.1,10,1
+CMP-1012,Pied Piper,SP-05,Karthik S,Mid,Finance,10,No,Organic,32.8,6,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Small,Finance,11,No,Referral,103.3,10,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,3,Yes,Organic,8.1,2,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,49,Yes,Paid,12.2,35,0
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Enterprise,SaaS,14,No,Organic,19.5,9,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Mid,SaaS,7,No,Paid,6.7,2,0
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Small,Healthcare,8,No,Organic,1.3,5,0
+CMP-1019,Tyrell Corporation,SP-01,Rahul Kumar,Small,Retail,20,Yes,Paid,27.5,15,1
+CMP-1020,Aperture Science,SP-05,Karthik S,Mid,Finance,32,No,Paid,80.5,2,1
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Enterprise,SaaS,17,No,Organic,44.3,2,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,21,No,Organic,17.8,5,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Small,Manufacturing,6,No,Paid,8.6,14,0
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Small,Retail,10,No,Paid,23.5,2,1
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Mid,Finance,19,No,Organic,18.3,23,1
+CMP-1026,Bluth Company,SP-05,Karthik S,Small,Finance,17,Yes,Organic,20.2,15,0
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Small,Manufacturing,23,Yes,Organic,12.2,16,1
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Small,Manufacturing,13,No,Referral,18.8,3,0
+CMP-1029,Nexus Logistics,SP-01,Rahul Kumar,Small,Retail,7,No,Referral,70.6,2,0
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Mid,Healthcare,25,No,Organic,20.0,12,1
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,12,No,Referral,32.0,28,1
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,22,Yes,Cold Outreach,60.9,21,1
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Mid,Finance,5,No,Organic,0.5,5,0
+CMP-1034,Virtucon,SP-01,Rahul Kumar,Mid,Retail,6,No,Paid,14.4,3,0
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Small,SaaS,7,No,Paid,10.8,9,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Small,Healthcare,39,Yes,Organic,12.9,1,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Mid,Healthcare,17,Yes,Organic,54.8,3,1
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Small,Finance,1,No,Referral,14.5,8,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Small,Healthcare,3,No,Organic,70.1,5,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Mid,Finance,3,No,Organic,25.8,1,0
+CMP-1006,CloudNine SaaS,SP-03,Arjun Nair,Small,Healthcare,2,No,Organic,4.7,11,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,24,No,Referral,12.1,12,0
+CMP-1008,Globex Corporation,SP-01,Rahul Kumar,Small,Retail,2,Yes,Organic,0.6,3,1
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Small,Retail,6,Yes,Cold Outreach,11.5,9,0
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,7,Yes,Referral,71.2,15,1
+CMP-1011,Veer Technologies,SP-05,Karthik S,Enterprise,Finance,20,No,Cold Outreach,0.5,4,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,22,No,Organic,17.9,2,0
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Small,Retail,11,Yes,Organic,19.4,11,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,28,No,Organic,21.8,10,1
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Small,Retail,6,No,Paid,1.2,2,0
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Small,Healthcare,6,Yes,Organic,10.5,13,1
+CMP-1017,Wonka Industries,SP-05,Karthik S,Mid,Finance,34,No,Referral,5.8,1,1
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Mid,SaaS,11,No,Paid,35.4,2,0
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,7,Yes,Referral,41.0,17,1
+CMP-1020,Aperture Science,SP-03,Arjun Nair,Small,Healthcare,2,No,Paid,3.5,31,0
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Small,Healthcare,16,No,Cold Outreach,25.8,12,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Small,Finance,53,No,Organic,1.0,13,1
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Small,Healthcare,1,No,Cold Outreach,8.5,26,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Enterprise,Finance,23,No,Cold Outreach,42.4,1,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,15,No,Organic,31.0,1,0
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Mid,Manufacturing,12,No,Paid,23.0,3,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Enterprise,SaaS,10,No,Cold Outreach,38.5,62,0
+CMP-1028,Summit Solutions,SP-05,Karthik S,Mid,Finance,12,No,Paid,99.4,15,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Small,Manufacturing,2,No,Organic,8.1,4,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Small,SaaS,7,No,Cold Outreach,27.3,3,1
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,26,No,Paid,15.1,10,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Enterprise,SaaS,13,No,Cold Outreach,17.3,3,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,6,Yes,Referral,83.5,22,0
+CMP-1034,Virtucon,SP-02,Priya Menon,Enterprise,SaaS,18,No,Paid,4.0,17,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Small,Healthcare,11,Yes,Referral,50.4,4,1
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Enterprise,Retail,20,No,Cold Outreach,19.2,1,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,9,Yes,Referral,6.0,12,1
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Enterprise,Finance,11,No,Paid,10.3,12,1
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Small,Retail,13,No,Referral,48.5,13,1
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Mid,Healthcare,17,Yes,Referral,51.1,21,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Enterprise,SaaS,17,Yes,Paid,40.9,18,1
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,48,No,Referral,7.2,11,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Mid,SaaS,10,No,Referral,10.0,11,1
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Small,Retail,1,No,Referral,29.6,1,0
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Small,Healthcare,25,No,Organic,83.3,14,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Mid,SaaS,5,No,Organic,35.3,12,0
+CMP-1012,Pied Piper,SP-01,Rahul Kumar,Small,Retail,8,Yes,Paid,38.0,12,0
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Small,Healthcare,4,No,Referral,3.9,6,1
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Small,Healthcare,4,No,Paid,12.6,23,0
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Small,SaaS,6,No,Referral,15.4,35,0
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Enterprise,Manufacturing,23,No,Referral,23.6,2,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Enterprise,Healthcare,8,Yes,Referral,3.2,12,1
+CMP-1018,Cyberdyne Systems,SP-05,Karthik S,Small,Finance,11,Yes,Organic,38.3,4,1
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,8,No,Paid,8.3,12,1
+CMP-1020,Aperture Science,SP-02,Priya Menon,Mid,SaaS,2,Yes,Paid,103.6,2,1
+CMP-1021,Sterling Cooper,SP-04,Divya Reddy,Mid,Manufacturing,1,No,Referral,17.5,1,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,2,No,Paid,28.1,17,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Small,SaaS,15,Yes,Referral,66.1,1,1
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Mid,Retail,20,No,Referral,40.5,1,1
+CMP-1025,Vandelay Industries,SP-04,Divya Reddy,Mid,Manufacturing,13,No,Paid,31.6,1,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,3,No,Cold Outreach,9.9,3,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Mid,Finance,16,Yes,Referral,134.6,37,1
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,1,Yes,Organic,14.9,21,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Mid,Finance,6,No,Paid,1.0,21,0
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Small,Manufacturing,25,No,Paid,13.1,4,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Enterprise,SaaS,12,No,Referral,3.4,13,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Small,SaaS,3,No,Cold Outreach,16.3,3,1
+CMP-1033,Omni Consumer Products,SP-03,Arjun Nair,Small,Healthcare,11,Yes,Paid,11.9,35,0
+CMP-1034,Virtucon,SP-05,Karthik S,Mid,Finance,2,No,Referral,14.5,3,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Small,Healthcare,22,No,Paid,6.9,10,0
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Small,SaaS,16,No,Organic,15.4,19,1
+CMP-1002,Blake and Sons,SP-01,Rahul Kumar,Mid,Retail,2,Yes,Organic,1.4,8,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,33,No,Paid,17.0,1,0
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Enterprise,Retail,37,No,Organic,48.6,7,0
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Mid,Healthcare,1,No,Organic,29.3,3,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Enterprise,SaaS,8,No,Referral,4.7,12,1
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Enterprise,Healthcare,12,No,Paid,20.3,1,1
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Mid,Healthcare,13,No,Organic,25.3,2,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Enterprise,SaaS,7,No,Cold Outreach,36.6,9,1
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Enterprise,Finance,14,No,Paid,34.5,16,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Enterprise,SaaS,1,No,Paid,11.0,6,1
+CMP-1012,Pied Piper,SP-05,Karthik S,Small,Finance,6,Yes,Organic,1.8,10,1
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,24,No,Paid,15.7,1,0
+CMP-1014,Stark Industries,SP-05,Karthik S,Small,Finance,10,No,Referral,34.7,17,1
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Enterprise,SaaS,1,No,Organic,54.8,3,1
+CMP-1016,Soylent Corp,SP-01,Rahul Kumar,Small,Retail,2,No,Paid,7.1,4,0
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Enterprise,Healthcare,12,No,Paid,7.6,6,0
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Small,Healthcare,9,No,Organic,2.7,9,0
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Enterprise,Finance,10,Yes,Cold Outreach,24.1,31,1
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Enterprise,Retail,3,No,Organic,12.7,19,1
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Small,SaaS,4,No,Referral,13.2,12,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Mid,Finance,3,No,Referral,47.7,3,0
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Small,Healthcare,10,Yes,Referral,11.9,10,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Enterprise,SaaS,7,No,Referral,30.3,12,1
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,11,Yes,Referral,2.0,1,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Small,Finance,6,Yes,Organic,17.6,1,0
+CMP-1027,Sloan & Partners,SP-03,Arjun Nair,Small,Healthcare,13,No,Cold Outreach,9.4,5,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Enterprise,Healthcare,16,No,Referral,1.5,9,0
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Small,Healthcare,10,Yes,Organic,14.4,15,1
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Mid,Manufacturing,4,No,Cold Outreach,4.0,49,0
+CMP-1031,Horizon Healthcare,SP-04,Divya Reddy,Mid,Manufacturing,12,Yes,Paid,33.8,2,0
+CMP-1032,Cascade Retail,SP-04,Divya Reddy,Mid,Manufacturing,5,Yes,Organic,10.7,1,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Mid,Finance,8,No,Paid,17.4,26,0
+CMP-1034,Virtucon,SP-01,Rahul Kumar,Enterprise,Retail,33,Yes,Organic,40.8,5,0
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Enterprise,Manufacturing,5,Yes,Referral,12.4,2,1
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Small,Retail,21,Yes,Referral,47.5,26,1
+CMP-1002,Blake and Sons,SP-04,Divya Reddy,Mid,Manufacturing,9,No,Organic,3.8,5,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,10,No,Cold Outreach,13.6,4,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Small,SaaS,3,No,Referral,25.2,2,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Mid,Finance,64,Yes,Organic,28.5,42,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,2,No,Paid,1.5,8,1
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Enterprise,Healthcare,12,No,Paid,13.3,2,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,7,No,Paid,31.7,15,0
+CMP-1009,Initech LLC,SP-05,Karthik S,Small,Finance,4,No,Organic,3.5,8,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Small,SaaS,20,No,Cold Outreach,16.1,2,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Mid,Manufacturing,9,Yes,Organic,9.4,14,1
+CMP-1012,Pied Piper,SP-05,Karthik S,Small,Finance,19,No,Paid,74.6,16,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,23,Yes,Organic,55.7,7,1
+CMP-1014,Stark Industries,SP-01,Rahul Kumar,Mid,Retail,12,Yes,Referral,17.5,2,1
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Mid,Healthcare,2,No,Organic,1.8,1,0
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Enterprise,Manufacturing,5,No,Paid,35.8,11,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Small,SaaS,18,Yes,Referral,0.5,1,0
+CMP-1018,Cyberdyne Systems,SP-04,Divya Reddy,Small,Manufacturing,6,Yes,Referral,3.1,10,0
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Mid,Healthcare,42,No,Organic,8.3,40,0
+CMP-1020,Aperture Science,SP-04,Divya Reddy,Mid,Manufacturing,13,Yes,Cold Outreach,9.9,27,0
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Small,Finance,12,No,Paid,6.6,2,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Enterprise,Healthcare,21,No,Organic,45.0,26,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,16,No,Cold Outreach,25.6,2,0
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Enterprise,Retail,3,Yes,Organic,31.1,18,1
+CMP-1025,Vandelay Industries,SP-04,Divya Reddy,Mid,Manufacturing,10,No,Referral,17.0,4,0
+CMP-1026,Bluth Company,SP-01,Rahul Kumar,Mid,Retail,18,Yes,Referral,14.9,1,1
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Mid,Retail,7,No,Organic,5.5,9,0
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Mid,SaaS,19,No,Paid,0.5,15,0
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Mid,SaaS,6,No,Cold Outreach,3.9,4,1
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Enterprise,Finance,16,No,Paid,21.6,5,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,6,No,Referral,2.3,9,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,10,No,Referral,22.2,12,1
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Small,Manufacturing,1,Yes,Paid,9.8,16,1
+CMP-1034,Virtucon,SP-03,Arjun Nair,Mid,Healthcare,2,No,Paid,13.7,1,0
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Mid,Manufacturing,33,No,Cold Outreach,13.1,11,1
+CMP-1001,Davis and Sons,SP-05,Karthik S,Small,Finance,6,No,Cold Outreach,21.3,3,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,22,Yes,Organic,17.5,4,0
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Small,Finance,23,Yes,Cold Outreach,38.9,7,1
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Small,SaaS,9,No,Referral,31.4,15,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Mid,SaaS,13,No,Referral,1.7,1,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,4,Yes,Cold Outreach,34.2,6,1
+CMP-1007,Acme Corp,SP-05,Karthik S,Small,Finance,1,No,Organic,3.6,8,0
+CMP-1008,Globex Corporation,SP-01,Rahul Kumar,Small,Retail,14,No,Organic,19.7,28,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Small,SaaS,48,Yes,Referral,25.5,3,1
+CMP-1010,Umbrella Corp,SP-01,Rahul Kumar,Mid,Retail,6,Yes,Referral,3.9,3,1
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Enterprise,Healthcare,2,No,Paid,30.8,1,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,8,Yes,Paid,69.9,19,1
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,10,Yes,Referral,17.2,17,1
+CMP-1014,Stark Industries,SP-04,Divya Reddy,Small,Manufacturing,4,Yes,Organic,9.6,15,1
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Small,Retail,25,Yes,Cold Outreach,14.4,42,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Small,SaaS,29,No,Paid,16.5,2,1
+CMP-1017,Wonka Industries,SP-05,Karthik S,Enterprise,Finance,41,Yes,Referral,17.8,4,1
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Mid,Healthcare,7,No,Referral,18.3,2,1
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,29,Yes,Cold Outreach,98.5,2,1
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Small,Retail,2,No,Referral,22.9,1,1
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Enterprise,Healthcare,7,No,Cold Outreach,26.5,11,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Enterprise,Finance,1,No,Organic,18.0,13,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Small,Manufacturing,24,No,Organic,18.7,13,0
+CMP-1024,Oscorp Industries,SP-04,Divya Reddy,Mid,Manufacturing,6,No,Paid,42.3,5,0
+CMP-1025,Vandelay Industries,SP-04,Divya Reddy,Mid,Manufacturing,4,Yes,Organic,10.3,6,0
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Mid,Healthcare,23,No,Paid,92.8,11,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Mid,Finance,1,Yes,Referral,46.5,3,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,9,No,Referral,5.7,1,0
+CMP-1029,Nexus Logistics,SP-01,Rahul Kumar,Mid,Retail,18,No,Cold Outreach,26.2,4,1
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Mid,Healthcare,8,No,Organic,48.0,8,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Enterprise,SaaS,1,No,Paid,60.0,4,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Small,Retail,20,Yes,Referral,79.0,13,1
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Enterprise,SaaS,2,No,Cold Outreach,18.7,2,0
+CMP-1034,Virtucon,SP-05,Karthik S,Small,Finance,11,Yes,Paid,8.6,14,1
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Enterprise,Retail,11,No,Referral,4.9,1,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,65,No,Referral,17.7,1,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Mid,SaaS,29,No,Organic,42.4,22,0
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Mid,Finance,7,No,Paid,22.1,23,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Mid,Healthcare,15,Yes,Referral,17.2,2,1
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Mid,Healthcare,12,No,Cold Outreach,16.9,11,0
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Small,Finance,1,Yes,Paid,7.8,36,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,4,Yes,Referral,17.4,1,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,5,No,Organic,20.4,8,0
+CMP-1009,Initech LLC,SP-05,Karthik S,Enterprise,Finance,12,Yes,Organic,10.2,8,1
+CMP-1010,Umbrella Corp,SP-04,Divya Reddy,Mid,Manufacturing,2,Yes,Cold Outreach,12.0,6,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Enterprise,Manufacturing,5,No,Referral,74.5,18,0
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,27.8,2,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,7,No,Organic,1.8,1,0
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Enterprise,Healthcare,6,No,Referral,0.5,11,0
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Mid,Retail,2,No,Referral,1.7,8,0
+CMP-1016,Soylent Corp,SP-05,Karthik S,Small,Finance,8,No,Organic,1.1,2,0
+CMP-1017,Wonka Industries,SP-04,Divya Reddy,Small,Manufacturing,23,No,Referral,13.5,12,0
+CMP-1018,Cyberdyne Systems,SP-04,Divya Reddy,Small,Manufacturing,20,No,Paid,46.8,25,0
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Small,Healthcare,12,No,Paid,28.0,5,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Small,SaaS,6,Yes,Cold Outreach,0.6,11,0
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Small,SaaS,5,No,Paid,22.3,5,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Enterprise,Finance,2,No,Referral,0.7,8,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Small,SaaS,6,Yes,Organic,0.6,15,1
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Small,Retail,38,No,Organic,52.6,10,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Enterprise,SaaS,6,No,Cold Outreach,10.0,8,0
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Mid,Healthcare,22,No,Referral,8.6,4,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Small,Finance,41,No,Organic,10.2,9,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,7,No,Paid,50.9,10,0
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Mid,SaaS,1,No,Paid,18.8,3,1
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Enterprise,Manufacturing,25,Yes,Paid,37.5,2,1
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Small,Retail,2,No,Cold Outreach,95.1,7,0
+CMP-1032,Cascade Retail,SP-05,Karthik S,Mid,Finance,3,No,Organic,11.7,8,0
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Mid,Retail,7,No,Cold Outreach,34.7,9,0
+CMP-1034,Virtucon,SP-02,Priya Menon,Small,SaaS,7,No,Cold Outreach,53.7,1,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Small,Healthcare,32,Yes,Referral,15.5,12,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,6,No,Organic,7.8,3,1
+CMP-1002,Blake and Sons,SP-01,Rahul Kumar,Small,Retail,22,Yes,Referral,0.5,14,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Mid,SaaS,18,No,Referral,34.9,19,1
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Small,Finance,7,No,Organic,1.6,5,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Enterprise,Retail,38,No,Organic,8.5,1,1
+CMP-1006,CloudNine SaaS,SP-04,Divya Reddy,Mid,Manufacturing,1,No,Organic,8.4,3,0
+CMP-1007,Acme Corp,SP-01,Rahul Kumar,Enterprise,Retail,29,No,Paid,15.5,3,1
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Enterprise,Healthcare,13,Yes,Paid,52.7,7,1
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Mid,Healthcare,14,Yes,Organic,30.0,18,0
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Mid,Healthcare,18,Yes,Organic,16.5,4,1
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Mid,SaaS,5,Yes,Referral,17.2,1,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,1,Yes,Cold Outreach,32.4,4,1
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Small,SaaS,5,No,Cold Outreach,53.4,6,0
+CMP-1014,Stark Industries,SP-01,Rahul Kumar,Small,Retail,14,No,Organic,11.8,11,0
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Small,SaaS,14,No,Referral,34.4,31,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Small,SaaS,13,Yes,Referral,10.7,32,1
+CMP-1017,Wonka Industries,SP-05,Karthik S,Small,Finance,6,No,Organic,1.3,15,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Enterprise,Retail,13,No,Organic,50.9,3,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Mid,SaaS,13,No,Organic,9.1,11,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Mid,SaaS,5,No,Cold Outreach,1.4,2,0
+CMP-1021,Sterling Cooper,SP-04,Divya Reddy,Small,Manufacturing,6,No,Organic,0.5,2,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Mid,Finance,11,Yes,Paid,15.0,34,1
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,18,No,Referral,89.5,2,0
+CMP-1024,Oscorp Industries,SP-04,Divya Reddy,Mid,Manufacturing,4,Yes,Organic,8.3,15,1
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Small,Finance,5,No,Organic,87.8,19,0
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Enterprise,Manufacturing,8,No,Referral,8.7,1,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Small,Finance,8,Yes,Referral,76.0,29,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Enterprise,Healthcare,1,No,Cold Outreach,6.1,3,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Mid,Manufacturing,2,No,Referral,24.3,5,0
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Small,Finance,5,No,Cold Outreach,53.0,13,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,8,Yes,Referral,76.0,8,1
+CMP-1032,Cascade Retail,SP-03,Arjun Nair,Mid,Healthcare,4,No,Organic,14.8,8,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,3,Yes,Paid,44.5,40,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Enterprise,SaaS,3,No,Cold Outreach,126.3,13,1
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Mid,SaaS,11,Yes,Paid,23.4,40,1
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Mid,Retail,39,No,Cold Outreach,90.9,15,0
+CMP-1002,Blake and Sons,SP-04,Divya Reddy,Mid,Manufacturing,13,No,Organic,4.3,9,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Mid,SaaS,6,No,Organic,6.2,11,0
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Small,Manufacturing,2,No,Referral,0.7,7,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Small,SaaS,31,No,Paid,1.1,15,0
+CMP-1006,CloudNine SaaS,SP-04,Divya Reddy,Small,Manufacturing,37,No,Cold Outreach,10.6,16,0
+CMP-1007,Acme Corp,SP-05,Karthik S,Mid,Finance,4,Yes,Referral,60.1,2,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,3,No,Organic,8.0,31,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Small,Healthcare,18,Yes,Paid,10.5,23,1
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Enterprise,Finance,8,No,Referral,5.5,9,0
+CMP-1011,Veer Technologies,SP-01,Rahul Kumar,Small,Retail,1,Yes,Organic,67.8,8,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Enterprise,Manufacturing,15,No,Paid,25.5,2,1
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Mid,SaaS,1,Yes,Paid,34.8,1,1
+CMP-1014,Stark Industries,SP-02,Priya Menon,Mid,SaaS,4,No,Cold Outreach,8.7,3,0
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Mid,Retail,14,No,Organic,45.3,6,0
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Small,Manufacturing,3,No,Cold Outreach,55.7,17,1
+CMP-1017,Wonka Industries,SP-05,Karthik S,Mid,Finance,13,Yes,Referral,18.9,13,1
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Mid,Healthcare,1,Yes,Cold Outreach,22.1,4,1
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Mid,SaaS,9,No,Paid,64.8,18,0
+CMP-1020,Aperture Science,SP-05,Karthik S,Mid,Finance,15,No,Cold Outreach,47.5,4,1
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Small,Finance,47,No,Paid,29.0,13,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Enterprise,Finance,3,No,Paid,31.8,5,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Enterprise,SaaS,43,No,Referral,6.4,13,0
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Mid,Retail,9,No,Organic,47.6,2,0
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Mid,Finance,25,Yes,Organic,8.9,4,0
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Mid,Manufacturing,12,No,Organic,42.9,24,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Mid,SaaS,5,No,Paid,10.4,10,0
+CMP-1028,Summit Solutions,SP-05,Karthik S,Mid,Finance,19,Yes,Organic,13.6,12,1
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,13,No,Cold Outreach,24.0,3,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Mid,SaaS,4,No,Organic,94.3,1,0
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Small,Retail,7,No,Organic,29.3,6,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Small,SaaS,8,Yes,Organic,8.1,11,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Mid,SaaS,37,Yes,Organic,2.3,10,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Mid,SaaS,41,Yes,Organic,27.1,13,1
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Small,SaaS,25,No,Referral,2.7,2,0
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Mid,Retail,11,No,Organic,27.4,6,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Mid,SaaS,38,No,Paid,44.0,3,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Enterprise,SaaS,7,Yes,Organic,33.1,25,1
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Small,Finance,1,No,Referral,22.8,11,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Mid,SaaS,26,No,Organic,0.5,3,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,8,No,Organic,22.4,12,0
+CMP-1007,Acme Corp,SP-04,Divya Reddy,Enterprise,Manufacturing,21,No,Cold Outreach,18.9,3,1
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Mid,Manufacturing,1,No,Paid,60.8,9,0
+CMP-1009,Initech LLC,SP-05,Karthik S,Small,Finance,14,No,Cold Outreach,14.5,10,0
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,13,No,Paid,1.6,18,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Small,SaaS,9,Yes,Paid,16.2,27,0
+CMP-1012,Pied Piper,SP-05,Karthik S,Mid,Finance,4,Yes,Referral,4.2,1,1
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Mid,Retail,14,Yes,Cold Outreach,8.2,4,1
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Mid,Healthcare,6,No,Paid,37.4,4,1
+CMP-1015,Wayne Enterprises,SP-05,Karthik S,Enterprise,Finance,9,No,Paid,50.2,2,0
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Mid,Healthcare,24,No,Organic,43.7,20,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Small,Healthcare,14,Yes,Organic,28.4,3,1
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,16,No,Referral,4.2,1,0
+CMP-1019,Tyrell Corporation,SP-01,Rahul Kumar,Small,Retail,6,Yes,Organic,6.0,8,1
+CMP-1020,Aperture Science,SP-02,Priya Menon,Small,SaaS,4,Yes,Paid,77.2,10,1
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Small,Finance,15,No,Paid,4.5,7,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Enterprise,Healthcare,2,No,Paid,3.0,5,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Mid,SaaS,28,Yes,Paid,17.0,6,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Mid,SaaS,10,No,Paid,28.0,3,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Mid,Healthcare,21,No,Cold Outreach,15.9,5,1
+CMP-1026,Bluth Company,SP-02,Priya Menon,Mid,SaaS,26,No,Cold Outreach,1.9,5,1
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Enterprise,SaaS,26,No,Organic,18.7,35,1
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Mid,SaaS,20,No,Paid,140.9,9,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,1,No,Paid,15.0,13,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Mid,SaaS,14,No,Organic,0.5,17,1
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,11,No,Referral,33.4,17,0
+CMP-1032,Cascade Retail,SP-03,Arjun Nair,Small,Healthcare,17,Yes,Referral,5.2,23,0
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Enterprise,Manufacturing,13,No,Referral,20.8,11,1
+CMP-1034,Virtucon,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Organic,6.6,3,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Enterprise,Healthcare,1,No,Organic,11.6,18,0
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,4,No,Referral,24.3,4,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Small,Healthcare,11,Yes,Organic,26.0,17,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Mid,SaaS,15,No,Organic,13.6,1,0
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Small,Retail,10,Yes,Organic,26.4,4,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Enterprise,Finance,67,No,Cold Outreach,44.7,3,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,5,No,Cold Outreach,39.4,20,1
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,2,Yes,Paid,10.7,16,0
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Small,Healthcare,1,No,Organic,23.5,15,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Enterprise,Healthcare,12,No,Referral,21.2,9,0
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,6,Yes,Referral,21.8,27,0
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Small,Healthcare,66,No,Organic,25.2,17,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,14,No,Paid,11.2,29,0
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Mid,Healthcare,13,Yes,Referral,4.1,11,1
+CMP-1014,Stark Industries,SP-04,Divya Reddy,Small,Manufacturing,14,No,Paid,4.5,1,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Mid,Healthcare,20,No,Cold Outreach,18.4,7,0
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Small,Healthcare,31,No,Organic,21.6,5,0
+CMP-1017,Wonka Industries,SP-05,Karthik S,Small,Finance,12,No,Organic,51.5,11,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Enterprise,Retail,17,Yes,Organic,38.9,59,1
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Enterprise,Healthcare,8,No,Cold Outreach,1.5,5,0
+CMP-1020,Aperture Science,SP-04,Divya Reddy,Enterprise,Manufacturing,34,Yes,Cold Outreach,11.7,1,1
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Small,Finance,2,Yes,Organic,3.8,37,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Enterprise,Finance,20,No,Organic,8.5,3,1
+CMP-1023,Gekko & Co,SP-05,Karthik S,Small,Finance,1,Yes,Referral,39.7,2,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Enterprise,SaaS,8,No,Organic,19.9,17,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Mid,Healthcare,12,Yes,Organic,16.1,1,1
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Small,Manufacturing,7,No,Organic,31.0,9,0
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Mid,Retail,10,No,Paid,109.2,23,0
+CMP-1028,Summit Solutions,SP-05,Karthik S,Small,Finance,9,No,Referral,43.7,5,1
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,18,Yes,Paid,5.2,31,1
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Mid,Healthcare,13,Yes,Paid,19.3,5,0
+CMP-1031,Horizon Healthcare,SP-03,Arjun Nair,Small,Healthcare,4,Yes,Organic,4.8,18,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Enterprise,Retail,2,No,Referral,38.4,5,0
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Referral,6.0,3,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Small,SaaS,25,No,Organic,23.7,14,0
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Mid,Finance,8,No,Organic,1.0,4,0
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Small,Retail,8,No,Paid,4.0,7,0
+CMP-1002,Blake and Sons,SP-01,Rahul Kumar,Mid,Retail,7,No,Referral,4.5,1,0
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,29,No,Referral,16.7,1,0
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Mid,Finance,3,Yes,Cold Outreach,14.3,3,1
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Mid,SaaS,4,Yes,Referral,11.5,17,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Mid,SaaS,4,No,Referral,20.0,27,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,9,No,Cold Outreach,6.4,5,0
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Enterprise,Healthcare,4,No,Cold Outreach,27.2,4,1
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Enterprise,Retail,4,Yes,Referral,79.4,1,1
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Mid,Healthcare,5,No,Cold Outreach,2.0,6,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Small,Manufacturing,3,No,Cold Outreach,63.4,1,0
+CMP-1012,Pied Piper,SP-03,Arjun Nair,Small,Healthcare,42,No,Organic,16.7,3,0
+CMP-1013,Hooli Inc,SP-04,Divya Reddy,Mid,Manufacturing,11,No,Referral,40.8,15,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,7,No,Referral,51.8,23,1
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,3,Yes,Organic,10.0,6,0
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Small,Manufacturing,5,No,Paid,8.6,10,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Small,SaaS,28,No,Paid,31.7,11,1
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Enterprise,Healthcare,28,No,Referral,9.5,1,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Enterprise,SaaS,8,Yes,Referral,94.6,3,1
+CMP-1020,Aperture Science,SP-04,Divya Reddy,Mid,Manufacturing,13,No,Organic,2.6,2,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Small,Retail,50,Yes,Cold Outreach,83.9,6,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,8,Yes,Referral,22.8,3,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Small,Manufacturing,8,No,Cold Outreach,10.8,17,0
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,8,No,Paid,6.0,5,0
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Enterprise,Finance,5,No,Paid,3.0,28,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Mid,SaaS,7,Yes,Paid,25.6,36,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Mid,SaaS,2,No,Paid,66.9,11,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,22,No,Paid,22.7,5,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,14,No,Paid,1.7,6,0
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Small,Manufacturing,7,Yes,Organic,50.8,9,0
+CMP-1031,Horizon Healthcare,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Cold Outreach,65.3,25,0
+CMP-1032,Cascade Retail,SP-05,Karthik S,Mid,Finance,10,No,Referral,13.4,14,1
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Small,Manufacturing,23,No,Paid,11.4,25,0
+CMP-1034,Virtucon,SP-05,Karthik S,Enterprise,Finance,5,No,Paid,9.4,1,0
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Small,Retail,7,No,Cold Outreach,10.2,12,0
+CMP-1001,Davis and Sons,SP-05,Karthik S,Enterprise,Finance,4,No,Referral,0.6,10,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Mid,SaaS,3,No,Cold Outreach,6.0,4,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,7,No,Organic,54.8,1,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Small,SaaS,12,Yes,Referral,6.4,1,1
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Enterprise,SaaS,25,No,Organic,13.1,1,1
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Mid,Finance,11,Yes,Organic,37.2,4,1
+CMP-1007,Acme Corp,SP-05,Karthik S,Mid,Finance,10,Yes,Cold Outreach,29.7,4,0
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Small,Healthcare,7,No,Organic,39.3,3,0
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Enterprise,Retail,8,No,Organic,49.1,1,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,8,No,Paid,12.0,8,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Mid,Manufacturing,3,Yes,Referral,7.5,5,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,6,No,Organic,5.2,11,0
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Enterprise,Retail,4,No,Organic,6.6,12,1
+CMP-1014,Stark Industries,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Paid,10.7,12,0
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Small,Retail,54,No,Organic,37.9,11,0
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Enterprise,SaaS,12,No,Paid,13.4,5,1
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Enterprise,SaaS,15,No,Cold Outreach,19.5,16,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Enterprise,SaaS,58,Yes,Cold Outreach,5.7,15,1
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Enterprise,SaaS,47,No,Organic,45.0,4,0
+CMP-1020,Aperture Science,SP-03,Arjun Nair,Mid,Healthcare,11,No,Referral,7.7,15,0
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,17,Yes,Referral,1.5,2,1
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Enterprise,SaaS,6,No,Referral,63.4,5,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Small,SaaS,1,No,Organic,13.3,8,0
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Small,Healthcare,1,No,Cold Outreach,20.6,9,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,6,No,Referral,12.5,2,1
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Small,Healthcare,28,No,Referral,27.1,12,1
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Small,SaaS,3,No,Organic,24.1,10,0
+CMP-1028,Summit Solutions,SP-05,Karthik S,Mid,Finance,10,No,Referral,3.5,1,1
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Enterprise,Healthcare,7,No,Organic,36.3,2,0
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Mid,Finance,1,No,Organic,45.7,32,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,6,No,Paid,11.8,3,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Small,SaaS,53,No,Organic,18.2,21,1
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Mid,Manufacturing,5,No,Paid,26.8,12,0
+CMP-1034,Virtucon,SP-03,Arjun Nair,Small,Healthcare,11,No,Organic,28.9,15,1
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Mid,Manufacturing,3,Yes,Referral,8.0,6,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Enterprise,SaaS,40,Yes,Organic,15.6,9,1
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,11,No,Organic,6.4,11,1
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Small,Finance,4,No,Referral,22.8,23,1
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Mid,Manufacturing,13,No,Paid,5.1,13,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Small,Retail,5,Yes,Organic,34.9,13,0
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Mid,Finance,8,No,Referral,65.5,3,0
+CMP-1007,Acme Corp,SP-01,Rahul Kumar,Mid,Retail,1,No,Paid,16.9,2,0
+CMP-1008,Globex Corporation,SP-05,Karthik S,Enterprise,Finance,7,Yes,Paid,51.6,6,1
+CMP-1009,Initech LLC,SP-05,Karthik S,Mid,Finance,1,No,Referral,67.7,11,1
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Small,Finance,11,No,Referral,9.9,2,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Small,Manufacturing,1,No,Organic,21.7,21,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Small,Manufacturing,1,No,Paid,57.3,6,0
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Small,SaaS,11,Yes,Paid,67.3,15,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Enterprise,SaaS,12,No,Paid,36.7,4,1
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Small,Retail,3,No,Cold Outreach,1.0,6,0
+CMP-1016,Soylent Corp,SP-01,Rahul Kumar,Mid,Retail,8,No,Referral,72.2,1,1
+CMP-1017,Wonka Industries,SP-04,Divya Reddy,Small,Manufacturing,2,No,Organic,24.8,5,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Mid,Retail,3,No,Paid,1.2,18,0
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,10,No,Referral,24.0,16,1
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Small,Retail,12,Yes,Paid,23.6,9,1
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Small,Healthcare,9,Yes,Referral,26.4,1,1
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,6,Yes,Organic,12.2,8,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Small,Manufacturing,9,Yes,Organic,1.8,9,1
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Enterprise,Healthcare,1,Yes,Cold Outreach,1.1,3,1
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Mid,SaaS,23,Yes,Cold Outreach,1.9,2,1
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Small,Healthcare,6,No,Organic,27.7,30,0
+CMP-1027,Sloan & Partners,SP-03,Arjun Nair,Small,Healthcare,1,No,Organic,24.6,6,0
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Small,SaaS,3,Yes,Paid,75.4,10,1
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,2,Yes,Organic,38.3,12,1
+CMP-1030,Pinnacle Capital,SP-01,Rahul Kumar,Mid,Retail,4,No,Organic,36.6,49,0
+CMP-1031,Horizon Healthcare,SP-04,Divya Reddy,Enterprise,Manufacturing,7,No,Organic,91.8,2,1
+CMP-1032,Cascade Retail,SP-04,Divya Reddy,Small,Manufacturing,11,No,Paid,39.1,21,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Mid,SaaS,10,No,Paid,17.6,57,0
+CMP-1034,Virtucon,SP-05,Karthik S,Mid,Finance,3,No,Organic,50.8,24,1
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Small,Finance,8,No,Referral,10.6,10,0
+CMP-1001,Davis and Sons,SP-05,Karthik S,Small,Finance,11,Yes,Referral,32.5,1,1
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Mid,Healthcare,15,No,Organic,38.2,14,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Mid,SaaS,7,No,Organic,17.3,4,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Mid,SaaS,1,No,Referral,68.1,2,0
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Small,Healthcare,7,No,Referral,54.5,3,0
+CMP-1006,CloudNine SaaS,SP-03,Arjun Nair,Enterprise,Healthcare,11,No,Cold Outreach,13.5,14,1
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,3,Yes,Organic,8.8,9,1
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Small,Healthcare,2,Yes,Organic,17.5,3,1
+CMP-1009,Initech LLC,SP-04,Divya Reddy,Small,Manufacturing,13,No,Organic,38.5,27,0
+CMP-1010,Umbrella Corp,SP-01,Rahul Kumar,Small,Retail,10,No,Paid,27.3,27,1
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Mid,SaaS,1,Yes,Cold Outreach,54.6,3,1
+CMP-1012,Pied Piper,SP-01,Rahul Kumar,Small,Retail,14,Yes,Paid,34.1,15,1
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Small,SaaS,13,No,Cold Outreach,8.7,16,0
+CMP-1014,Stark Industries,SP-01,Rahul Kumar,Mid,Retail,2,No,Paid,31.4,9,0
+CMP-1015,Wayne Enterprises,SP-05,Karthik S,Mid,Finance,13,No,Paid,6.3,6,0
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Small,Manufacturing,6,No,Cold Outreach,54.6,19,0
+CMP-1017,Wonka Industries,SP-05,Karthik S,Enterprise,Finance,1,No,Paid,2.8,3,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Enterprise,Retail,24,No,Paid,34.7,2,1
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Enterprise,Healthcare,9,No,Paid,17.1,2,0
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Enterprise,Retail,37,No,Organic,26.1,14,1
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Enterprise,Finance,2,No,Cold Outreach,32.5,12,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Enterprise,SaaS,16,No,Organic,45.4,5,0
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Enterprise,Healthcare,16,No,Organic,22.3,7,1
+CMP-1024,Oscorp Industries,SP-04,Divya Reddy,Enterprise,Manufacturing,22,No,Organic,28.7,5,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Mid,SaaS,27,Yes,Paid,78.1,12,1
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,5,No,Cold Outreach,12.0,2,0
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Mid,Retail,6,No,Paid,17.6,6,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Mid,Healthcare,49,Yes,Organic,1.8,11,1
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,3,No,Referral,25.1,6,0
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Small,Manufacturing,5,No,Paid,131.0,6,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,7,Yes,Organic,0.5,25,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,63.4,6,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Mid,Finance,12,No,Paid,2.8,1,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Small,SaaS,1,No,Organic,38.9,5,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Mid,Healthcare,25,Yes,Cold Outreach,36.1,7,0
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Mid,Retail,4,No,Referral,116.3,20,0
+CMP-1002,Blake and Sons,SP-05,Karthik S,Mid,Finance,7,Yes,Organic,41.0,5,0
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Small,Finance,4,Yes,Organic,5.0,9,1
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Small,Finance,29,No,Cold Outreach,9.6,2,1
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Small,SaaS,5,Yes,Organic,36.7,2,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,3,No,Cold Outreach,18.9,1,1
+CMP-1007,Acme Corp,SP-01,Rahul Kumar,Small,Retail,24,Yes,Organic,17.2,15,0
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Enterprise,Manufacturing,3,Yes,Cold Outreach,8.2,5,1
+CMP-1009,Initech LLC,SP-02,Priya Menon,Mid,SaaS,3,No,Referral,16.8,16,1
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,2,No,Paid,12.8,1,0
+CMP-1011,Veer Technologies,SP-01,Rahul Kumar,Enterprise,Retail,1,Yes,Paid,12.0,30,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,6,No,Cold Outreach,10.1,10,0
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Small,Retail,27,No,Cold Outreach,39.6,1,0
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Small,Healthcare,2,No,Paid,40.4,5,0
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Small,SaaS,13,No,Organic,28.6,5,1
+CMP-1016,Soylent Corp,SP-05,Karthik S,Small,Finance,3,Yes,Cold Outreach,51.6,5,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Small,Healthcare,1,No,Paid,6.6,5,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,30,Yes,Organic,15.9,2,1
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Enterprise,SaaS,3,No,Cold Outreach,19.0,22,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Mid,SaaS,30,No,Organic,11.2,15,0
+CMP-1021,Sterling Cooper,SP-04,Divya Reddy,Enterprise,Manufacturing,26,Yes,Referral,7.1,7,1
+CMP-1022,Dunder Mifflin,SP-01,Rahul Kumar,Mid,Retail,6,No,Paid,14.1,7,0
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Enterprise,Healthcare,21,No,Referral,13.6,19,1
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Mid,Retail,17,No,Referral,44.8,6,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Small,Healthcare,17,No,Paid,24.2,3,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Mid,SaaS,17,No,Organic,5.8,35,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Enterprise,Finance,28,No,Paid,29.5,3,1
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Small,SaaS,1,No,Organic,6.7,11,1
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Mid,SaaS,12,No,Referral,35.2,38,0
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Small,Healthcare,28,Yes,Organic,9.5,17,1
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Small,Finance,5,No,Cold Outreach,2.2,15,0
+CMP-1032,Cascade Retail,SP-05,Karthik S,Small,Finance,15,No,Organic,24.2,3,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Small,Finance,24,No,Referral,13.7,31,1
+CMP-1034,Virtucon,SP-03,Arjun Nair,Enterprise,Healthcare,1,No,Organic,3.1,4,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Mid,Healthcare,6,No,Organic,84.0,14,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Mid,Healthcare,14,No,Organic,22.1,7,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Small,Healthcare,20,Yes,Organic,2.1,6,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,6,No,Referral,61.4,7,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Mid,SaaS,5,No,Paid,0.5,9,1
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Mid,SaaS,9,No,Cold Outreach,6.5,7,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,4,Yes,Cold Outreach,16.9,15,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,3.0,1,0
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Enterprise,SaaS,1,No,Paid,20.7,9,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Small,SaaS,2,No,Paid,81.3,36,0
+CMP-1010,Umbrella Corp,SP-04,Divya Reddy,Mid,Manufacturing,12,No,Organic,15.8,15,0
+CMP-1011,Veer Technologies,SP-01,Rahul Kumar,Small,Retail,8,No,Organic,22.6,8,0
+CMP-1012,Pied Piper,SP-01,Rahul Kumar,Small,Retail,9,Yes,Referral,0.5,34,1
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Mid,SaaS,33,No,Referral,3.2,9,0
+CMP-1014,Stark Industries,SP-01,Rahul Kumar,Small,Retail,28,No,Referral,3.4,4,0
+CMP-1015,Wayne Enterprises,SP-04,Divya Reddy,Enterprise,Manufacturing,5,Yes,Referral,33.9,7,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Mid,SaaS,8,Yes,Paid,100.2,3,1
+CMP-1017,Wonka Industries,SP-04,Divya Reddy,Small,Manufacturing,11,Yes,Paid,0.8,6,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Enterprise,SaaS,30,No,Paid,42.5,2,0
+CMP-1019,Tyrell Corporation,SP-01,Rahul Kumar,Mid,Retail,6,No,Referral,7.7,5,0
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Mid,Retail,20,No,Organic,1.6,5,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Small,Retail,16,No,Referral,11.4,17,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Enterprise,SaaS,3,No,Cold Outreach,33.9,6,0
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Small,Manufacturing,1,Yes,Organic,15.4,2,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,26,Yes,Referral,21.9,11,1
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Mid,Finance,1,No,Paid,26.0,1,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Enterprise,Finance,29,No,Paid,20.9,16,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Mid,Finance,41,No,Paid,2.1,20,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,26,Yes,Paid,42.0,9,1
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Enterprise,Healthcare,8,No,Organic,8.7,3,0
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Small,Manufacturing,4,Yes,Paid,9.7,29,0
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Enterprise,Finance,27,No,Organic,29.7,42,1
+CMP-1032,Cascade Retail,SP-04,Divya Reddy,Small,Manufacturing,3,Yes,Organic,0.5,15,1
+CMP-1033,Omni Consumer Products,SP-03,Arjun Nair,Mid,Healthcare,1,No,Paid,0.5,15,1
+CMP-1034,Virtucon,SP-03,Arjun Nair,Small,Healthcare,6,No,Paid,53.8,5,0
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Enterprise,Retail,8,Yes,Paid,76.6,2,0
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Small,SaaS,81,Yes,Paid,20.7,1,1
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Small,Healthcare,5,Yes,Organic,8.7,34,1
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,1,No,Cold Outreach,71.1,1,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Enterprise,Healthcare,4,No,Organic,28.3,14,1
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Small,Healthcare,7,Yes,Paid,91.0,20,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Mid,SaaS,15,No,Paid,111.2,10,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,6,No,Paid,36.5,7,0
+CMP-1008,Globex Corporation,SP-05,Karthik S,Mid,Finance,4,Yes,Cold Outreach,16.9,4,1
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Mid,Healthcare,41,No,Paid,47.8,2,0
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Enterprise,Healthcare,6,Yes,Referral,14.7,6,0
+CMP-1011,Veer Technologies,SP-01,Rahul Kumar,Small,Retail,4,No,Cold Outreach,54.2,34,0
+CMP-1012,Pied Piper,SP-03,Arjun Nair,Small,Healthcare,4,No,Referral,1.3,1,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Small,Finance,5,Yes,Paid,8.9,37,0
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Small,Healthcare,4,No,Cold Outreach,30.2,10,0
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Mid,SaaS,17,Yes,Referral,44.2,1,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Mid,SaaS,37,Yes,Organic,5.3,5,1
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Mid,SaaS,4,Yes,Organic,12.7,13,1
+CMP-1018,Cyberdyne Systems,SP-05,Karthik S,Small,Finance,38,No,Cold Outreach,6.6,1,0
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Small,Healthcare,24,No,Referral,10.7,12,0
+CMP-1020,Aperture Science,SP-04,Divya Reddy,Small,Manufacturing,7,No,Organic,28.4,15,0
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Enterprise,SaaS,16,No,Paid,104.9,3,1
+CMP-1022,Dunder Mifflin,SP-01,Rahul Kumar,Mid,Retail,17,No,Organic,7.7,7,0
+CMP-1023,Gekko & Co,SP-01,Rahul Kumar,Mid,Retail,12,No,Referral,1.3,3,0
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,5,Yes,Paid,15.0,2,0
+CMP-1025,Vandelay Industries,SP-04,Divya Reddy,Enterprise,Manufacturing,18,No,Organic,35.0,2,1
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Enterprise,Healthcare,8,No,Referral,0.8,11,1
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Small,SaaS,2,No,Paid,38.0,2,0
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Small,Retail,8,Yes,Paid,25.2,21,1
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Mid,SaaS,1,Yes,Organic,3.5,4,1
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Enterprise,Healthcare,15,Yes,Cold Outreach,32.0,4,1
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Small,Retail,4,No,Organic,0.6,12,0
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Enterprise,Retail,1,No,Cold Outreach,24.9,11,0
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Mid,Retail,7,Yes,Cold Outreach,10.8,18,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Mid,SaaS,8,No,Paid,24.6,4,0
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Small,Retail,8,No,Paid,27.5,11,0
+CMP-1001,Davis and Sons,SP-05,Karthik S,Small,Finance,13,Yes,Organic,21.9,21,0
+CMP-1002,Blake and Sons,SP-05,Karthik S,Small,Finance,14,No,Organic,6.7,6,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Enterprise,SaaS,3,Yes,Referral,58.1,18,1
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Small,Manufacturing,6,No,Paid,2.3,15,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Small,SaaS,1,No,Organic,44.0,1,0
+CMP-1006,CloudNine SaaS,SP-04,Divya Reddy,Mid,Manufacturing,6,No,Paid,7.7,1,0
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Mid,Healthcare,14,Yes,Referral,10.4,2,1
+CMP-1008,Globex Corporation,SP-01,Rahul Kumar,Mid,Retail,12,Yes,Cold Outreach,2.7,17,0
+CMP-1009,Initech LLC,SP-04,Divya Reddy,Mid,Manufacturing,22,Yes,Referral,33.0,20,1
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,1,No,Cold Outreach,4.4,13,0
+CMP-1011,Veer Technologies,SP-05,Karthik S,Small,Finance,3,Yes,Cold Outreach,34.1,7,1
+CMP-1012,Pied Piper,SP-03,Arjun Nair,Small,Healthcare,3,No,Organic,21.6,15,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Small,Finance,5,Yes,Cold Outreach,10.5,9,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Enterprise,SaaS,2,No,Cold Outreach,57.0,2,1
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Mid,Retail,5,Yes,Referral,8.7,1,1
+CMP-1016,Soylent Corp,SP-05,Karthik S,Small,Finance,2,Yes,Referral,24.7,3,1
+CMP-1017,Wonka Industries,SP-01,Rahul Kumar,Small,Retail,6,No,Cold Outreach,18.5,12,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Mid,SaaS,8,No,Organic,20.2,18,1
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Small,Healthcare,47,No,Referral,27.9,3,1
+CMP-1020,Aperture Science,SP-04,Divya Reddy,Small,Manufacturing,6,No,Cold Outreach,13.5,6,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Mid,Retail,3,No,Cold Outreach,32.1,3,0
+CMP-1022,Dunder Mifflin,SP-01,Rahul Kumar,Small,Retail,16,Yes,Referral,30.5,1,1
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Mid,SaaS,4,No,Cold Outreach,12.5,10,0
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Small,Retail,21,No,Organic,5.7,4,0
+CMP-1025,Vandelay Industries,SP-01,Rahul Kumar,Enterprise,Retail,20,Yes,Paid,91.0,34,1
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,21,No,Organic,2.2,5,1
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Mid,Finance,52,No,Organic,7.9,1,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,9,No,Cold Outreach,14.2,13,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Small,Finance,1,No,Referral,18.4,56,0
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Enterprise,Finance,11,No,Referral,12.7,10,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,1,No,Organic,6.5,3,0
+CMP-1032,Cascade Retail,SP-03,Arjun Nair,Small,Healthcare,39,No,Organic,47.8,6,1
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,11,No,Organic,17.5,1,0
+CMP-1034,Virtucon,SP-05,Karthik S,Mid,Finance,4,No,Referral,21.3,3,0
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Mid,Manufacturing,4,No,Paid,26.6,6,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Small,Healthcare,66,No,Paid,16.0,9,1
+CMP-1002,Blake and Sons,SP-05,Karthik S,Enterprise,Finance,11,No,Referral,5.1,7,1
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Enterprise,Finance,10,No,Cold Outreach,18.8,2,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Small,Healthcare,19,Yes,Paid,4.3,6,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Mid,Finance,2,No,Paid,26.3,4,0
+CMP-1006,CloudNine SaaS,SP-01,Rahul Kumar,Small,Retail,13,Yes,Organic,30.3,15,0
+CMP-1007,Acme Corp,SP-01,Rahul Kumar,Mid,Retail,5,Yes,Organic,106.2,5,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Mid,SaaS,4,No,Organic,6.4,1,1
+CMP-1009,Initech LLC,SP-05,Karthik S,Enterprise,Finance,1,No,Paid,41.9,2,0
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Mid,Healthcare,12,No,Organic,11.0,15,1
+CMP-1011,Veer Technologies,SP-01,Rahul Kumar,Small,Retail,18,No,Paid,54.7,24,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Enterprise,Manufacturing,3,No,Referral,45.6,4,1
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Small,SaaS,11,No,Paid,0.5,33,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,33,No,Referral,41.5,1,1
+CMP-1015,Wayne Enterprises,SP-05,Karthik S,Mid,Finance,14,No,Organic,34.8,7,0
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Mid,SaaS,12,Yes,Cold Outreach,78.7,8,1
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Mid,SaaS,21,No,Cold Outreach,16.7,7,1
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Small,Healthcare,2,No,Paid,46.1,20,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,2,No,Cold Outreach,2.6,10,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Mid,SaaS,4,No,Referral,49.7,2,1
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,3,No,Paid,34.1,2,0
+CMP-1022,Dunder Mifflin,SP-01,Rahul Kumar,Enterprise,Retail,37,No,Paid,12.0,19,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,22,No,Cold Outreach,9.7,7,0
+CMP-1024,Oscorp Industries,SP-04,Divya Reddy,Small,Manufacturing,5,Yes,Paid,6.6,30,0
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Small,Finance,1,No,Paid,18.9,9,0
+CMP-1026,Bluth Company,SP-01,Rahul Kumar,Small,Retail,4,Yes,Paid,14.7,15,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Mid,SaaS,18,No,Paid,19.9,3,1
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Small,Retail,25,No,Organic,30.8,4,1
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Small,SaaS,2,Yes,Paid,69.1,38,0
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Enterprise,Healthcare,15,No,Organic,108.5,4,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,91,No,Organic,37.1,8,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Small,SaaS,17,No,Paid,1.9,1,0
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Small,Retail,20,No,Referral,10.8,2,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Mid,SaaS,9,No,Paid,70.1,9,0
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Small,SaaS,1,No,Organic,30.8,2,1
+CMP-1001,Davis and Sons,SP-05,Karthik S,Small,Finance,6,Yes,Organic,16.1,6,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,12,Yes,Organic,43.5,8,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Mid,SaaS,5,No,Organic,5.7,2,1
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Small,Manufacturing,5,Yes,Referral,3.8,12,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Mid,Retail,3,Yes,Referral,44.3,3,1
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Mid,Finance,13,Yes,Cold Outreach,70.9,3,1
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,2,No,Paid,10.4,15,0
+CMP-1008,Globex Corporation,SP-05,Karthik S,Small,Finance,2,No,Paid,29.5,3,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Small,Healthcare,52,No,Organic,11.9,9,1
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,23,No,Paid,25.2,21,1
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Enterprise,SaaS,17,No,Paid,22.4,2,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,3,No,Paid,0.5,6,0
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Mid,Healthcare,3,Yes,Cold Outreach,45.8,2,0
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Enterprise,Healthcare,2,No,Cold Outreach,24.4,5,1
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,13,Yes,Referral,10.9,19,1
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Enterprise,Healthcare,16,Yes,Referral,20.2,21,1
+CMP-1017,Wonka Industries,SP-05,Karthik S,Enterprise,Finance,6,No,Organic,9.2,21,1
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,5,No,Referral,14.0,7,1
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Small,Finance,6,No,Paid,39.7,5,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Mid,SaaS,33,No,Organic,20.7,11,0
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Mid,Healthcare,6,Yes,Paid,5.2,31,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Mid,SaaS,16,No,Organic,17.1,3,1
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Small,SaaS,5,Yes,Paid,24.9,11,0
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,47,No,Organic,29.7,1,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Small,Healthcare,42,No,Cold Outreach,14.7,30,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Small,Finance,8,No,Organic,20.9,5,0
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Mid,Manufacturing,5,No,Referral,58.4,3,0
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Mid,Manufacturing,27,No,Cold Outreach,18.1,1,0
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Mid,Healthcare,17,Yes,Referral,20.0,1,1
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Mid,Healthcare,4,No,Cold Outreach,9.6,6,0
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Mid,Retail,25,Yes,Organic,52.7,4,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Mid,Retail,6,No,Organic,12.1,3,0
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Small,Retail,9,No,Referral,15.0,1,0
+CMP-1034,Virtucon,SP-02,Priya Menon,Small,SaaS,18,Yes,Cold Outreach,21.4,13,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Enterprise,Healthcare,10,No,Referral,2.9,2,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Small,SaaS,1,No,Referral,18.6,35,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Small,Healthcare,70,No,Cold Outreach,9.3,24,0
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Mid,Finance,6,Yes,Organic,27.8,30,1
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Enterprise,SaaS,1,No,Paid,34.9,11,1
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Mid,Retail,32,No,Referral,3.0,8,0
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Mid,Finance,1,Yes,Referral,16.2,31,1
+CMP-1007,Acme Corp,SP-04,Divya Reddy,Small,Manufacturing,5,No,Referral,5.9,34,0
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,19,Yes,Organic,2.0,7,1
+CMP-1009,Initech LLC,SP-04,Divya Reddy,Small,Manufacturing,30,No,Referral,27.6,1,1
+CMP-1010,Umbrella Corp,SP-04,Divya Reddy,Enterprise,Manufacturing,4,No,Paid,31.2,40,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Small,SaaS,3,Yes,Referral,157.0,1,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Small,Manufacturing,28,No,Referral,0.5,1,1
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Mid,Retail,12,Yes,Paid,39.2,35,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Mid,SaaS,9,Yes,Referral,14.0,5,1
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Mid,SaaS,15,No,Referral,1.3,15,0
+CMP-1016,Soylent Corp,SP-05,Karthik S,Small,Finance,11,Yes,Organic,10.6,12,1
+CMP-1017,Wonka Industries,SP-05,Karthik S,Small,Finance,1,Yes,Referral,51.1,1,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Enterprise,SaaS,11,No,Paid,68.3,14,0
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,1,Yes,Paid,37.5,7,1
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Small,Retail,4,Yes,Referral,7.0,26,1
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Mid,Healthcare,20,No,Paid,3.0,2,0
+CMP-1022,Dunder Mifflin,SP-05,Karthik S,Enterprise,Finance,18,Yes,Cold Outreach,0.9,2,1
+CMP-1023,Gekko & Co,SP-05,Karthik S,Small,Finance,16,Yes,Paid,12.5,7,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Enterprise,SaaS,15,No,Cold Outreach,28.9,6,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Mid,Healthcare,5,No,Referral,21.2,1,0
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Mid,Manufacturing,28,Yes,Paid,12.7,23,0
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Mid,Retail,25,No,Organic,4.7,3,0
+CMP-1028,Summit Solutions,SP-05,Karthik S,Small,Finance,5,No,Organic,14.0,5,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Enterprise,Manufacturing,17,Yes,Paid,3.4,5,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Small,SaaS,24,No,Organic,7.0,9,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,5,No,Cold Outreach,0.5,5,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,3,No,Referral,39.0,9,1
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Mid,Finance,5,No,Cold Outreach,32.8,5,0
+CMP-1034,Virtucon,SP-04,Divya Reddy,Mid,Manufacturing,10,No,Cold Outreach,56.1,2,0
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Mid,Manufacturing,7,Yes,Cold Outreach,13.8,3,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,7,No,Cold Outreach,2.3,5,0
+CMP-1002,Blake and Sons,SP-04,Divya Reddy,Enterprise,Manufacturing,4,No,Paid,10.1,2,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Enterprise,SaaS,34,Yes,Organic,2.9,9,1
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Mid,Retail,1,No,Referral,12.6,4,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Small,SaaS,8,No,Organic,20.4,72,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,5,No,Organic,56.7,37,0
+CMP-1007,Acme Corp,SP-05,Karthik S,Enterprise,Finance,25,No,Organic,4.3,6,1
+CMP-1008,Globex Corporation,SP-05,Karthik S,Mid,Finance,1,No,Cold Outreach,15.8,7,0
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Mid,Retail,20,No,Cold Outreach,19.2,18,0
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Small,Finance,5,No,Paid,9.0,2,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Small,SaaS,8,No,Organic,38.6,14,0
+CMP-1012,Pied Piper,SP-05,Karthik S,Small,Finance,1,Yes,Referral,38.1,7,1
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Small,Retail,15,No,Cold Outreach,17.6,37,0
+CMP-1014,Stark Industries,SP-04,Divya Reddy,Small,Manufacturing,3,No,Organic,12.5,27,0
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Mid,Retail,3,No,Cold Outreach,23.2,2,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Enterprise,SaaS,2,No,Organic,5.2,6,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Mid,SaaS,33,No,Organic,36.5,1,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Mid,SaaS,13,Yes,Cold Outreach,57.5,32,0
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,3,No,Paid,76.1,7,0
+CMP-1020,Aperture Science,SP-05,Karthik S,Mid,Finance,7,Yes,Cold Outreach,5.1,15,1
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,8,No,Paid,64.4,3,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Small,Healthcare,28,No,Paid,11.6,7,1
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Enterprise,SaaS,7,Yes,Paid,5.3,1,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,20,No,Organic,15.8,6,1
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,3,No,Organic,58.0,10,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Enterprise,SaaS,11,No,Organic,1.0,6,0
+CMP-1027,Sloan & Partners,SP-03,Arjun Nair,Mid,Healthcare,2,No,Paid,3.3,30,0
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Small,Manufacturing,5,No,Paid,48.4,12,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Mid,Manufacturing,4,No,Organic,0.5,14,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Small,SaaS,6,No,Cold Outreach,27.1,13,1
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Mid,Finance,13,Yes,Cold Outreach,3.2,19,1
+CMP-1032,Cascade Retail,SP-05,Karthik S,Mid,Finance,12,Yes,Organic,12.8,8,1
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Mid,Manufacturing,1,Yes,Referral,18.5,28,0
+CMP-1034,Virtucon,SP-05,Karthik S,Enterprise,Finance,8,Yes,Paid,0.8,30,1
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Small,SaaS,11,No,Cold Outreach,58.2,5,0
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Small,SaaS,18,No,Cold Outreach,11.3,8,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,20,Yes,Organic,5.1,8,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,17,No,Paid,40.7,33,0
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Mid,Finance,50,No,Organic,4.0,11,0
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Mid,Healthcare,22,Yes,Paid,14.3,8,1
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Mid,Finance,2,No,Referral,11.6,14,0
+CMP-1007,Acme Corp,SP-05,Karthik S,Small,Finance,9,No,Cold Outreach,15.9,7,0
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Enterprise,SaaS,30,No,Cold Outreach,17.6,12,1
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Small,Healthcare,9,Yes,Organic,4.8,5,1
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,3,No,Paid,24.3,9,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Small,Manufacturing,8,No,Paid,0.5,11,0
+CMP-1012,Pied Piper,SP-02,Priya Menon,Small,SaaS,31,No,Organic,3.3,5,0
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Enterprise,SaaS,27,Yes,Organic,5.4,32,1
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,4,No,Organic,12.9,13,1
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Small,SaaS,29,No,Paid,1.6,12,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Enterprise,SaaS,26,No,Paid,15.8,1,1
+CMP-1017,Wonka Industries,SP-01,Rahul Kumar,Small,Retail,8,No,Organic,4.2,7,0
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Enterprise,Healthcare,2,No,Referral,3.4,15,0
+CMP-1019,Tyrell Corporation,SP-04,Divya Reddy,Enterprise,Manufacturing,3,No,Referral,23.1,15,0
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Enterprise,Retail,21,No,Organic,14.9,4,1
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Mid,Finance,15,No,Referral,1.3,20,1
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,27,No,Paid,33.2,2,0
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Enterprise,Manufacturing,9,Yes,Organic,12.6,16,0
+CMP-1024,Oscorp Industries,SP-01,Rahul Kumar,Small,Retail,6,No,Referral,22.3,9,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Mid,SaaS,10,Yes,Cold Outreach,34.9,27,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,2,No,Paid,4.9,3,0
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Small,Manufacturing,3,Yes,Paid,17.1,2,0
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Mid,Manufacturing,30,No,Cold Outreach,6.7,2,0
+CMP-1029,Nexus Logistics,SP-01,Rahul Kumar,Enterprise,Retail,2,No,Cold Outreach,13.2,1,0
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Small,Healthcare,8,No,Paid,48.7,11,0
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Enterprise,Retail,10,Yes,Organic,1.2,12,1
+CMP-1032,Cascade Retail,SP-04,Divya Reddy,Small,Manufacturing,30,Yes,Cold Outreach,56.2,4,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,8,Yes,Referral,5.1,12,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Enterprise,SaaS,6,No,Organic,10.5,4,1
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Mid,SaaS,25,No,Paid,2.4,15,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,12,Yes,Organic,16.8,8,1
+CMP-1002,Blake and Sons,SP-04,Divya Reddy,Enterprise,Manufacturing,1,Yes,Referral,16.3,2,0
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Small,Finance,13,Yes,Paid,13.5,4,0
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Small,Retail,5,No,Cold Outreach,0.8,35,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Small,Finance,55,Yes,Organic,25.5,6,0
+CMP-1006,CloudNine SaaS,SP-03,Arjun Nair,Small,Healthcare,15,Yes,Paid,5.2,3,0
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Small,Healthcare,24,No,Organic,17.5,5,0
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,10,No,Referral,12.1,12,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Mid,SaaS,8,No,Paid,67.8,4,0
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Mid,Healthcare,18,No,Organic,70.0,3,1
+CMP-1011,Veer Technologies,SP-05,Karthik S,Mid,Finance,23,No,Paid,11.2,7,0
+CMP-1012,Pied Piper,SP-01,Rahul Kumar,Small,Retail,13,Yes,Referral,22.2,2,1
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,2,No,Referral,4.6,44,0
+CMP-1014,Stark Industries,SP-05,Karthik S,Mid,Finance,45,Yes,Organic,13.2,11,1
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Enterprise,Healthcare,1,Yes,Organic,54.1,12,1
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Small,Healthcare,7,No,Referral,5.9,12,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Small,Healthcare,8,Yes,Paid,41.8,7,1
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,16,Yes,Organic,28.1,5,1
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,5,No,Organic,26.3,4,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Small,SaaS,28,Yes,Organic,6.2,4,1
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,13,No,Organic,29.5,9,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Mid,SaaS,7,Yes,Paid,22.2,21,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,4,No,Organic,11.0,25,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Small,Finance,13,No,Cold Outreach,9.8,18,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Enterprise,Healthcare,9,No,Paid,0.5,21,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,9,No,Paid,27.2,6,1
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Mid,Manufacturing,7,No,Organic,20.2,20,0
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Small,Retail,14,No,Organic,42.9,2,0
+CMP-1029,Nexus Logistics,SP-01,Rahul Kumar,Mid,Retail,5,No,Paid,64.0,19,1
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Small,SaaS,21,Yes,Referral,6.6,16,1
+CMP-1031,Horizon Healthcare,SP-03,Arjun Nair,Small,Healthcare,16,No,Referral,22.8,9,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,2,Yes,Organic,16.6,19,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Mid,Finance,7,Yes,Paid,1.5,9,0
+CMP-1034,Virtucon,SP-02,Priya Menon,Small,SaaS,4,No,Referral,29.2,30,0
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Mid,Finance,8,Yes,Referral,17.0,8,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Mid,Healthcare,16,No,Organic,53.9,26,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Enterprise,SaaS,10,Yes,Paid,32.9,1,1
+CMP-1003,Doyle Ltd,SP-04,Divya Reddy,Mid,Manufacturing,15,No,Cold Outreach,12.0,1,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Mid,Healthcare,16,No,Paid,1.8,3,1
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Mid,Retail,56,Yes,Organic,0.5,60,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Mid,SaaS,29,No,Referral,26.6,3,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,3,No,Paid,12.1,3,0
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Small,Manufacturing,7,No,Cold Outreach,20.0,2,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Mid,Healthcare,7,No,Cold Outreach,33.3,7,0
+CMP-1010,Umbrella Corp,SP-01,Rahul Kumar,Small,Retail,1,No,Referral,23.4,1,0
+CMP-1011,Veer Technologies,SP-05,Karthik S,Mid,Finance,4,Yes,Paid,28.0,8,1
+CMP-1012,Pied Piper,SP-03,Arjun Nair,Small,Healthcare,2,Yes,Organic,40.2,14,0
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Mid,Healthcare,13,Yes,Paid,23.3,16,1
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,15,No,Referral,10.1,15,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Enterprise,Healthcare,11,No,Paid,80.2,1,0
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Enterprise,Healthcare,8,Yes,Referral,35.1,14,1
+CMP-1017,Wonka Industries,SP-04,Divya Reddy,Small,Manufacturing,26,Yes,Organic,21.6,28,0
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Small,Healthcare,4,No,Paid,33.3,11,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,18,No,Referral,44.1,1,0
+CMP-1020,Aperture Science,SP-05,Karthik S,Small,Finance,37,Yes,Organic,61.3,6,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Mid,Retail,17,No,Organic,3.6,2,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Enterprise,Healthcare,2,Yes,Paid,39.9,1,1
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Enterprise,SaaS,1,No,Referral,4.3,14,0
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Mid,Healthcare,17,No,Organic,26.1,2,1
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Small,Finance,17,Yes,Organic,51.2,23,1
+CMP-1026,Bluth Company,SP-02,Priya Menon,Mid,SaaS,15,No,Paid,23.5,4,0
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Small,Manufacturing,15,Yes,Paid,9.4,5,1
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Small,Manufacturing,9,No,Cold Outreach,0.8,22,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Enterprise,Finance,31,Yes,Paid,20.9,8,1
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Small,Healthcare,1,No,Referral,4.3,3,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,5,Yes,Cold Outreach,2.7,13,1
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Small,SaaS,1,Yes,Organic,13.6,3,1
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Small,Retail,11,No,Cold Outreach,11.5,6,0
+CMP-1034,Virtucon,SP-01,Rahul Kumar,Mid,Retail,5,No,Cold Outreach,2.4,3,0
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Small,Retail,8,No,Organic,28.3,5,0
+CMP-1001,Davis and Sons,SP-05,Karthik S,Mid,Finance,8,No,Organic,22.9,18,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,15,No,Paid,8.4,7,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,3,Yes,Organic,5.3,1,1
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Small,Retail,6,No,Organic,0.5,19,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Enterprise,Retail,10,No,Paid,11.7,11,0
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Small,Finance,27,Yes,Paid,41.5,3,1
+CMP-1007,Acme Corp,SP-05,Karthik S,Small,Finance,9,No,Organic,14.0,7,1
+CMP-1008,Globex Corporation,SP-05,Karthik S,Mid,Finance,26,No,Organic,6.0,4,1
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Small,Retail,20,No,Organic,16.3,22,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,4,No,Organic,3.1,2,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Mid,Manufacturing,1,No,Organic,7.2,20,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Mid,SaaS,18,No,Cold Outreach,9.9,4,0
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Mid,Healthcare,8,No,Paid,24.6,24,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,16,No,Referral,7.8,30,0
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Mid,SaaS,10,No,Cold Outreach,42.8,2,0
+CMP-1016,Soylent Corp,SP-05,Karthik S,Enterprise,Finance,8,No,Organic,0.8,4,0
+CMP-1017,Wonka Industries,SP-01,Rahul Kumar,Small,Retail,13,Yes,Cold Outreach,56.7,8,0
+CMP-1018,Cyberdyne Systems,SP-04,Divya Reddy,Enterprise,Manufacturing,15,Yes,Referral,5.7,12,1
+CMP-1019,Tyrell Corporation,SP-04,Divya Reddy,Small,Manufacturing,8,No,Referral,43.8,11,0
+CMP-1020,Aperture Science,SP-05,Karthik S,Small,Finance,4,Yes,Organic,14.6,24,1
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Mid,Healthcare,31,No,Organic,10.9,15,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Mid,SaaS,8,No,Cold Outreach,6.0,12,0
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Mid,Healthcare,27,No,Paid,44.3,17,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Small,Finance,4,No,Cold Outreach,39.4,5,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,2,Yes,Referral,46.4,5,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Enterprise,SaaS,15,No,Organic,2.5,13,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Enterprise,SaaS,3,No,Organic,28.4,17,0
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Small,SaaS,10,No,Paid,7.1,30,0
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Enterprise,SaaS,5,No,Paid,20.3,6,0
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Mid,Healthcare,4,No,Cold Outreach,21.1,5,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,2,No,Organic,25.9,31,0
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Small,Retail,8,No,Cold Outreach,89.6,8,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,11,No,Paid,106.7,5,0
+CMP-1034,Virtucon,SP-03,Arjun Nair,Enterprise,Healthcare,9,No,Organic,35.3,7,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Enterprise,Healthcare,4,No,Paid,6.7,2,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Small,Healthcare,13,Yes,Organic,0.5,2,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Enterprise,SaaS,12,No,Referral,11.2,12,1
+CMP-1003,Doyle Ltd,SP-01,Rahul Kumar,Small,Retail,5,Yes,Paid,29.2,11,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Enterprise,SaaS,31,No,Paid,7.0,8,0
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Small,Retail,3,No,Referral,11.7,6,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Enterprise,SaaS,8,No,Paid,10.8,1,1
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,20,No,Cold Outreach,8.5,11,0
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Small,Manufacturing,2,Yes,Organic,4.0,1,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Small,SaaS,34,No,Organic,10.9,21,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Small,SaaS,5,No,Paid,8.2,9,0
+CMP-1011,Veer Technologies,SP-05,Karthik S,Small,Finance,6,No,Cold Outreach,7.1,2,0
+CMP-1012,Pied Piper,SP-02,Priya Menon,Small,SaaS,18,Yes,Organic,19.6,5,1
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,16,No,Organic,5.1,2,1
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Small,Healthcare,2,No,Paid,17.9,3,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Mid,Healthcare,10,No,Organic,37.8,10,0
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Mid,Healthcare,7,No,Organic,26.6,3,0
+CMP-1017,Wonka Industries,SP-04,Divya Reddy,Enterprise,Manufacturing,47,Yes,Cold Outreach,23.4,6,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Small,Retail,19,Yes,Referral,4.9,15,1
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Enterprise,SaaS,6,No,Referral,28.6,5,0
+CMP-1020,Aperture Science,SP-03,Arjun Nair,Small,Healthcare,17,No,Paid,13.2,6,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Small,Retail,5,No,Cold Outreach,45.1,6,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Small,Healthcare,15,Yes,Cold Outreach,5.0,15,0
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Mid,Healthcare,22,No,Organic,7.2,13,0
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,5,No,Organic,17.0,7,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Small,Healthcare,5,No,Paid,33.0,20,0
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Small,Healthcare,7,Yes,Organic,41.9,2,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Enterprise,Finance,12,No,Referral,13.6,16,1
+CMP-1028,Summit Solutions,SP-05,Karthik S,Enterprise,Finance,19,No,Paid,19.4,2,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Enterprise,Manufacturing,1,No,Cold Outreach,25.0,18,0
+CMP-1030,Pinnacle Capital,SP-03,Arjun Nair,Enterprise,Healthcare,5,Yes,Organic,18.2,1,1
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Enterprise,SaaS,8,No,Organic,34.6,6,1
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,7,No,Organic,32.7,9,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,7,No,Referral,4.5,11,1
+CMP-1034,Virtucon,SP-05,Karthik S,Small,Finance,5,No,Cold Outreach,2.3,10,0
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Enterprise,Manufacturing,15,No,Referral,14.3,20,0
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Mid,Retail,10,No,Referral,5.6,1,0
+CMP-1002,Blake and Sons,SP-05,Karthik S,Mid,Finance,48,No,Paid,14.4,2,0
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Mid,Healthcare,2,No,Referral,7.0,3,0
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Small,Finance,52,No,Organic,3.4,3,1
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Small,Retail,4,No,Cold Outreach,0.5,11,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,7,Yes,Referral,28.0,9,0
+CMP-1007,Acme Corp,SP-04,Divya Reddy,Small,Manufacturing,2,No,Referral,14.0,30,0
+CMP-1008,Globex Corporation,SP-05,Karthik S,Mid,Finance,5,No,Cold Outreach,55.6,4,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Enterprise,SaaS,9,Yes,Paid,0.5,3,1
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Small,SaaS,15,Yes,Cold Outreach,25.2,11,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Small,SaaS,33,No,Cold Outreach,34.8,1,0
+CMP-1012,Pied Piper,SP-02,Priya Menon,Small,SaaS,2,No,Cold Outreach,67.0,3,1
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Enterprise,Healthcare,5,No,Organic,8.9,4,1
+CMP-1014,Stark Industries,SP-04,Divya Reddy,Small,Manufacturing,11,No,Organic,8.2,3,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Mid,Healthcare,4,No,Paid,61.6,7,0
+CMP-1016,Soylent Corp,SP-05,Karthik S,Mid,Finance,7,No,Organic,0.5,6,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Mid,Healthcare,1,No,Cold Outreach,37.2,8,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Small,Retail,26,No,Paid,26.9,17,0
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Small,Healthcare,6,No,Cold Outreach,2.4,25,0
+CMP-1020,Aperture Science,SP-05,Karthik S,Mid,Finance,14,Yes,Paid,21.6,15,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Small,Retail,26,No,Referral,18.7,26,1
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,6,Yes,Paid,7.5,20,1
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Mid,SaaS,1,Yes,Paid,35.1,22,1
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Mid,Finance,18,No,Cold Outreach,26.7,19,0
+CMP-1025,Vandelay Industries,SP-01,Rahul Kumar,Small,Retail,10,No,Referral,10.3,8,0
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Small,Manufacturing,3,No,Cold Outreach,12.6,12,0
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Mid,Retail,30,No,Paid,2.7,3,1
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Enterprise,SaaS,3,No,Organic,4.8,7,1
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Small,Healthcare,24,Yes,Organic,27.9,12,1
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Small,Finance,20,No,Organic,14.7,10,1
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Enterprise,Finance,4,No,Organic,14.3,6,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,7,Yes,Organic,21.0,5,1
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Mid,SaaS,26,No,Organic,12.7,1,0
+CMP-1034,Virtucon,SP-03,Arjun Nair,Mid,Healthcare,3,Yes,Referral,39.9,30,1
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Mid,SaaS,5,Yes,Organic,29.7,8,1
+CMP-1001,Davis and Sons,SP-04,Divya Reddy,Small,Manufacturing,12,No,Organic,21.1,4,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,13,Yes,Paid,0.5,8,1
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Enterprise,Healthcare,11,No,Paid,42.3,4,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Small,Healthcare,9,Yes,Referral,30.9,17,1
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Mid,Finance,23,No,Cold Outreach,28.2,22,0
+CMP-1006,CloudNine SaaS,SP-04,Divya Reddy,Small,Manufacturing,6,No,Organic,30.9,6,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,17,Yes,Organic,14.5,5,0
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Small,SaaS,11,No,Organic,13.0,6,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Mid,Healthcare,2,Yes,Organic,2.6,10,1
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Small,SaaS,24,Yes,Cold Outreach,9.5,3,1
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Small,Healthcare,28,Yes,Paid,39.1,16,1
+CMP-1012,Pied Piper,SP-02,Priya Menon,Small,SaaS,4,No,Organic,12.7,30,0
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Enterprise,SaaS,5,Yes,Referral,46.8,4,1
+CMP-1014,Stark Industries,SP-05,Karthik S,Mid,Finance,16,Yes,Paid,26.5,23,1
+CMP-1015,Wayne Enterprises,SP-04,Divya Reddy,Small,Manufacturing,7,Yes,Paid,17.0,2,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Mid,SaaS,58,No,Paid,44.2,6,1
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Small,SaaS,7,No,Organic,10.2,11,0
+CMP-1018,Cyberdyne Systems,SP-05,Karthik S,Mid,Finance,6,Yes,Referral,118.4,2,1
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Enterprise,Finance,5,No,Referral,7.3,5,0
+CMP-1020,Aperture Science,SP-03,Arjun Nair,Mid,Healthcare,1,No,Cold Outreach,21.1,26,0
+CMP-1021,Sterling Cooper,SP-01,Rahul Kumar,Mid,Retail,26,Yes,Organic,31.6,28,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Small,SaaS,8,Yes,Cold Outreach,28.1,7,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Small,SaaS,12,No,Referral,40.8,20,1
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Small,Healthcare,11,No,Paid,10.3,25,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Mid,SaaS,2,Yes,Cold Outreach,9.7,5,1
+CMP-1026,Bluth Company,SP-05,Karthik S,Mid,Finance,5,No,Organic,28.1,13,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Small,SaaS,22,No,Organic,16.3,1,0
+CMP-1028,Summit Solutions,SP-03,Arjun Nair,Small,Healthcare,35,No,Organic,58.5,16,0
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Mid,Healthcare,12,No,Referral,103.2,14,1
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Enterprise,SaaS,8,No,Organic,42.4,6,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,22,Yes,Referral,21.7,10,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Small,Retail,4,Yes,Paid,26.4,10,1
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Small,Retail,5,No,Paid,11.9,20,0
+CMP-1034,Virtucon,SP-01,Rahul Kumar,Small,Retail,33,Yes,Referral,20.6,4,0
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Small,Healthcare,5,No,Paid,45.8,10,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Small,Healthcare,1,No,Paid,26.0,9,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Mid,SaaS,11,Yes,Organic,2.0,6,1
+CMP-1003,Doyle Ltd,SP-04,Divya Reddy,Small,Manufacturing,5,No,Referral,25.1,11,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Small,Healthcare,35,No,Paid,21.3,3,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Small,Finance,9,Yes,Organic,91.3,2,0
+CMP-1006,CloudNine SaaS,SP-03,Arjun Nair,Enterprise,Healthcare,7,No,Referral,10.0,4,0
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Mid,Healthcare,6,Yes,Organic,1.3,3,1
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Small,Manufacturing,13,Yes,Organic,49.3,7,1
+CMP-1009,Initech LLC,SP-05,Karthik S,Mid,Finance,2,No,Referral,13.3,5,1
+CMP-1010,Umbrella Corp,SP-04,Divya Reddy,Small,Manufacturing,16,Yes,Paid,44.9,14,1
+CMP-1011,Veer Technologies,SP-05,Karthik S,Small,Finance,4,No,Cold Outreach,0.7,6,0
+CMP-1012,Pied Piper,SP-03,Arjun Nair,Enterprise,Healthcare,10,Yes,Cold Outreach,9.1,9,0
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Enterprise,SaaS,3,No,Organic,46.0,15,0
+CMP-1014,Stark Industries,SP-05,Karthik S,Mid,Finance,9,Yes,Organic,3.4,22,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,17,No,Paid,34.6,13,0
+CMP-1016,Soylent Corp,SP-05,Karthik S,Small,Finance,17,No,Paid,3.6,6,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Small,Healthcare,1,No,Paid,29.1,8,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,6,No,Cold Outreach,37.7,4,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,21,Yes,Organic,30.3,29,1
+CMP-1020,Aperture Science,SP-05,Karthik S,Mid,Finance,8,No,Paid,102.4,28,0
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Enterprise,Finance,28,No,Referral,78.3,6,0
+CMP-1022,Dunder Mifflin,SP-01,Rahul Kumar,Mid,Retail,17,No,Organic,7.5,15,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,12,No,Paid,5.3,33,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Mid,Finance,7,No,Paid,18.9,8,0
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Small,Finance,2,No,Organic,22.3,11,0
+CMP-1026,Bluth Company,SP-03,Arjun Nair,Enterprise,Healthcare,6,No,Referral,41.2,20,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Small,SaaS,24,Yes,Organic,1.9,4,1
+CMP-1028,Summit Solutions,SP-04,Divya Reddy,Small,Manufacturing,1,No,Referral,12.6,2,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Mid,Manufacturing,1,No,Referral,40.4,24,0
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Enterprise,Manufacturing,2,No,Cold Outreach,77.2,12,0
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Enterprise,Finance,8,No,Referral,1.9,7,0
+CMP-1032,Cascade Retail,SP-03,Arjun Nair,Mid,Healthcare,35,Yes,Cold Outreach,12.4,1,1
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Mid,Retail,2,Yes,Cold Outreach,21.4,8,0
+CMP-1034,Virtucon,SP-01,Rahul Kumar,Enterprise,Retail,27,No,Paid,32.0,7,0
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Enterprise,Finance,6,Yes,Referral,2.5,7,1
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Small,Healthcare,15,No,Referral,59.1,7,0
+CMP-1002,Blake and Sons,SP-05,Karthik S,Small,Finance,13,Yes,Organic,8.7,15,1
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Small,SaaS,2,No,Referral,17.0,12,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Enterprise,SaaS,4,Yes,Organic,8.2,4,1
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Mid,Finance,5,Yes,Referral,18.7,1,1
+CMP-1006,CloudNine SaaS,SP-01,Rahul Kumar,Small,Retail,2,No,Referral,31.6,10,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,10,No,Paid,20.0,30,1
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Enterprise,Manufacturing,2,Yes,Cold Outreach,16.4,19,1
+CMP-1009,Initech LLC,SP-02,Priya Menon,Mid,SaaS,16,Yes,Organic,10.4,4,1
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,2,No,Referral,11.1,11,1
+CMP-1011,Veer Technologies,SP-01,Rahul Kumar,Small,Retail,7,Yes,Referral,68.5,15,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Small,Manufacturing,18,No,Referral,30.3,5,0
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Mid,Retail,8,No,Paid,18.7,19,0
+CMP-1014,Stark Industries,SP-01,Rahul Kumar,Small,Retail,24,No,Referral,46.6,2,0
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Enterprise,SaaS,19,No,Organic,4.3,20,1
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Mid,Manufacturing,3,Yes,Paid,16.9,8,0
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Mid,Healthcare,3,Yes,Referral,49.6,1,1
+CMP-1018,Cyberdyne Systems,SP-05,Karthik S,Mid,Finance,5,Yes,Cold Outreach,8.6,9,1
+CMP-1019,Tyrell Corporation,SP-01,Rahul Kumar,Mid,Retail,4,No,Cold Outreach,19.1,30,1
+CMP-1020,Aperture Science,SP-04,Divya Reddy,Small,Manufacturing,1,Yes,Paid,14.8,7,0
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,5,Yes,Referral,12.5,3,1
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Small,Healthcare,14,No,Organic,2.8,7,0
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Mid,SaaS,9,No,Paid,19.1,9,0
+CMP-1024,Oscorp Industries,SP-04,Divya Reddy,Enterprise,Manufacturing,23,No,Organic,42.3,18,1
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Mid,SaaS,5,No,Organic,6.3,1,1
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,6,No,Organic,1.1,36,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Small,Finance,12,Yes,Paid,5.0,20,1
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Small,Retail,6,No,Referral,0.5,14,0
+CMP-1029,Nexus Logistics,SP-01,Rahul Kumar,Enterprise,Retail,29,No,Cold Outreach,10.7,7,1
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Enterprise,SaaS,21,No,Cold Outreach,50.9,4,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,20,No,Referral,23.5,1,1
+CMP-1032,Cascade Retail,SP-05,Karthik S,Small,Finance,1,No,Paid,4.7,11,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Mid,Finance,3,No,Cold Outreach,32.0,9,1
+CMP-1034,Virtucon,SP-05,Karthik S,Small,Finance,12,Yes,Organic,4.2,8,1
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Small,Healthcare,3,No,Referral,30.6,8,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Small,Healthcare,14,Yes,Cold Outreach,14.8,23,0
+CMP-1002,Blake and Sons,SP-01,Rahul Kumar,Enterprise,Retail,33,No,Organic,44.7,6,0
+CMP-1003,Doyle Ltd,SP-04,Divya Reddy,Mid,Manufacturing,11,Yes,Organic,10.2,5,1
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Small,SaaS,1,No,Organic,74.1,2,1
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Mid,Healthcare,22,Yes,Referral,16.9,12,1
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Enterprise,SaaS,10,No,Referral,10.0,10,0
+CMP-1007,Acme Corp,SP-04,Divya Reddy,Mid,Manufacturing,2,Yes,Paid,1.3,5,1
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Mid,Manufacturing,3,Yes,Organic,19.0,2,1
+CMP-1009,Initech LLC,SP-04,Divya Reddy,Enterprise,Manufacturing,7,No,Organic,37.6,8,0
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,6,No,Organic,10.1,3,0
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Small,Manufacturing,1,No,Organic,35.7,17,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Small,Manufacturing,4,No,Referral,2.6,41,1
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Mid,Retail,3,No,Referral,1.8,5,1
+CMP-1014,Stark Industries,SP-05,Karthik S,Small,Finance,25,Yes,Referral,11.7,2,1
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,3,No,Organic,0.5,6,0
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Mid,Healthcare,2,No,Paid,26.8,16,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Mid,SaaS,3,Yes,Organic,6.1,8,1
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Enterprise,SaaS,21,No,Referral,7.1,4,1
+CMP-1019,Tyrell Corporation,SP-04,Divya Reddy,Small,Manufacturing,3,No,Organic,36.6,7,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Small,SaaS,11,No,Paid,1.7,8,0
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,21,No,Paid,14.4,4,0
+CMP-1022,Dunder Mifflin,SP-04,Divya Reddy,Small,Manufacturing,7,No,Cold Outreach,45.0,6,0
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Small,Manufacturing,20,No,Paid,5.8,13,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Small,SaaS,8,No,Organic,19.4,3,1
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,9,Yes,Paid,7.6,2,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Mid,Finance,16,Yes,Referral,81.3,18,1
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Small,SaaS,17,No,Organic,36.7,14,0
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Mid,SaaS,13,Yes,Paid,0.8,20,1
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Small,Healthcare,5,Yes,Referral,64.8,5,1
+CMP-1030,Pinnacle Capital,SP-04,Divya Reddy,Mid,Manufacturing,4,Yes,Organic,114.9,3,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Enterprise,SaaS,36,No,Cold Outreach,5.8,11,1
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Enterprise,SaaS,5,Yes,Referral,13.1,16,1
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Mid,Retail,12,No,Paid,12.0,12,1
+CMP-1034,Virtucon,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Organic,0.5,3,0
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Small,SaaS,11,No,Paid,24.9,6,1
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,14,No,Organic,37.4,14,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Enterprise,Healthcare,22,Yes,Organic,36.0,32,1
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Mid,Finance,6,No,Paid,33.4,12,0
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Mid,Manufacturing,10,No,Paid,26.0,6,1
+CMP-1005,Diaz-Frederick,SP-01,Rahul Kumar,Small,Retail,1,No,Organic,6.7,14,0
+CMP-1006,CloudNine SaaS,SP-01,Rahul Kumar,Enterprise,Retail,15,Yes,Organic,12.5,19,1
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Mid,Healthcare,44,Yes,Referral,20.5,20,1
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Small,Healthcare,3,No,Paid,17.7,28,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Mid,SaaS,3,No,Paid,4.6,4,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Small,SaaS,2,Yes,Referral,11.2,13,1
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Small,Healthcare,34,Yes,Paid,26.9,23,0
+CMP-1012,Pied Piper,SP-02,Priya Menon,Small,SaaS,2,No,Referral,30.5,14,0
+CMP-1013,Hooli Inc,SP-03,Arjun Nair,Mid,Healthcare,1,Yes,Cold Outreach,11.2,2,0
+CMP-1014,Stark Industries,SP-05,Karthik S,Enterprise,Finance,1,Yes,Cold Outreach,0.7,4,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,34,Yes,Paid,5.7,1,1
+CMP-1016,Soylent Corp,SP-01,Rahul Kumar,Small,Retail,12,No,Referral,2.3,6,1
+CMP-1017,Wonka Industries,SP-01,Rahul Kumar,Enterprise,Retail,2,Yes,Cold Outreach,0.5,4,1
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Mid,Healthcare,17,No,Cold Outreach,1.3,1,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,4,No,Paid,13.9,8,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Small,SaaS,6,No,Organic,33.9,11,0
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Mid,Healthcare,10,No,Paid,20.0,13,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Mid,SaaS,45,No,Organic,1.5,6,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Mid,Manufacturing,13,No,Cold Outreach,22.2,4,1
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Enterprise,Healthcare,5,Yes,Paid,40.6,6,1
+CMP-1025,Vandelay Industries,SP-04,Divya Reddy,Mid,Manufacturing,24,No,Organic,70.4,6,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Small,Finance,12,No,Organic,48.2,1,0
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Mid,Manufacturing,16,No,Cold Outreach,9.7,7,0
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Small,SaaS,4,Yes,Organic,0.7,25,1
+CMP-1029,Nexus Logistics,SP-02,Priya Menon,Mid,SaaS,27,No,Cold Outreach,26.8,1,1
+CMP-1030,Pinnacle Capital,SP-01,Rahul Kumar,Enterprise,Retail,6,No,Referral,8.3,9,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Enterprise,SaaS,10,No,Organic,23.2,3,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Mid,Retail,8,No,Cold Outreach,12.7,8,0
+CMP-1033,Omni Consumer Products,SP-04,Divya Reddy,Small,Manufacturing,5,Yes,Paid,0.9,9,1
+CMP-1034,Virtucon,SP-03,Arjun Nair,Small,Healthcare,17,No,Referral,53.9,28,0
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Mid,Finance,4,Yes,Cold Outreach,14.0,1,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Mid,Healthcare,9,Yes,Referral,22.7,13,1
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Mid,SaaS,3,No,Organic,45.1,18,0
+CMP-1003,Doyle Ltd,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Organic,23.1,40,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Mid,SaaS,9,No,Organic,4.4,4,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Mid,Finance,3,Yes,Organic,22.8,1,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,16,Yes,Cold Outreach,41.3,7,0
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Mid,Healthcare,4,No,Cold Outreach,14.8,1,0
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Small,Healthcare,10,Yes,Referral,15.2,26,1
+CMP-1009,Initech LLC,SP-04,Divya Reddy,Mid,Manufacturing,9,No,Referral,11.9,22,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Small,SaaS,7,Yes,Referral,6.3,24,0
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Mid,Healthcare,6,No,Paid,3.2,6,0
+CMP-1012,Pied Piper,SP-05,Karthik S,Mid,Finance,2,No,Paid,6.7,3,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,16,No,Referral,15.3,5,0
+CMP-1014,Stark Industries,SP-05,Karthik S,Mid,Finance,25,Yes,Cold Outreach,3.5,10,1
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Small,Retail,32,No,Organic,34.5,3,0
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Mid,SaaS,5,Yes,Paid,5.5,16,1
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Small,Healthcare,5,Yes,Cold Outreach,20.3,24,1
+CMP-1018,Cyberdyne Systems,SP-05,Karthik S,Mid,Finance,2,No,Paid,31.0,34,0
+CMP-1019,Tyrell Corporation,SP-03,Arjun Nair,Small,Healthcare,19,Yes,Referral,7.3,8,1
+CMP-1020,Aperture Science,SP-05,Karthik S,Enterprise,Finance,11,No,Referral,9.7,18,1
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Mid,SaaS,5,Yes,Paid,81.9,2,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Enterprise,SaaS,4,Yes,Referral,12.4,28,1
+CMP-1023,Gekko & Co,SP-03,Arjun Nair,Mid,Healthcare,2,No,Cold Outreach,27.4,12,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Enterprise,SaaS,7,No,Paid,14.4,5,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Enterprise,SaaS,8,No,Cold Outreach,42.6,5,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Small,Finance,22,Yes,Cold Outreach,2.7,6,1
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Mid,SaaS,1,No,Paid,27.1,7,1
+CMP-1028,Summit Solutions,SP-05,Karthik S,Enterprise,Finance,23,No,Organic,41.2,2,0
+CMP-1029,Nexus Logistics,SP-04,Divya Reddy,Small,Manufacturing,4,No,Cold Outreach,8.9,38,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Enterprise,SaaS,10,No,Referral,6.1,13,1
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Mid,SaaS,1,Yes,Cold Outreach,6.7,6,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Mid,Retail,11,Yes,Referral,28.4,2,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Small,Finance,24,Yes,Paid,20.0,2,1
+CMP-1034,Virtucon,SP-05,Karthik S,Enterprise,Finance,32,No,Paid,16.0,9,0
+CMP-1035,Ansel Manufacturing,SP-04,Divya Reddy,Small,Manufacturing,1,No,Paid,11.4,2,0
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Enterprise,Retail,25,Yes,Cold Outreach,11.5,18,1
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Mid,Healthcare,29,No,Paid,15.0,60,0
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,18,No,Cold Outreach,29.5,3,1
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Enterprise,SaaS,45,No,Organic,53.7,22,0
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Mid,Healthcare,17,No,Organic,25.0,7,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Small,SaaS,3,No,Organic,4.0,4,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,19,Yes,Referral,8.2,28,0
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Mid,SaaS,10,Yes,Paid,14.3,10,1
+CMP-1009,Initech LLC,SP-04,Divya Reddy,Mid,Manufacturing,22,Yes,Paid,43.6,2,1
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Mid,Finance,6,Yes,Cold Outreach,16.7,7,1
+CMP-1011,Veer Technologies,SP-04,Divya Reddy,Mid,Manufacturing,44,Yes,Cold Outreach,30.2,6,0
+CMP-1012,Pied Piper,SP-01,Rahul Kumar,Mid,Retail,37,No,Referral,56.0,17,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Small,Finance,9,No,Organic,17.9,37,1
+CMP-1014,Stark Industries,SP-05,Karthik S,Small,Finance,6,No,Paid,17.8,9,1
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Enterprise,SaaS,7,Yes,Referral,1.2,7,1
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Small,Healthcare,4,Yes,Referral,45.3,1,0
+CMP-1017,Wonka Industries,SP-05,Karthik S,Mid,Finance,1,Yes,Organic,3.6,10,1
+CMP-1018,Cyberdyne Systems,SP-03,Arjun Nair,Mid,Healthcare,1,Yes,Organic,0.6,14,1
+CMP-1019,Tyrell Corporation,SP-05,Karthik S,Mid,Finance,9,No,Paid,7.7,2,0
+CMP-1020,Aperture Science,SP-05,Karthik S,Small,Finance,9,No,Referral,18.9,14,1
+CMP-1021,Sterling Cooper,SP-03,Arjun Nair,Mid,Healthcare,7,No,Cold Outreach,34.7,9,0
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Enterprise,SaaS,18,No,Referral,1.3,10,1
+CMP-1023,Gekko & Co,SP-02,Priya Menon,Small,SaaS,8,Yes,Referral,22.8,14,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Enterprise,Finance,25,Yes,Cold Outreach,4.2,6,1
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Mid,Healthcare,9,Yes,Referral,46.9,4,0
+CMP-1026,Bluth Company,SP-01,Rahul Kumar,Small,Retail,4,Yes,Organic,29.3,19,0
+CMP-1027,Sloan & Partners,SP-03,Arjun Nair,Enterprise,Healthcare,23,Yes,Referral,10.5,24,1
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Enterprise,Retail,21,No,Organic,112.5,7,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Mid,Finance,28,No,Organic,3.6,15,1
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Small,SaaS,15,No,Cold Outreach,22.6,1,0
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,30,No,Referral,5.6,11,1
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Mid,Retail,17,Yes,Paid,10.3,5,1
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Enterprise,Retail,3,No,Organic,8.2,10,1
+CMP-1034,Virtucon,SP-03,Arjun Nair,Enterprise,Healthcare,9,Yes,Cold Outreach,17.9,9,0
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Small,Finance,39,No,Paid,33.8,14,0
+CMP-1001,Davis and Sons,SP-01,Rahul Kumar,Mid,Retail,35,Yes,Paid,1.8,23,0
+CMP-1002,Blake and Sons,SP-03,Arjun Nair,Enterprise,Healthcare,22,No,Cold Outreach,20.2,5,1
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,10,No,Paid,1.2,22,0
+CMP-1004,Hernandez Ltd,SP-02,Priya Menon,Mid,SaaS,4,No,Organic,2.5,24,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Small,SaaS,18,No,Organic,22.9,3,0
+CMP-1006,CloudNine SaaS,SP-01,Rahul Kumar,Mid,Retail,16,No,Organic,8.5,7,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,1,No,Referral,5.1,22,1
+CMP-1008,Globex Corporation,SP-05,Karthik S,Enterprise,Finance,6,Yes,Referral,14.0,2,0
+CMP-1009,Initech LLC,SP-03,Arjun Nair,Small,Healthcare,10,No,Referral,3.0,9,0
+CMP-1010,Umbrella Corp,SP-04,Divya Reddy,Enterprise,Manufacturing,1,Yes,Cold Outreach,5.2,1,1
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Mid,SaaS,27,No,Paid,12.0,5,0
+CMP-1012,Pied Piper,SP-03,Arjun Nair,Small,Healthcare,23,No,Paid,22.6,5,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,3,Yes,Organic,36.0,3,1
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Mid,Healthcare,25,No,Cold Outreach,0.5,6,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Mid,Healthcare,13,Yes,Organic,33.3,5,0
+CMP-1016,Soylent Corp,SP-05,Karthik S,Small,Finance,4,No,Referral,23.9,9,0
+CMP-1017,Wonka Industries,SP-03,Arjun Nair,Mid,Healthcare,15,No,Paid,5.4,3,0
+CMP-1018,Cyberdyne Systems,SP-04,Divya Reddy,Small,Manufacturing,3,No,Referral,16.8,25,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,10.1,16,0
+CMP-1020,Aperture Science,SP-02,Priya Menon,Enterprise,SaaS,6,No,Organic,10.3,15,0
+CMP-1021,Sterling Cooper,SP-04,Divya Reddy,Small,Manufacturing,35,No,Organic,2.2,4,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Mid,Healthcare,18,Yes,Referral,43.0,13,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Enterprise,Manufacturing,7,No,Organic,1.4,31,0
+CMP-1024,Oscorp Industries,SP-03,Arjun Nair,Mid,Healthcare,32,No,Organic,17.8,3,0
+CMP-1025,Vandelay Industries,SP-02,Priya Menon,Small,SaaS,41,No,Paid,53.0,11,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Enterprise,Finance,5,Yes,Cold Outreach,46.4,9,0
+CMP-1027,Sloan & Partners,SP-02,Priya Menon,Enterprise,SaaS,6,No,Paid,37.9,4,0
+CMP-1028,Summit Solutions,SP-02,Priya Menon,Mid,SaaS,12,No,Cold Outreach,10.0,2,0
+CMP-1029,Nexus Logistics,SP-01,Rahul Kumar,Small,Retail,17,No,Organic,11.0,1,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Mid,SaaS,5,No,Cold Outreach,18.8,2,1
+CMP-1031,Horizon Healthcare,SP-02,Priya Menon,Small,SaaS,12,No,Paid,28.5,1,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Enterprise,SaaS,2,No,Cold Outreach,10.7,10,0
+CMP-1033,Omni Consumer Products,SP-02,Priya Menon,Small,SaaS,5,No,Organic,21.3,16,0
+CMP-1034,Virtucon,SP-05,Karthik S,Mid,Finance,7,No,Paid,6.3,1,0
+CMP-1035,Ansel Manufacturing,SP-01,Rahul Kumar,Small,Retail,1,Yes,Cold Outreach,16.4,10,0
+CMP-1001,Davis and Sons,SP-03,Arjun Nair,Mid,Healthcare,1,No,Paid,5.8,18,0
+CMP-1002,Blake and Sons,SP-01,Rahul Kumar,Mid,Retail,6,Yes,Cold Outreach,35.8,6,0
+CMP-1003,Doyle Ltd,SP-02,Priya Menon,Enterprise,SaaS,1,No,Organic,26.0,4,0
+CMP-1004,Hernandez Ltd,SP-03,Arjun Nair,Small,Healthcare,32,Yes,Organic,192.6,2,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Small,SaaS,24,No,Cold Outreach,29.1,9,1
+CMP-1006,CloudNine SaaS,SP-03,Arjun Nair,Small,Healthcare,6,No,Paid,4.4,2,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Mid,SaaS,36,Yes,Paid,26.5,14,1
+CMP-1008,Globex Corporation,SP-04,Divya Reddy,Enterprise,Manufacturing,11,No,Paid,21.5,22,0
+CMP-1009,Initech LLC,SP-02,Priya Menon,Small,SaaS,1,No,Organic,27.2,11,0
+CMP-1010,Umbrella Corp,SP-05,Karthik S,Enterprise,Finance,6,No,Cold Outreach,28.8,3,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Mid,SaaS,5,Yes,Referral,71.3,11,0
+CMP-1012,Pied Piper,SP-05,Karthik S,Mid,Finance,14,No,Paid,7.0,21,1
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Mid,Retail,37,No,Paid,1.0,24,0
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Mid,Healthcare,8,No,Organic,0.5,4,0
+CMP-1015,Wayne Enterprises,SP-04,Divya Reddy,Small,Manufacturing,35,No,Referral,7.1,26,1
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Mid,Healthcare,15,No,Cold Outreach,30.0,1,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Small,SaaS,2,No,Organic,38.9,45,0
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Mid,Retail,16,No,Organic,2.2,20,1
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,5,No,Organic,18.2,4,1
+CMP-1020,Aperture Science,SP-02,Priya Menon,Small,SaaS,10,No,Paid,7.7,2,1
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Enterprise,Finance,12,No,Paid,11.9,24,0
+CMP-1022,Dunder Mifflin,SP-03,Arjun Nair,Mid,Healthcare,19,Yes,Cold Outreach,9.7,7,1
+CMP-1023,Gekko & Co,SP-04,Divya Reddy,Mid,Manufacturing,55,Yes,Referral,49.9,15,1
+CMP-1024,Oscorp Industries,SP-02,Priya Menon,Mid,SaaS,10,Yes,Referral,25.6,11,1
+CMP-1025,Vandelay Industries,SP-05,Karthik S,Small,Finance,26,No,Referral,18.1,15,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Mid,SaaS,13,Yes,Paid,30.8,19,1
+CMP-1027,Sloan & Partners,SP-01,Rahul Kumar,Small,Retail,5,No,Referral,27.3,9,0
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Small,Retail,52,No,Referral,68.3,3,1
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Small,Healthcare,6,No,Paid,46.2,1,0
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Small,Finance,5,No,Cold Outreach,4.8,11,0
+CMP-1031,Horizon Healthcare,SP-05,Karthik S,Small,Finance,18,No,Cold Outreach,18.3,1,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Mid,SaaS,16,No,Cold Outreach,28.4,29,0
+CMP-1033,Omni Consumer Products,SP-01,Rahul Kumar,Mid,Retail,1,No,Referral,56.6,16,0
+CMP-1034,Virtucon,SP-01,Rahul Kumar,Mid,Retail,14,Yes,Organic,24.5,10,1
+CMP-1035,Ansel Manufacturing,SP-03,Arjun Nair,Small,Healthcare,4,No,Organic,9.5,7,1
+CMP-1001,Davis and Sons,SP-05,Karthik S,Small,Finance,17,No,Referral,59.3,15,0
+CMP-1002,Blake and Sons,SP-05,Karthik S,Small,Finance,15,No,Organic,1.1,19,0
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,7,Yes,Paid,12.3,15,1
+CMP-1004,Hernandez Ltd,SP-05,Karthik S,Small,Finance,35,Yes,Referral,13.9,16,1
+CMP-1005,Diaz-Frederick,SP-03,Arjun Nair,Small,Healthcare,9,No,Organic,50.1,7,0
+CMP-1006,CloudNine SaaS,SP-01,Rahul Kumar,Small,Retail,7,Yes,Organic,35.6,7,0
+CMP-1007,Acme Corp,SP-01,Rahul Kumar,Small,Retail,16,No,Referral,55.7,4,1
+CMP-1008,Globex Corporation,SP-05,Karthik S,Small,Finance,4,Yes,Cold Outreach,8.7,10,0
+CMP-1009,Initech LLC,SP-01,Rahul Kumar,Mid,Retail,3,No,Referral,7.4,2,0
+CMP-1010,Umbrella Corp,SP-02,Priya Menon,Mid,SaaS,5,Yes,Organic,22.2,17,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Small,SaaS,1,No,Cold Outreach,5.3,30,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Small,Manufacturing,5,No,Referral,31.5,1,0
+CMP-1013,Hooli Inc,SP-02,Priya Menon,Mid,SaaS,3,No,Referral,5.3,8,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Small,SaaS,2,No,Cold Outreach,1.7,2,0
+CMP-1015,Wayne Enterprises,SP-01,Rahul Kumar,Mid,Retail,19,No,Cold Outreach,14.6,5,1
+CMP-1016,Soylent Corp,SP-03,Arjun Nair,Mid,Healthcare,1,No,Organic,9.0,6,0
+CMP-1017,Wonka Industries,SP-02,Priya Menon,Enterprise,SaaS,2,No,Cold Outreach,31.4,2,0
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,7,No,Cold Outreach,4.5,5,0
+CMP-1019,Tyrell Corporation,SP-01,Rahul Kumar,Small,Retail,2,Yes,Cold Outreach,47.6,5,0
+CMP-1020,Aperture Science,SP-03,Arjun Nair,Small,Healthcare,2,Yes,Referral,61.3,14,0
+CMP-1021,Sterling Cooper,SP-05,Karthik S,Mid,Finance,6,Yes,Referral,31.3,6,0
+CMP-1022,Dunder Mifflin,SP-01,Rahul Kumar,Small,Retail,4,No,Cold Outreach,13.6,25,0
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,3,No,Organic,33.8,10,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Small,Finance,21,No,Organic,12.5,1,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Mid,Healthcare,4,No,Referral,28.0,4,0
+CMP-1026,Bluth Company,SP-05,Karthik S,Small,Finance,7,No,Cold Outreach,21.4,3,0
+CMP-1027,Sloan & Partners,SP-05,Karthik S,Mid,Finance,7,Yes,Organic,2.5,6,1
+CMP-1028,Summit Solutions,SP-05,Karthik S,Enterprise,Finance,10,No,Referral,7.2,29,0
+CMP-1029,Nexus Logistics,SP-05,Karthik S,Enterprise,Finance,14,Yes,Organic,15.5,3,1
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Enterprise,Finance,9,No,Cold Outreach,64.0,23,0
+CMP-1031,Horizon Healthcare,SP-03,Arjun Nair,Small,Healthcare,8,No,Organic,42.8,23,0
+CMP-1032,Cascade Retail,SP-01,Rahul Kumar,Small,Retail,12,Yes,Organic,12.2,43,0
+CMP-1033,Omni Consumer Products,SP-05,Karthik S,Small,Finance,25,Yes,Cold Outreach,2.0,10,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Mid,SaaS,14,Yes,Organic,46.8,1,1
+CMP-1035,Ansel Manufacturing,SP-05,Karthik S,Enterprise,Finance,3,No,Referral,31.1,4,1
+CMP-1001,Davis and Sons,SP-05,Karthik S,Mid,Finance,11,Yes,Referral,12.4,5,1
+CMP-1002,Blake and Sons,SP-05,Karthik S,Mid,Finance,5,No,Cold Outreach,37.1,8,0
+CMP-1003,Doyle Ltd,SP-05,Karthik S,Small,Finance,88,No,Organic,51.8,12,0
+CMP-1004,Hernandez Ltd,SP-04,Divya Reddy,Mid,Manufacturing,3,No,Cold Outreach,9.8,1,0
+CMP-1005,Diaz-Frederick,SP-05,Karthik S,Enterprise,Finance,12,No,Referral,3.6,13,0
+CMP-1006,CloudNine SaaS,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,33.9,2,1
+CMP-1007,Acme Corp,SP-03,Arjun Nair,Mid,Healthcare,2,No,Cold Outreach,3.2,5,0
+CMP-1008,Globex Corporation,SP-03,Arjun Nair,Enterprise,Healthcare,15,No,Referral,3.1,17,1
+CMP-1009,Initech LLC,SP-05,Karthik S,Mid,Finance,35,No,Paid,73.5,2,1
+CMP-1010,Umbrella Corp,SP-03,Arjun Nair,Enterprise,Healthcare,10,No,Referral,41.4,2,0
+CMP-1011,Veer Technologies,SP-02,Priya Menon,Small,SaaS,7,No,Cold Outreach,7.3,1,0
+CMP-1012,Pied Piper,SP-04,Divya Reddy,Small,Manufacturing,8,Yes,Organic,8.1,16,1
+CMP-1013,Hooli Inc,SP-01,Rahul Kumar,Mid,Retail,20,Yes,Referral,6.9,23,1
+CMP-1014,Stark Industries,SP-03,Arjun Nair,Mid,Healthcare,1,No,Paid,27.3,7,1
+CMP-1015,Wayne Enterprises,SP-02,Priya Menon,Small,SaaS,20,No,Cold Outreach,3.4,3,1
+CMP-1016,Soylent Corp,SP-04,Divya Reddy,Small,Manufacturing,20,No,Cold Outreach,37.3,5,0
+CMP-1017,Wonka Industries,SP-05,Karthik S,Small,Finance,4,Yes,Cold Outreach,84.0,1,1
+CMP-1018,Cyberdyne Systems,SP-02,Priya Menon,Small,SaaS,2,No,Cold Outreach,7.7,1,0
+CMP-1019,Tyrell Corporation,SP-02,Priya Menon,Small,SaaS,8,No,Referral,13.0,27,1
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Mid,Retail,6,No,Paid,23.5,7,0
+CMP-1021,Sterling Cooper,SP-04,Divya Reddy,Enterprise,Manufacturing,16,Yes,Paid,2.5,5,1
+CMP-1022,Dunder Mifflin,SP-04,Divya Reddy,Small,Manufacturing,11,Yes,Paid,4.6,23,1
+CMP-1023,Gekko & Co,SP-01,Rahul Kumar,Enterprise,Retail,5,No,Paid,157.9,10,0
+CMP-1024,Oscorp Industries,SP-05,Karthik S,Mid,Finance,22,No,Referral,0.5,5,1
+CMP-1025,Vandelay Industries,SP-01,Rahul Kumar,Small,Retail,3,No,Organic,23.0,8,0
+CMP-1026,Bluth Company,SP-02,Priya Menon,Small,SaaS,4,No,Paid,15.0,1,0
+CMP-1027,Sloan & Partners,SP-03,Arjun Nair,Small,Healthcare,11,No,Organic,63.1,4,0
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Mid,Retail,2,Yes,Cold Outreach,16.4,2,0
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Small,Healthcare,69,No,Cold Outreach,21.9,20,0
+CMP-1030,Pinnacle Capital,SP-05,Karthik S,Mid,Finance,7,Yes,Organic,28.5,3,1
+CMP-1031,Horizon Healthcare,SP-01,Rahul Kumar,Small,Retail,11,No,Paid,12.7,3,0
+CMP-1032,Cascade Retail,SP-02,Priya Menon,Small,SaaS,3,No,Referral,15.5,6,1
+CMP-1033,Omni Consumer Products,SP-03,Arjun Nair,Mid,Healthcare,5,No,Referral,13.8,4,1
+CMP-1034,Virtucon,SP-02,Priya Menon,Enterprise,SaaS,1,Yes,Organic,2.9,8,0
+CMP-1035,Ansel Manufacturing,SP-02,Priya Menon,Mid,SaaS,9,No,Paid,43.9,25,0
+CMP-1001,Davis and Sons,SP-02,Priya Menon,Mid,SaaS,4,No,Referral,24.1,3,0
+CMP-1002,Blake and Sons,SP-02,Priya Menon,Small,SaaS,2,Yes,Organic,6.0,44,1
+CMP-1003,Doyle Ltd,SP-03,Arjun Nair,Small,Healthcare,14,Yes,Cold Outreach,19.8,13,0
+CMP-1004,Hernandez Ltd,SP-01,Rahul Kumar,Mid,Retail,11,No,Cold Outreach,24.6,18,0
+CMP-1005,Diaz-Frederick,SP-02,Priya Menon,Enterprise,SaaS,25,Yes,Paid,15.5,2,1
+CMP-1006,CloudNine SaaS,SP-05,Karthik S,Small,Finance,60,No,Paid,2.9,13,0
+CMP-1007,Acme Corp,SP-02,Priya Menon,Small,SaaS,34,Yes,Cold Outreach,4.2,3,1
+CMP-1008,Globex Corporation,SP-02,Priya Menon,Mid,SaaS,5,No,Referral,25.7,6,1
+CMP-1009,Initech LLC,SP-02,Priya Menon,Enterprise,SaaS,33,Yes,Paid,1.0,7,1
+CMP-1010,Umbrella Corp,SP-01,Rahul Kumar,Mid,Retail,2,No,Paid,36.2,1,0
+CMP-1011,Veer Technologies,SP-03,Arjun Nair,Small,Healthcare,14,No,Cold Outreach,1.6,24,0
+CMP-1012,Pied Piper,SP-01,Rahul Kumar,Small,Retail,27,No,Organic,34.0,9,0
+CMP-1013,Hooli Inc,SP-05,Karthik S,Mid,Finance,18,No,Referral,0.5,17,0
+CMP-1014,Stark Industries,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,23.8,44,0
+CMP-1015,Wayne Enterprises,SP-03,Arjun Nair,Small,Healthcare,34,No,Cold Outreach,13.4,11,1
+CMP-1016,Soylent Corp,SP-02,Priya Menon,Mid,SaaS,1,No,Organic,2.8,3,0
+CMP-1017,Wonka Industries,SP-05,Karthik S,Mid,Finance,1,Yes,Referral,16.6,5,1
+CMP-1018,Cyberdyne Systems,SP-01,Rahul Kumar,Small,Retail,2,Yes,Referral,88.4,12,0
+CMP-1019,Tyrell Corporation,SP-04,Divya Reddy,Mid,Manufacturing,8,No,Referral,0.5,27,0
+CMP-1020,Aperture Science,SP-01,Rahul Kumar,Small,Retail,55,No,Cold Outreach,146.7,3,0
+CMP-1021,Sterling Cooper,SP-02,Priya Menon,Enterprise,SaaS,47,Yes,Organic,49.1,1,1
+CMP-1022,Dunder Mifflin,SP-02,Priya Menon,Mid,SaaS,11,Yes,Referral,4.3,5,1
+CMP-1023,Gekko & Co,SP-05,Karthik S,Mid,Finance,8,Yes,Organic,3.3,3,0
+CMP-1024,Oscorp Industries,SP-04,Divya Reddy,Enterprise,Manufacturing,4,No,Paid,30.7,51,0
+CMP-1025,Vandelay Industries,SP-03,Arjun Nair,Small,Healthcare,23,No,Cold Outreach,73.9,8,1
+CMP-1026,Bluth Company,SP-04,Divya Reddy,Enterprise,Manufacturing,3,No,Paid,14.5,22,0
+CMP-1027,Sloan & Partners,SP-04,Divya Reddy,Small,Manufacturing,5,No,Organic,23.4,2,1
+CMP-1028,Summit Solutions,SP-01,Rahul Kumar,Small,Retail,4,Yes,Paid,0.5,8,1
+CMP-1029,Nexus Logistics,SP-03,Arjun Nair,Small,Healthcare,3,No,Organic,70.4,2,0
+CMP-1030,Pinnacle Capital,SP-02,Priya Menon,Enterprise,SaaS,1,No,Cold Outreach,8.8,28,0
