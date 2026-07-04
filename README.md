@@ -1,103 +1,85 @@
-# AI Sales Lead Intelligence Platform
+# LeadIQ — AI Sales Lead Intelligence Platform
 
-A full-stack AI-powered sales lead qualification system combining ML-based lead scoring, RAG-grounded recommendations, and an intelligent chat assistant.
+A full-stack, enterprise-grade B2B sales lead qualification and intelligence platform. It features machine-learning-based lead scoring, a multi-tool autonomous AI Agent for lead diagnostics, RAG-grounded outreach email generation, and a context-aware chat assistant.
 
-## Architecture
+---
 
+## 🚀 Key Features
+
+### 1. 🔐 Two-Step Company Authentication Flow
+* **Side-by-side Layout:** A visual list of registered client companies on the left, with an authorization panel on the right.
+* **Secured Access Codes:** Authenticate sessions securely using lowercase names plus a numeric suffix (e.g., `davisandsons12`).
+* **Session Scoping:** Once logged in, all data points, lead pipelines, chat history, and exports are restricted solely to the active company's scope.
+
+### 2. ⚡ Autonomous Sales Operations Agent (`/api/agent`)
+* **Parallel Fast-Path:** Analyzes Hot and Warm leads concurrently using `Promise.all()` to generate explanations and playbooks in parallel. Cuts analysis time from **~20s → ~5s**.
+* **Markdown Rendered Analysis:** Renders a clean structured diagnosis with a clear **Verdict**, bulleted **Why** factors, **Engagement Signal** checks, and a direct **Action for Today**.
+* **Draft outreach template:** Instantly produces a personalized follow-up email tailored to the prospect's industry and website visits.
+* **Copy to Clipboard:** Features a **Copy Email** button to copy drafts in one click.
+* **Muting of Cold Leads:** Instantly logs `no_action_needed` for cold leads with zero active engagement to save representative time.
+* **Audit Trail Log:** Exposes the underlying step-by-step tool trace so reps can inspect *how* the agent reasoned through the lead.
+
+### 3. 📊 Expanded Pipeline Dataset (1,500 leads)
+* **High density data:** Database expanded to **1,500 records** distributed evenly across a fixed pool of 35 companies (roughly 40-50 leads per company).
+* **Deterministic Spikes:** Real-time engagement spikes are flagged when a prospect's website visits exceed their historical baseline by 1.8x.
+
+### 4. 💬 General fallback Sales Chatbot
+* **Hybrid RAG Chat:** Grounded in case studies and playbooks, with a smart fallback to general B2B sales coaching principles when playbook context isn't matched.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technology | Description |
+|---|---|---|
+| **Frontend** | Next.js 14 (App Router) | High-performance React application structure |
+| **Styling** | Tailwind CSS & Vanilla CSS | Sleek, dark-mode premium copper-gold palette |
+| **Database/Cache** | CSV & local JSON | Local data storage for pipeline records |
+| **Vector DB** | Pinecone | Vector indexing of playbook guides |
+| **Embeddings** | NVIDIA NIM | `nvidia/nv-embedqa-e5-v5` for query matching |
+| **LLM Engine** | Groq & NVIDIA NIM | Primary: `llama-3.3-70b-versatile` (fast fallback to NVIDIA) |
+| **ML Engine** | Python / scikit-learn | Custom classifier for conversion scores |
+
+---
+
+## 💻 Quick Start & Setup
+
+### 1. Configure Secrets
+Rename `.env.local.example` to `.env.local` and configure your API keys:
+```env
+GROQ_API_KEY=gsk_...
+NVIDIA_API_KEY=nvapi-...
+PINECONE_API_KEY=pcsk_...
+PINECONE_INDEX_NAME=sales-leads-kb
 ```
-ML Pipeline (Python)  →  scored_leads.csv  →  Next.js API routes  →  React Frontend
-NVIDIA NIM embeddings →  Pinecone index    →  /api/chat, /api/recommend-action
-NVIDIA NIM / Groq LLM →  LLM explanations →  /api/explain-lead
-```
 
-## Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | Next.js 14 (App Router), Tailwind CSS |
-| ML Pipeline | Python, scikit-learn, XGBoost, Faker |
-| Embeddings | NVIDIA NIM (`nvidia/nv-embedqa-e5-v5`) |
-| LLM | NVIDIA NIM (`meta/llama-3.1-70b-instruct`) → Groq fallback (`llama-3.3-70b-versatile`) |
-| Vector DB | Pinecone |
-
-## Quick Start
-
-### 1. Clone & Configure
-
-```bash
-# Copy environment template
-cp .env.local.example .env.local
-# Edit .env.local and fill in your API keys
-```
-
-Required keys:
-- `NVIDIA_API_KEY` — [build.nvidia.com](https://build.nvidia.com)
-- `GROQ_API_KEY` — [console.groq.com](https://console.groq.com)
-- `PINECONE_API_KEY` — [app.pinecone.io](https://app.pinecone.io)
-- `PINECONE_INDEX_NAME` — name of your Pinecone index (must be **1024-dim**, cosine metric)
-
-### 2. Create Pinecone Index
-
-In the Pinecone console, create an index with:
-- **Dimensions**: 1024
-- **Metric**: cosine
-- **Name**: `sales-leads-kb` (or whatever you set in `PINECONE_INDEX_NAME`)
-
-### 3. Run the ML Pipeline
-
+### 2. Generate and Score leads
+Regenerate the 1,500 lead database and train/score the classification models:
 ```bash
 cd ml
 pip install -r requirements.txt
 python generate_and_train.py
 ```
 
-This generates:
-- `ml/scored_leads.csv` — 1000 scored leads
-- `ml/best_model.pkl` — trained model
-- `ml/raw_leads.csv` — raw synthetic dataset
-
-### 4. Embed the Knowledge Base
-
+### 3. Embed Playbooks into Vector DB
 ```bash
 npm install
 npm run embed-docs
 ```
 
-This reads `docs/*.txt`, embeds each paragraph via NVIDIA NIM, and upserts into Pinecone.
-
-### 5. Run the App
-
+### 4. Start Next.js Development Server
 ```bash
 npm run dev
 ```
+Open [http://localhost:3000](http://localhost:3000) and select a company card on the login screen to access the console!
 
-Open [http://localhost:3000](http://localhost:3000) — it redirects to `/leads`.
+---
 
-## Pages
-
-### `/leads` — Lead Intelligence Table
-- Sortable by conversion score, website visits
-- Filterable by priority: Hot 🔴 / Warm 🟡 / Cold 🔵
-- Search by industry, source, ID
-- ⚡ Engagement spike badge for high-visit leads
-- Expandable rows with:
-  - AI explanation of why the lead is high/low priority
-  - Recommended next action + draft follow-up email (RAG-grounded)
-  - Mark as Converted / Not Converted (writes to `data/feedback.csv`)
-
-### `/chat` — AI Sales Assistant
-- RAG chatbot grounded in your knowledge base
-- Sources cited under each answer
-- Conversation history included in each request
-- Suggested questions on empty state
-
-## API Routes
-
-| Route | Method | Description |
-|---|---|---|
-| `/api/leads` | GET | Paginated, sortable, filterable leads |
-| `/api/explain-lead` | POST | LLM explanation of lead priority |
-| `/api/recommend-action` | POST | RAG-grounded action + draft email |
+## 🔒 Sales Rep Accounts for Quick Demo
+* **Davis and Sons** — Access Code: `davisandsons12`
+* **Blake and Sons** — Access Code: `blakeandsons12`
+* **Doyle Ltd** — Access Code: `doyleltd12`
+* **Hernandez Ltd** — Access Code: `hernandezltd12`
 | `/api/chat` | POST | RAG chatbot |
 | `/api/feedback` | POST/GET | Record/read lead outcomes |
 
