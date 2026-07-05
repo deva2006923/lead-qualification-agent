@@ -657,18 +657,18 @@ Open [http://localhost:3000](http://localhost:3000) and log in!
 
 ## 👤 Developer Profile
 
-![Developer](https://img.shields.io/badge/Developer-Pratap_Sakthivel-FF6B35?style=for-the-badge)
+![Developer](https://img.shields.io/badge/Developer-Devaprakassh-FF6B35?style=for-the-badge)
 
-### Built with ❤️ by Pratap Sakthivel
+### Built with ❤️ by Devaprakassh
 
-*AI/ML Engineer · Full-Stack Developer · Autonomous Systems Enthusiast*
+*Backend Developer · ML Developer · Autonomous Systems Enthusiast*
 
 <table>
 <tr>
 <td align="center" width="33%">
-<img src="https://img.shields.io/badge/Role-AI%2FML_Engineer-7C3AED?style=for-the-badge" alt="Role"/><br><br>
+<img src="https://img.shields.io/badge/Role-Backend_%26_ML_Developer-7C3AED?style=for-the-badge" alt="Role"/><br><br>
 <b>Core Expertise</b><br>
-Machine Learning · LLM Integration<br>RAG Pipelines · FastAPI · Next.js
+FastAPI · Next.js Routing<br>XGBoost ML Modeling · Pinecone RAG
 </td>
 <td align="center" width="33%">
 <a href="./Resume/">
@@ -685,8 +685,8 @@ Machine Learning · LLM Integration<br>RAG Pipelines · FastAPI · Next.js
 
 ### 📫 Connect
 
-[![GitHub](https://img.shields.io/badge/GitHub-PratapSakthivel-181717?style=for-the-badge&logo=github)](https://github.com/PratapSakthivel)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pratap@example.com)
+[![GitHub](https://img.shields.io/badge/GitHub-deva2006923-181717?style=for-the-badge&logo=github)](https://github.com/deva2006923)
+[![Email](https://img.shields.io/badge/Email-devaprakassh49%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:devaprakassh49@gmail.com)
 
 </div>
 
@@ -696,8 +696,8 @@ Machine Learning · LLM Integration<br>RAG Pipelines · FastAPI · Next.js
 
 ### ⭐ Star this repo if LeadIQ impressed you!
 
-[![Star History](https://img.shields.io/github/stars/PratapSakthivel/lead-qualification-agent?style=social)](https://github.com/PratapSakthivel)
+[![Star History](https://img.shields.io/github/stars/deva2006923/lead-qualification-agent?style=social)](https://github.com/deva2006923)
 
-<sub>Made with ❤️ by Pratap Sakthivel | © 2026 LeadIQ | All Rights Reserved</sub>
+<sub>Made with ❤️ by Devaprakassh | © 2026 LeadIQ | All Rights Reserved</sub>
 
 </div>
