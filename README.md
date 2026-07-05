@@ -462,17 +462,39 @@ Bot → ✉️ DRAFT EMAIL (Pinecone context: case-studies.txt, pricing-faq.txt)
 ```
 lead-qualification-agent/
 │
-├── backend/                          # 🐍 Python FastAPI Backend
-│   ├── __init__.py
-│   ├── main.py                       # All 9 API endpoints (FastAPI)
-│   ├── llm.py                        # Groq primary → NVIDIA NIM fallback
-│   ├── embeddings.py                 # NVIDIA NIM 1024-dim embed client
-│   ├── pinecone_db.py                # Pinecone vector index query helper
-│   └── requirements.txt             # Python backend dependencies
+├── src/                              # ⚛️ Next.js 14 — Full-Stack App
+│   ├── app/
+│   │   ├── layout.js                 # Root layout + global styles
+│   │   ├── page.js                   # Redirects to /leads
+│   │   ├── leads/page.js             # Main lead intelligence dashboard
+│   │   ├── chat/page.js              # RAG sales coach chatbot
+│   │   ├── login/page.js             # Company authentication
+│   │   ├── register/page.js          # Company + CSV upload
+│   │   ├── admin/page.js             # Admin panel
+│   │   └── api/                      # ⚡ Next.js API Routes (no separate server needed)
+│   │       ├── agent/route.js        # Autonomous sales agent (parallel fast-path)
+│   │       ├── explain-lead/route.js # LLM lead diagnosis
+│   │       ├── recommend-action/route.js # RAG-grounded email + action plan
+│   │       ├── chat/route.js         # Hybrid RAG sales coach chatbot
+│   │       ├── leads/route.js        # Scored leads reader + filter/sort/paginate
+│   │       ├── companies/route.js    # Company registry
+│   │       ├── auth/login/route.js   # Session authentication
+│   │       ├── register/route.js     # Company + CSV onboarding + live scoring
+│   │       ├── feedback/route.js     # Outcome feedback logger
+│   │       └── admin/upload/route.js # Admin CSV override + re-score
+│   ├── lib/                          # 🔧 Shared server-side utilities
+│   │   ├── llm.js                    # Groq primary → NVIDIA NIM fallback
+│   │   ├── embeddings.js             # NVIDIA NIM 1024-dim embed client
+│   │   ├── pinecone.js               # Pinecone vector index query helper
+│   │   └── leads.js                  # CSV reader for ml/scored_leads.csv
+│   └── components/
+│       ├── Navbar.js
+│       ├── LeadRow.js
+│       └── ChatMessage.js
 │
-├── ml/                               # 🧠 Machine Learning Pipeline
+├── ml/                               # 🧠 Machine Learning Pipeline (Python — offline)
 │   ├── generate_and_train.py         # Dataset gen + 3-model tournament
-│   ├── score_custom_leads.py         # Custom CSV upload scorer
+│   ├── score_custom_leads.py         # Custom CSV upload scorer (called by /api/register)
 │   ├── best_model.pkl                # Serialized XGBoost champion
 │   ├── scored_leads.csv              # 1,500 scored leads (35 companies)
 │   ├── raw_leads.csv                 # Raw generated dataset
@@ -490,29 +512,17 @@ lead-qualification-agent/
 │   ├── companies.json                # Registered company registry
 │   └── feedback.csv                  # Rep outcome feedback for retraining
 │
-├── src/                              # ⚛️ Next.js Frontend (React)
-│   ├── app/
-│   │   ├── layout.js                 # Root layout
-│   │   ├── page.js                   # Redirects to /leads
-│   │   ├── leads/page.js             # Main lead intelligence dashboard
-│   │   ├── chat/page.js              # RAG sales coach chatbot
-│   │   ├── login/page.js             # Company authentication
-│   │   ├── register/page.js          # Company + CSV upload
-│   │   └── admin/page.js            # Admin panel
-│   └── components/
-│       ├── Navbar.js
-│       ├── LeadRow.js
-│       └── ChatMessage.js
-│
 ├── Resume/                           # 📄 Developer Resume (add your PDF here)
 ├── Video/                            # 🎥 Demo Video (add your video here)
-├── next.config.js                    # Proxy: /api/* → localhost:8000
+├── next.config.js                    # Next.js config
 └── .env.local.example               # Environment variables template
 ```
 
 ---
 
 ## 💻 Quick Start & Setup
+
+> **No separate backend server needed.** All API logic runs inside Next.js API Routes — one process, one port.
 
 ### 1. Configure API Keys
 Rename `.env.local.example` → `.env.local` and fill in:
@@ -523,7 +533,7 @@ PINECONE_API_KEY=pcsk_...
 PINECONE_INDEX_NAME=sales-leads-kb
 ```
 
-### 2. Install Frontend Dependencies
+### 2. Install Dependencies
 ```bash
 npm install
 ```
@@ -541,18 +551,10 @@ This generates **1,500 scored leads** across **35 companies** and saves `best_mo
 npm run embed-docs
 ```
 
-### 5. Install Python Backend Dependencies
-```bash
-pip install -r backend/requirements.txt
-```
-
-### 6. Run Both Servers
+### 5. Run the App
 
 ```bash
-# Terminal 1 — Python FastAPI backend (port 8000)
-python -m uvicorn backend.main:app --reload --port 8000
-
-# Terminal 2 — Next.js frontend (port 3000)
+# Single command — Next.js serves both frontend + API (port 3000)
 npm run dev
 ```
 
@@ -590,7 +592,7 @@ Open [http://localhost:3000](http://localhost:3000) and log in!
 | 2 | ✅ Done | Autonomous agent — parallel fast-path, tool trace, cold muter |
 | 3 | ✅ Done | RAG pipeline — NVIDIA NIM embeddings, Pinecone, grounded email drafts |
 | 4 | ✅ Done | Company-scoped auth, custom CSV upload, live scoring via `best_model.pkl` |
-| 5 | ✅ Done | Python FastAPI backend migration, Next.js proxy rewrites |
+| 5 | ✅ Done | Full-stack consolidation — Python FastAPI removed, all 10 endpoints migrated to Next.js API Routes |
 | 6 | ✅ Done | Engagement spike detector (1.8× threshold), urgency flagging |
 | 7 | 🔲 Planned | Webhook-based real-time lead ingestion |
 | 8 | 🔲 Planned | Online model retraining from feedback loop |
@@ -610,8 +612,8 @@ Open [http://localhost:3000](http://localhost:3000) and log in!
 </a>
 </td>
 <td align="center">
-<a href="https://fastapi.tiangolo.com">
-<img src="https://img.shields.io/badge/FastAPI-Python_Backend-009688?style=for-the-badge&logo=fastapi" alt="FastAPI"/>
+<a href="https://nextjs.org">
+<img src="https://img.shields.io/badge/Next.js_API_Routes-Full--Stack-000000?style=for-the-badge&logo=nextdotjs" alt="Next.js API Routes"/>
 </a>
 </td>
 <td align="center">
@@ -668,7 +670,7 @@ Open [http://localhost:3000](http://localhost:3000) and log in!
 <td align="center" width="33%">
 <img src="https://img.shields.io/badge/Role-Backend_%26_ML_Developer-7C3AED?style=for-the-badge" alt="Role"/><br><br>
 <b>Core Expertise</b><br>
-FastAPI · Next.js Routing<br>XGBoost ML Modeling · Pinecone RAG
+Next.js Full-Stack · XGBoost ML<br>Pinecone RAG · LLM Agent Systems
 </td>
 <td align="center" width="33%">
 <a href="./Resume/">
