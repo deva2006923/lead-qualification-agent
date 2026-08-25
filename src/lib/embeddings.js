@@ -48,15 +48,29 @@ export async function embedText(text, inputType = "query") {
 
   if (provider === "gemini") {
     try {
-      const openai = new OpenAI({
-        apiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
-      });
-      const resp = await openai.embeddings.create({
-        model: "text-embedding-004",
-        input: text,
-      });
-      let embedding = resp.data?.[0]?.embedding ?? [];
+      const resp = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent?key=${apiKey}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            content: {
+              parts: [{ text }],
+            },
+          }),
+        }
+      );
+
+      if (!resp.ok) {
+        const err = await resp.text();
+        throw new Error(`Gemini Embedding API error ${resp.status}: ${err}`);
+      }
+
+      const data = await resp.json();
+      let embedding = data.embedding?.values ?? [];
+      
       // Pad to 1024 dimensions if needed
       if (embedding.length > 0 && embedding.length < 1024) {
         const padding = new Array(1024 - embedding.length).fill(0);
@@ -130,16 +144,32 @@ export async function embedBatch(texts, inputType = "passage") {
 
   if (provider === "gemini") {
     try {
-      const openai = new OpenAI({
-        apiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
-      });
-      const resp = await openai.embeddings.create({
-        model: "text-embedding-004",
-        input: texts,
-      });
-      return resp.data.map((d) => {
-        let embedding = d.embedding;
+      const requests = texts.map((t) => ({
+        model: "models/text-embedding-004",
+        content: {
+          parts: [{ text: t }],
+        },
+      }));
+
+      const resp = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents?key=${apiKey}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ requests }),
+        }
+      );
+
+      if (!resp.ok) {
+        const err = await resp.text();
+        throw new Error(`Gemini Batch Embedding API error ${resp.status}: ${err}`);
+      }
+
+      const data = await resp.json();
+      return (data.embeddings ?? []).map((e) => {
+        let embedding = e.values ?? [];
         if (embedding.length > 0 && embedding.length < 1024) {
           const padding = new Array(1024 - embedding.length).fill(0);
           embedding = embedding.concat(padding);
