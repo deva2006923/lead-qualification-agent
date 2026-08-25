@@ -37,50 +37,9 @@ function makeClient(provider) {
  * @returns {{ text: string, message: object, provider: string }}
  */
 export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, tools, tool_choice } = {}) {
-  let groqError = null;
+  let nvidiaError = null;
 
-  // --- Primary: Groq (fast ~800 tokens/sec) ---
-  if (process.env.GROQ_API_KEY) {
-    const modelsToTry = [
-      GROQ_MODEL,
-      "llama-3.3-70b-specdec",
-      "llama-3.1-8b-instant",
-    ];
-
-    // Remove duplicates while preserving order
-    const uniqueModels = [...new Set(modelsToTry)];
-
-    for (const model of uniqueModels) {
-      try {
-        console.log(`[LLM] Attempting Groq call with model: ${model}`);
-        const client = makeClient("groq");
-        const resp = await client.chat.completions.create({
-          model,
-          messages,
-          temperature,
-          max_tokens:  maxTokens,
-          stream:      false,
-          ...(tools       && { tools }),
-          ...(tool_choice && { tool_choice }),
-        });
-        const message = resp.choices?.[0]?.message;
-        const text = message?.content?.trim() ?? "";
-        return { text, message, provider: "groq" };
-      } catch (err) {
-        groqError = err;
-        const status = err?.status ?? err?.response?.status;
-        console.warn(`[LLM] Groq failed for model ${model} with status ${status}:`, err.message);
-        
-        // If it's a auth error (401/403) or rate limit (429) or server error (500+),
-        // break and proceed to NVIDIA NIM fallback rather than trying other Groq models.
-        if (status === 401 || status === 403 || status === 429 || status >= 500) {
-          break;
-        }
-      }
-    }
-  }
-
-  // --- Fallback: NVIDIA NIM ---
+  // --- Primary: NVIDIA NIM ---
   if (process.env.NVIDIA_API_KEY) {
     try {
       console.log(`[LLM] Attempting NVIDIA NIM call with model: ${NVIDIA_MODEL}`);
@@ -98,15 +57,53 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
       const text = message?.content?.trim() ?? "";
       return { text, message, provider: "nvidia" };
     } catch (err) {
+      nvidiaError = err;
       console.error(`[LLM] NVIDIA NIM failed:`, err.message);
-      throw new Error(`Both LLM providers failed. Groq: ${groqError?.message || "not attempted"}. NVIDIA NIM: ${err.message}`);
     }
   }
 
-  // If both are not configured or failed
-  if (groqError) {
-    throw groqError;
+  // --- Fallback: Groq ---
+  if (process.env.GROQ_API_KEY) {
+    const modelsToTry = [
+      GROQ_MODEL,
+      "llama-3.3-70b-specdec",
+      "llama-3.1-8b-instant",
+    ];
+
+    // Remove duplicates while preserving order
+    const uniqueModels = [...new Set(modelsToTry)];
+
+    for (const model of uniqueModels) {
+      try {
+        console.log(`[LLM] Attempting Groq fallback call with model: ${model}`);
+        const client = makeClient("groq");
+        const resp = await client.chat.completions.create({
+          model,
+          messages,
+          temperature,
+          max_tokens:  maxTokens,
+          stream:      false,
+          ...(tools       && { tools }),
+          ...(tool_choice && { tool_choice }),
+        });
+        const message = resp.choices?.[0]?.message;
+        const text = message?.content?.trim() ?? "";
+        return { text, message, provider: "groq" };
+      } catch (err) {
+        const status = err?.status ?? err?.response?.status;
+        console.warn(`[LLM] Groq failed for model ${model} with status ${status}:`, err.message);
+        
+        if (status === 401 || status === 403 || status === 429 || status >= 500) {
+          break;
+        }
+      }
+    }
   }
 
-  throw new Error("No LLM API keys configured. Set GROQ_API_KEY or NVIDIA_API_KEY in environment variables.");
+  // If both failed or are not configured
+  if (nvidiaError) {
+    throw new Error(`NVIDIA NIM failed: ${nvidiaError.message}. Groq fallback: ${process.env.GROQ_API_KEY ? "failed" : "not configured"}`);
+  }
+
+  throw new Error("No LLM API keys configured. Please set NVIDIA_API_KEY in environment variables.");
 }
