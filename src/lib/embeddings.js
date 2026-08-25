@@ -1,12 +1,17 @@
-/**
- * NVIDIA NIM Embedding Utility
- * =============================
- * Calls the NVIDIA NIM embedding endpoint and returns a float[] vector.
- * Model: nvidia/nv-embedqa-e5-v5 (1024-dim)
- */
+import OpenAI from "openai";
 
 const NVIDIA_EMBED_BASE = "https://integrate.api.nvidia.com/v1";
 const EMBED_MODEL       = "nvidia/nv-embedqa-e5-v5";
+
+/** Helper to detect and retrieve OpenAI key (even if misconfigured in NVIDIA_API_KEY) */
+function getOpenAIKey() {
+  return process.env.OPENAI_API_KEY || (
+    process.env.NVIDIA_API_KEY && (
+      process.env.NVIDIA_API_KEY.startsWith("sk-") || 
+      process.env.NVIDIA_API_KEY.startsWith("sk_")
+    ) ? process.env.NVIDIA_API_KEY : null
+  );
+}
 
 /**
  * Embed a single text string.
@@ -15,6 +20,22 @@ const EMBED_MODEL       = "nvidia/nv-embedqa-e5-v5";
  * @returns {Promise<number[]>}
  */
 export async function embedText(text, inputType = "query") {
+  const openAIKey = getOpenAIKey();
+  if (openAIKey) {
+    try {
+      const openai = new OpenAI({ apiKey: openAIKey });
+      const resp = await openai.embeddings.create({
+        model: "text-embedding-3-small",
+        input: text,
+        dimensions: 1024,
+      });
+      return resp.data?.[0]?.embedding ?? [];
+    } catch (err) {
+      console.error("[Embeddings] OpenAI embedding failed:", err.message);
+      throw err;
+    }
+  }
+
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 8000);
 
@@ -57,6 +78,22 @@ export async function embedText(text, inputType = "query") {
  * @returns {Promise<number[][]>}
  */
 export async function embedBatch(texts, inputType = "passage") {
+  const openAIKey = getOpenAIKey();
+  if (openAIKey) {
+    try {
+      const openai = new OpenAI({ apiKey: openAIKey });
+      const resp = await openai.embeddings.create({
+        model: "text-embedding-3-small",
+        input: texts,
+        dimensions: 1024,
+      });
+      return resp.data.map((d) => d.embedding);
+    } catch (err) {
+      console.error("[Embeddings] OpenAI batch embedding failed:", err.message);
+      throw err;
+    }
+  }
+
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 12000); // 12s for batch
 

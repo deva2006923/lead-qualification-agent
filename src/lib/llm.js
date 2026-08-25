@@ -14,6 +14,17 @@ const GROQ_BASE_URL   = "https://api.groq.com/openai/v1";
 
 const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.3-70b-instruct";
 const GROQ_MODEL   = process.env.GROQ_MODEL   || "llama-3.3-70b-versatile";
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+
+/** Helper to detect and retrieve OpenAI key (even if misconfigured in NVIDIA_API_KEY) */
+function getOpenAIKey() {
+  return process.env.OPENAI_API_KEY || (
+    process.env.NVIDIA_API_KEY && (
+      process.env.NVIDIA_API_KEY.startsWith("sk-") || 
+      process.env.NVIDIA_API_KEY.startsWith("sk_")
+    ) ? process.env.NVIDIA_API_KEY : null
+  );
+}
 
 /** Create an OpenAI-compatible client for the given provider. */
 function makeClient(provider) {
@@ -30,7 +41,7 @@ function makeClient(provider) {
 }
 
 /**
- * Call the LLM — tries Groq first (fast ~800 tok/s), falls back to NVIDIA NIM.
+ * Call the LLM — tries OpenAI/NVIDIA first, falls back to Groq.
  *
  * @param {Array}  messages  - OpenAI chat messages array
  * @param {Object} options   - { temperature, maxTokens, tools, tool_choice }
@@ -38,9 +49,42 @@ function makeClient(provider) {
  */
 export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, tools, tool_choice } = {}) {
   let nvidiaError = null;
+  let openAIError = null;
 
-  // --- Primary: NVIDIA NIM ---
-  if (process.env.NVIDIA_API_KEY) {
+  const openAIKey = getOpenAIKey();
+
+  // --- Primary: OpenAI (runs if key detected directly or via misconfigured NVIDIA_API_KEY) ---
+  if (openAIKey) {
+    try {
+      console.log(`[LLM] Attempting OpenAI call with model: ${OPENAI_MODEL}`);
+      const client = new OpenAI({ apiKey: openAIKey });
+      const resp = await client.chat.completions.create({
+        model:      OPENAI_MODEL,
+        messages,
+        temperature,
+        max_tokens: maxTokens,
+        stream:     false,
+        ...(tools       && { tools }),
+        ...(tool_choice && { tool_choice }),
+      }, {
+        timeout: 12000 // 12 seconds timeout
+      });
+      const message = resp.choices?.[0]?.message;
+      const text = message?.content?.trim() ?? "";
+      return { text, message, provider: "openai" };
+    } catch (err) {
+      openAIError = err;
+      console.error(`[LLM] OpenAI failed:`, err.message);
+      
+      // If no other provider is configured, fail immediately
+      if (!process.env.GROQ_API_KEY && (!process.env.NVIDIA_API_KEY || openAIKey === process.env.NVIDIA_API_KEY)) {
+        throw err;
+      }
+    }
+  }
+
+  // --- Secondary: NVIDIA NIM (runs only if key is set and NOT an OpenAI key) ---
+  if (process.env.NVIDIA_API_KEY && !openAIKey) {
     try {
       console.log(`[LLM] Attempting NVIDIA NIM call with model: ${NVIDIA_MODEL}`);
       const client = makeClient("nvidia");
@@ -104,10 +148,11 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
     }
   }
 
-  // If both failed or are not configured
-  if (nvidiaError) {
-    throw new Error(`NVIDIA NIM failed: ${nvidiaError.message}. Groq fallback: ${process.env.GROQ_API_KEY ? "failed" : "not configured"}`);
+  // If all failed or are not configured
+  const lastError = openAIError || nvidiaError;
+  if (lastError) {
+    throw new Error(`LLM call failed. Error: ${lastError.message}. Groq fallback: ${process.env.GROQ_API_KEY ? "failed" : "not configured"}`);
   }
 
-  throw new Error("No LLM API keys configured. Please set NVIDIA_API_KEY in environment variables.");
+  throw new Error("No LLM API keys configured. Please set NVIDIA_API_KEY or OPENAI_API_KEY in environment variables.");
 }
