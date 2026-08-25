@@ -15,7 +15,7 @@ const GROQ_BASE_URL   = "https://api.groq.com/openai/v1";
 const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.3-70b-instruct";
 const GROQ_MODEL   = process.env.GROQ_MODEL   || "llama-3.3-70b-versatile";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
-const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-1.5-flash";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
 /** Helper to detect the current provider and credentials from env */
 function getProviderAndKey() {

@@ -18,22 +18,35 @@ export async function GET() {
     return NextResponse.json({ error: "No GEMINI_API_KEY set" });
   }
 
-  // Test 2: List Models
+  // Test 2: Embeddings
   try {
-    const resp = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`
-    );
-    if (!resp.ok) {
-      throw new Error(`Status ${resp.status}: ${await resp.text()}`);
-    }
-    const data = await resp.json();
-    results.models = data.models.map((m) => ({
-      name: m.name,
-      displayName: m.displayName,
-      supportedGenerationMethods: m.supportedGenerationMethods,
-    }));
+    const vector = await embedText("test content", "query");
+    results.embeddings = {
+      success: true,
+      length: vector.length,
+    };
   } catch (err) {
-    results.models = { error: err.message };
+    results.embeddings = {
+      success: false,
+      error: err.message,
+    };
+  }
+
+  // Test 3: LLM
+  try {
+    const response = await callLLM([
+      { role: "user", content: "Say 'Gemini is active' in 3 words" }
+    ]);
+    results.llm = {
+      success: true,
+      response: response.text,
+      provider: response.provider,
+    };
+  } catch (err) {
+    results.llm = {
+      success: false,
+      error: err.message,
+    };
   }
 
   return NextResponse.json(results);

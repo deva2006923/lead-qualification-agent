@@ -59,6 +59,7 @@ export async function embedText(text, inputType = "query") {
             content: {
               parts: [{ text }],
             },
+            outputDimensionality: 1024,
           }),
         }
       );
@@ -71,8 +72,10 @@ export async function embedText(text, inputType = "query") {
       const data = await resp.json();
       let embedding = data.embedding?.values ?? [];
       
-      // Pad to 1024 dimensions if needed
-      if (embedding.length > 0 && embedding.length < 1024) {
+      // Safety pad/slice to exactly 1024 dimensions
+      if (embedding.length > 1024) {
+        embedding = embedding.slice(0, 1024);
+      } else if (embedding.length > 0 && embedding.length < 1024) {
         const padding = new Array(1024 - embedding.length).fill(0);
         embedding = embedding.concat(padding);
       }
@@ -149,6 +152,7 @@ export async function embedBatch(texts, inputType = "passage") {
         content: {
           parts: [{ text: t }],
         },
+        outputDimensionality: 1024,
       }));
 
       const resp = await fetch(
@@ -170,7 +174,9 @@ export async function embedBatch(texts, inputType = "passage") {
       const data = await resp.json();
       return (data.embeddings ?? []).map((e) => {
         let embedding = e.values ?? [];
-        if (embedding.length > 0 && embedding.length < 1024) {
+        if (embedding.length > 1024) {
+          embedding = embedding.slice(0, 1024);
+        } else if (embedding.length > 0 && embedding.length < 1024) {
           const padding = new Array(1024 - embedding.length).fill(0);
           embedding = embedding.concat(padding);
         }
