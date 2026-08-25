@@ -65,6 +65,31 @@ function makeClient(provider) {
   });
 }
 
+function mapOpenAiToGemini(openaiMessages) {
+  let systemInstructionText = "";
+  const contents = [];
+
+  for (const msg of openaiMessages) {
+    if (msg.role === "system") {
+      systemInstructionText += msg.content + "\n";
+    } else {
+      contents.push({
+        role: msg.role === "assistant" ? "model" : "user",
+        parts: [{ text: msg.content }]
+      });
+    }
+  }
+
+  return {
+    contents,
+    ...(systemInstructionText && {
+      systemInstruction: {
+        parts: [{ text: systemInstructionText.trim() }]
+      }
+    })
+  };
+}
+
 /**
  * Call the LLM — tries Gemini/OpenAI/NVIDIA first, falls back to Groq.
  *
@@ -82,28 +107,47 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
   // --- Primary 1: Gemini ---
   if (provider === "gemini") {
     try {
-      console.log(`[LLM] Attempting Gemini call with model: ${GEMINI_MODEL}`);
-      const client = new OpenAI({
-        apiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
-      });
-      const resp = await client.chat.completions.create({
-        model:      GEMINI_MODEL,
-        messages,
-        temperature,
-        max_tokens: maxTokens,
-        stream:     false,
-        ...(tools       && { tools }),
-        ...(tool_choice && { tool_choice }),
-      }, {
-        timeout: 12000 // 12 seconds timeout
-      });
-      const message = resp.choices?.[0]?.message;
-      const text = message?.content?.trim() ?? "";
-      return { text, message, provider: "gemini" };
+      console.log(`[LLM] Attempting Gemini REST call with model: ${GEMINI_MODEL}`);
+      const mapped = mapOpenAiToGemini(messages);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 12000); // 12 seconds timeout
+
+      const resp = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          signal: controller.signal,
+          body: JSON.stringify({
+            contents: mapped.contents,
+            ...(mapped.systemInstruction && { systemInstruction: mapped.systemInstruction }),
+            generationConfig: {
+              temperature,
+              maxOutputTokens: maxTokens,
+            }
+          }),
+        }
+      );
+
+      clearTimeout(timeoutId);
+
+      if (!resp.ok) {
+        const err = await resp.text();
+        throw new Error(`Gemini generateContent error ${resp.status}: ${err}`);
+      }
+
+      const data = await resp.json();
+      const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
+      return { 
+        text, 
+        message: { role: "assistant", content: text }, 
+        provider: "gemini" 
+      };
     } catch (err) {
       geminiError = err;
-      console.error(`[LLM] Gemini failed:`, err.message);
+      console.error(`[LLM] Gemini REST failed:`, err.message);
       
       // If no other provider is configured, fail immediately
       if (!process.env.GROQ_API_KEY && (!process.env.NVIDIA_API_KEY || apiKey === process.env.NVIDIA_API_KEY || apiKey === process.env.OPENAI_API_KEY)) {
