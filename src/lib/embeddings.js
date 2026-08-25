@@ -15,28 +15,39 @@ const EMBED_MODEL       = "nvidia/nv-embedqa-e5-v5";
  * @returns {Promise<number[]>}
  */
 export async function embedText(text, inputType = "query") {
-  const resp = await fetch(`${NVIDIA_EMBED_BASE}/embeddings`, {
-    method:  "POST",
-    headers: {
-      "Content-Type":  "application/json",
-      "Authorization": `Bearer ${process.env.NVIDIA_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model:      EMBED_MODEL,
-      input:      [text],
-      input_type: inputType,
-      encoding_format: "float",
-      truncate: "END",
-    }),
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8000);
 
-  if (!resp.ok) {
-    const err = await resp.text();
-    throw new Error(`NVIDIA Embedding API error ${resp.status}: ${err}`);
+  try {
+    const resp = await fetch(`${NVIDIA_EMBED_BASE}/embeddings`, {
+      method:  "POST",
+      headers: {
+        "Content-Type":  "application/json",
+        "Authorization": `Bearer ${process.env.NVIDIA_API_KEY}`,
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        model:      EMBED_MODEL,
+        input:      [text],
+        input_type: inputType,
+        encoding_format: "float",
+        truncate: "END",
+      }),
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!resp.ok) {
+      const err = await resp.text();
+      throw new Error(`NVIDIA Embedding API error ${resp.status}: ${err}`);
+    }
+
+    const data = await resp.json();
+    return data.data?.[0]?.embedding ?? [];
+  } catch (err) {
+    clearTimeout(timeoutId);
+    throw err;
   }
-
-  const data = await resp.json();
-  return data.data?.[0]?.embedding ?? [];
 }
 
 /**
@@ -46,26 +57,37 @@ export async function embedText(text, inputType = "query") {
  * @returns {Promise<number[][]>}
  */
 export async function embedBatch(texts, inputType = "passage") {
-  const resp = await fetch(`${NVIDIA_EMBED_BASE}/embeddings`, {
-    method:  "POST",
-    headers: {
-      "Content-Type":  "application/json",
-      "Authorization": `Bearer ${process.env.NVIDIA_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model:      EMBED_MODEL,
-      input:      texts,
-      input_type: inputType,
-      encoding_format: "float",
-      truncate: "END",
-    }),
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 12000); // 12s for batch
 
-  if (!resp.ok) {
-    const err = await resp.text();
-    throw new Error(`NVIDIA Embedding API error ${resp.status}: ${err}`);
+  try {
+    const resp = await fetch(`${NVIDIA_EMBED_BASE}/embeddings`, {
+      method:  "POST",
+      headers: {
+        "Content-Type":  "application/json",
+        "Authorization": `Bearer ${process.env.NVIDIA_API_KEY}`,
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        model:      EMBED_MODEL,
+        input:      texts,
+        input_type: inputType,
+        encoding_format: "float",
+        truncate: "END",
+      }),
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!resp.ok) {
+      const err = await resp.text();
+      throw new Error(`NVIDIA Embedding API error ${resp.status}: ${err}`);
+    }
+
+    const data = await resp.json();
+    return data.data.map((d) => d.embedding);
+  } catch (err) {
+    clearTimeout(timeoutId);
+    throw err;
   }
-
-  const data = await resp.json();
-  return data.data.map((d) => d.embedding);
 }

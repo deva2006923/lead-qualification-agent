@@ -52,6 +52,8 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
         stream:     false,
         ...(tools       && { tools }),
         ...(tool_choice && { tool_choice }),
+      }, {
+        timeout: 12000 // 12 seconds timeout
       });
       const message = resp.choices?.[0]?.message;
       const text = message?.content?.trim() ?? "";
@@ -85,6 +87,8 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
           stream:      false,
           ...(tools       && { tools }),
           ...(tool_choice && { tool_choice }),
+        }, {
+          timeout: 12000 // 12 seconds timeout
         });
         const message = resp.choices?.[0]?.message;
         const text = message?.content?.trim() ?? "";

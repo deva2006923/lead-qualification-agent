@@ -32,11 +32,19 @@ function getIndex() {
  */
 export async function queryIndex(vector, topK = 5) {
   const index = getIndex();
-  const result = await index.query({
+  
+  // Timeout Promise (8 seconds)
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error("Pinecone query timeout after 8s")), 8000)
+  );
+
+  const queryPromise = index.query({
     vector,
     topK,
     includeMetadata: true,
   });
+
+  const result = await Promise.race([queryPromise, timeoutPromise]);
 
   return (result.matches ?? []).map((m) => ({
     text:   m.metadata?.text   ?? "",
