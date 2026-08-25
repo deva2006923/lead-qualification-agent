@@ -50,7 +50,7 @@ export async function embedText(text, inputType = "query") {
     try {
       const openai = new OpenAI({
         apiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
+        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
       });
       const resp = await openai.embeddings.create({
         model: "text-embedding-004",
@@ -132,7 +132,7 @@ export async function embedBatch(texts, inputType = "passage") {
     try {
       const openai = new OpenAI({
         apiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
+        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
       });
       const resp = await openai.embeddings.create({
         model: "text-embedding-004",

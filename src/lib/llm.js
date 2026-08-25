@@ -85,7 +85,7 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
       console.log(`[LLM] Attempting Gemini call with model: ${GEMINI_MODEL}`);
       const client = new OpenAI({
         apiKey,
-        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
+        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
       });
       const resp = await client.chat.completions.create({
         model:      GEMINI_MODEL,
