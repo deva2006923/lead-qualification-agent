@@ -15,15 +15,40 @@ const GROQ_BASE_URL   = "https://api.groq.com/openai/v1";
 const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.3-70b-instruct";
 const GROQ_MODEL   = process.env.GROQ_MODEL   || "llama-3.3-70b-versatile";
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-1.5-flash";
 
-/** Helper to detect and retrieve OpenAI key (even if misconfigured in NVIDIA_API_KEY) */
-function getOpenAIKey() {
-  return process.env.OPENAI_API_KEY || (
+/** Helper to detect the current provider and credentials from env */
+function getProviderAndKey() {
+  const geminiKey = process.env.GEMINI_API_KEY || (
+    process.env.NVIDIA_API_KEY && process.env.NVIDIA_API_KEY.startsWith("AIzaSy") ? process.env.NVIDIA_API_KEY : null
+  ) || (
+    process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY.startsWith("AIzaSy") ? process.env.OPENAI_API_KEY : null
+  );
+
+  if (geminiKey) {
+    return { provider: "gemini", apiKey: geminiKey };
+  }
+
+  const openAIKey = process.env.OPENAI_API_KEY || (
     process.env.NVIDIA_API_KEY && (
       process.env.NVIDIA_API_KEY.startsWith("sk-") || 
       process.env.NVIDIA_API_KEY.startsWith("sk_")
     ) ? process.env.NVIDIA_API_KEY : null
   );
+
+  if (openAIKey) {
+    return { provider: "openai", apiKey: openAIKey };
+  }
+
+  if (process.env.NVIDIA_API_KEY) {
+    return { provider: "nvidia", apiKey: process.env.NVIDIA_API_KEY };
+  }
+
+  if (process.env.GROQ_API_KEY) {
+    return { provider: "groq", apiKey: process.env.GROQ_API_KEY };
+  }
+
+  return { provider: null, apiKey: null };
 }
 
 /** Create an OpenAI-compatible client for the given provider. */
@@ -41,7 +66,7 @@ function makeClient(provider) {
 }
 
 /**
- * Call the LLM — tries OpenAI/NVIDIA first, falls back to Groq.
+ * Call the LLM — tries Gemini/OpenAI/NVIDIA first, falls back to Groq.
  *
  * @param {Array}  messages  - OpenAI chat messages array
  * @param {Object} options   - { temperature, maxTokens, tools, tool_choice }
@@ -50,14 +75,48 @@ function makeClient(provider) {
 export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, tools, tool_choice } = {}) {
   let nvidiaError = null;
   let openAIError = null;
+  let geminiError = null;
 
-  const openAIKey = getOpenAIKey();
+  const { provider, apiKey } = getProviderAndKey();
 
-  // --- Primary: OpenAI (runs if key detected directly or via misconfigured NVIDIA_API_KEY) ---
-  if (openAIKey) {
+  // --- Primary 1: Gemini ---
+  if (provider === "gemini") {
+    try {
+      console.log(`[LLM] Attempting Gemini call with model: ${GEMINI_MODEL}`);
+      const client = new OpenAI({
+        apiKey,
+        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
+      });
+      const resp = await client.chat.completions.create({
+        model:      GEMINI_MODEL,
+        messages,
+        temperature,
+        max_tokens: maxTokens,
+        stream:     false,
+        ...(tools       && { tools }),
+        ...(tool_choice && { tool_choice }),
+      }, {
+        timeout: 12000 // 12 seconds timeout
+      });
+      const message = resp.choices?.[0]?.message;
+      const text = message?.content?.trim() ?? "";
+      return { text, message, provider: "gemini" };
+    } catch (err) {
+      geminiError = err;
+      console.error(`[LLM] Gemini failed:`, err.message);
+      
+      // If no other provider is configured, fail immediately
+      if (!process.env.GROQ_API_KEY && (!process.env.NVIDIA_API_KEY || apiKey === process.env.NVIDIA_API_KEY || apiKey === process.env.OPENAI_API_KEY)) {
+        throw err;
+      }
+    }
+  }
+
+  // --- Primary 2: OpenAI ---
+  if (provider === "openai") {
     try {
       console.log(`[LLM] Attempting OpenAI call with model: ${OPENAI_MODEL}`);
-      const client = new OpenAI({ apiKey: openAIKey });
+      const client = new OpenAI({ apiKey });
       const resp = await client.chat.completions.create({
         model:      OPENAI_MODEL,
         messages,
@@ -77,14 +136,14 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
       console.error(`[LLM] OpenAI failed:`, err.message);
       
       // If no other provider is configured, fail immediately
-      if (!process.env.GROQ_API_KEY && (!process.env.NVIDIA_API_KEY || openAIKey === process.env.NVIDIA_API_KEY)) {
+      if (!process.env.GROQ_API_KEY && (!process.env.NVIDIA_API_KEY || apiKey === process.env.NVIDIA_API_KEY)) {
         throw err;
       }
     }
   }
 
-  // --- Secondary: NVIDIA NIM (runs only if key is set and NOT an OpenAI key) ---
-  if (process.env.NVIDIA_API_KEY && !openAIKey) {
+  // --- Secondary: NVIDIA NIM ---
+  if (process.env.NVIDIA_API_KEY && provider !== "gemini" && provider !== "openai") {
     try {
       console.log(`[LLM] Attempting NVIDIA NIM call with model: ${NVIDIA_MODEL}`);
       const client = makeClient("nvidia");
@@ -149,10 +208,10 @@ export async function callLLM(messages, { temperature = 0.4, maxTokens = 1024, t
   }
 
   // If all failed or are not configured
-  const lastError = openAIError || nvidiaError;
+  const lastError = geminiError || openAIError || nvidiaError;
   if (lastError) {
     throw new Error(`LLM call failed. Error: ${lastError.message}. Groq fallback: ${process.env.GROQ_API_KEY ? "failed" : "not configured"}`);
   }
 
-  throw new Error("No LLM API keys configured. Please set NVIDIA_API_KEY or OPENAI_API_KEY in environment variables.");
+  throw new Error("No LLM API keys configured. Please set NVIDIA_API_KEY, OPENAI_API_KEY, or GEMINI_API_KEY in environment variables.");
 }

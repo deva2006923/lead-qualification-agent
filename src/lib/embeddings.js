@@ -3,14 +3,38 @@ import OpenAI from "openai";
 const NVIDIA_EMBED_BASE = "https://integrate.api.nvidia.com/v1";
 const EMBED_MODEL       = "nvidia/nv-embedqa-e5-v5";
 
-/** Helper to detect and retrieve OpenAI key (even if misconfigured in NVIDIA_API_KEY) */
-function getOpenAIKey() {
-  return process.env.OPENAI_API_KEY || (
+/** Helper to detect the current provider and credentials from env */
+function getProviderAndKey() {
+  const geminiKey = process.env.GEMINI_API_KEY || (
+    process.env.NVIDIA_API_KEY && process.env.NVIDIA_API_KEY.startsWith("AIzaSy") ? process.env.NVIDIA_API_KEY : null
+  ) || (
+    process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY.startsWith("AIzaSy") ? process.env.OPENAI_API_KEY : null
+  );
+
+  if (geminiKey) {
+    return { provider: "gemini", apiKey: geminiKey };
+  }
+
+  const openAIKey = process.env.OPENAI_API_KEY || (
     process.env.NVIDIA_API_KEY && (
       process.env.NVIDIA_API_KEY.startsWith("sk-") || 
       process.env.NVIDIA_API_KEY.startsWith("sk_")
     ) ? process.env.NVIDIA_API_KEY : null
   );
+
+  if (openAIKey) {
+    return { provider: "openai", apiKey: openAIKey };
+  }
+
+  if (process.env.NVIDIA_API_KEY) {
+    return { provider: "nvidia", apiKey: process.env.NVIDIA_API_KEY };
+  }
+
+  if (process.env.GROQ_API_KEY) {
+    return { provider: "groq", apiKey: process.env.GROQ_API_KEY };
+  }
+
+  return { provider: null, apiKey: null };
 }
 
 /**
@@ -20,10 +44,34 @@ function getOpenAIKey() {
  * @returns {Promise<number[]>}
  */
 export async function embedText(text, inputType = "query") {
-  const openAIKey = getOpenAIKey();
-  if (openAIKey) {
+  const { provider, apiKey } = getProviderAndKey();
+
+  if (provider === "gemini") {
     try {
-      const openai = new OpenAI({ apiKey: openAIKey });
+      const openai = new OpenAI({
+        apiKey,
+        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
+      });
+      const resp = await openai.embeddings.create({
+        model: "text-embedding-004",
+        input: text,
+      });
+      let embedding = resp.data?.[0]?.embedding ?? [];
+      // Pad to 1024 dimensions if needed
+      if (embedding.length > 0 && embedding.length < 1024) {
+        const padding = new Array(1024 - embedding.length).fill(0);
+        embedding = embedding.concat(padding);
+      }
+      return embedding;
+    } catch (err) {
+      console.error("[Embeddings] Gemini embedding failed:", err.message);
+      throw err;
+    }
+  }
+
+  if (provider === "openai") {
+    try {
+      const openai = new OpenAI({ apiKey });
       const resp = await openai.embeddings.create({
         model: "text-embedding-3-small",
         input: text,
@@ -78,10 +126,35 @@ export async function embedText(text, inputType = "query") {
  * @returns {Promise<number[][]>}
  */
 export async function embedBatch(texts, inputType = "passage") {
-  const openAIKey = getOpenAIKey();
-  if (openAIKey) {
+  const { provider, apiKey } = getProviderAndKey();
+
+  if (provider === "gemini") {
     try {
-      const openai = new OpenAI({ apiKey: openAIKey });
+      const openai = new OpenAI({
+        apiKey,
+        baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
+      });
+      const resp = await openai.embeddings.create({
+        model: "text-embedding-004",
+        input: texts,
+      });
+      return resp.data.map((d) => {
+        let embedding = d.embedding;
+        if (embedding.length > 0 && embedding.length < 1024) {
+          const padding = new Array(1024 - embedding.length).fill(0);
+          embedding = embedding.concat(padding);
+        }
+        return embedding;
+      });
+    } catch (err) {
+      console.error("[Embeddings] Gemini batch embedding failed:", err.message);
+      throw err;
+    }
+  }
+
+  if (provider === "openai") {
+    try {
+      const openai = new OpenAI({ apiKey });
       const resp = await openai.embeddings.create({
         model: "text-embedding-3-small",
         input: texts,
