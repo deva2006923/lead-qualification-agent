@@ -37,14 +37,41 @@ const STRUCTURED_KEYWORDS = [
 ];
 
 /**
- * Returns true if the question looks like a structured filter query
- * rather than a general coaching / RAG question.
+ * Returns true if the question (or recent conversation context) looks like
+ * a structured filter query rather than a general coaching / RAG question.
+ *
+ * Checks the current message first; if it's a very short follow-up (< 8 words),
+ * also scans the last 4 messages in history for lead/data keywords so that
+ * follow-ups like "I need the id" inherit context from the prior turn.
+ *
  * @param {string} question
+ * @param {Array}  history  - optional [{role, content}] conversation history
  * @returns {boolean}
  */
-export function isStructuredLeadQuery(question) {
+export function isStructuredLeadQuery(question, history = []) {
   const lower = question.toLowerCase();
-  return STRUCTURED_KEYWORDS.some((re) => re.test(lower));
+  if (STRUCTURED_KEYWORDS.some((re) => re.test(lower))) return true;
+
+  // Short follow-up heuristic: if the current message is brief and vague,
+  // check if the recent history was a structured data conversation.
+  const wordCount = lower.trim().split(/\s+/).length;
+  if (wordCount <= 8) {
+    const FOLLOW_UP_TRIGGERS = [
+      /\b(id|ids|lead|leads|list|show|give|tell|which|what|those|them|result|results)\b/,
+    ];
+    const isFollowUpIntent = FOLLOW_UP_TRIGGERS.some((re) => re.test(lower));
+    if (isFollowUpIntent) {
+      // Look at last 4 messages for lead data context
+      const recentText = history
+        .slice(-4)
+        .map((h) => h.content || "")
+        .join(" ")
+        .toLowerCase();
+      if (STRUCTURED_KEYWORDS.some((re) => re.test(recentText))) return true;
+    }
+  }
+
+  return false;
 }
 
 /* ------------------------------------------------------------------ */
@@ -216,11 +243,16 @@ const MAX_IDS_IN_PROMPT = 50; // keep the context block manageable
  * Run a structured query against scored_leads.csv and return a data
  * block for inclusion in the LLM prompt.
  *
- * @param {string} question
+ * @param {string} question       - The current user message
+ * @param {string} [fullContext]  - Optional combined text of question + recent history
+ *                                  used to extract filters when the current message alone
+ *                                  is too vague (e.g. short follow-ups).
  * @returns {{ found: boolean, count: number, dataBlock: string, filters: object[] }}
  */
-export function queryLeads(question) {
-  const filters = extractFilters(question);
+export function queryLeads(question, fullContext) {
+  // Extract filters from the richest available text
+  const filterSource = fullContext || question;
+  const filters = extractFilters(filterSource);
   const allLeads = loadScoredLeads();
 
   if (allLeads.length === 0) {

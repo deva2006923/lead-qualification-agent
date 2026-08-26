@@ -239,7 +239,7 @@ export default function ChatPage() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Ask about pricing, competitors, case studies…"
+                placeholder="Ask about pricing, competitors… or 'leads with conversion above 80%'"
                 rows={1}
                 className="w-full bg-surface-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-slate-200 placeholder-slate-600 outline-none focus:border-[#d4af37]/60 focus:ring-1 focus:ring-[#d4af37]/25 transition-all duration-150 resize-none min-h-[44px] max-h-32 overflow-y-auto"
                 style={{ height: "auto" }}

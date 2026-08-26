@@ -41,8 +41,17 @@ export async function POST(request) {
     // ----------------------------------------------------------------
     // PATH A: Structured Lead Data Query
     // ----------------------------------------------------------------
-    if (isStructuredLeadQuery(question)) {
-      const { found, count, dataBlock } = queryLeads(question);
+
+    // Build a combined context string from the question + last 4 history messages
+    // so filter extraction works even on vague short follow-ups.
+    const historyText = history
+      .slice(-4)
+      .map((h) => h.content || "")
+      .join(" ");
+    const fullContext = `${historyText} ${question}`.trim();
+
+    if (isStructuredLeadQuery(question, history)) {
+      const { found, count, dataBlock } = queryLeads(question, fullContext);
 
       const systemPrompt = found
         ? `You are a data-aware AI sales assistant. ${repContext}
@@ -65,6 +74,7 @@ Tell the user clearly that no leads matched, and suggest they try a broader filt
 
       const messages = [
         { role: "system", content: systemPrompt },
+        ...history.slice(-4).map((h) => ({ role: h.role, content: h.content })),
         { role: "user",   content: question },
       ];
 
