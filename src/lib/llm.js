@@ -74,52 +74,108 @@ function mapOpenAiToGemini(openaiMessages) {
   };
 }
 
+/** Sleep helper for retry backoff. */
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Call the Gemini REST API with automatic retry + exponential backoff.
+ * Retries up to MAX_RETRIES times on transient errors (503, 429, 500).
+ * On persistent failure, falls back to a lighter Gemini model automatically.
+ */
 async function callGemini(messages, { temperature, maxTokens, apiKey }) {
-  console.log(`[LLM] Calling Gemini with model: ${GEMINI_MODEL}`);
   const mapped = mapOpenAiToGemini(messages);
+  const body = JSON.stringify({
+    contents: mapped.contents,
+    ...(mapped.systemInstruction && { systemInstruction: mapped.systemInstruction }),
+    generationConfig: { temperature, maxOutputTokens: maxTokens },
+  });
 
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 25000);
+  // Try primary model first, fall back to lighter model on persistent failure
+  const modelsToTry = [
+    GEMINI_MODEL,
+    "gemini-2.0-flash-lite",   // lighter, less congested fallback
+    "gemini-1.5-flash-latest", // older stable fallback
+  ];
 
-  try {
-    const resp = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        signal: controller.signal,
-        body: JSON.stringify({
-          contents: mapped.contents,
-          ...(mapped.systemInstruction && { systemInstruction: mapped.systemInstruction }),
-          generationConfig: {
-            temperature,
-            maxOutputTokens: maxTokens,
-          },
-        }),
+  const MAX_RETRIES = 3;
+  const RETRYABLE = new Set([429, 500, 503]);
+
+  let lastError = null;
+
+  for (const model of modelsToTry) {
+    console.log(`[LLM] Calling Gemini model: ${model}`);
+
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 25000);
+
+      try {
+        const resp = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            signal: controller.signal,
+            body,
+          }
+        );
+
+        clearTimeout(timeoutId);
+
+        if (!resp.ok) {
+          const errText = await resp.text();
+
+          if (RETRYABLE.has(resp.status) && attempt < MAX_RETRIES) {
+            const delay = 1000 * attempt; // 1s, 2s backoff
+            console.warn(
+              `[LLM] Gemini ${model} returned ${resp.status} (attempt ${attempt}/${MAX_RETRIES}). Retrying in ${delay}ms…`
+            );
+            await sleep(delay);
+            continue;
+          }
+
+          // Non-retryable or exhausted retries for this model → try next model
+          lastError = new Error(`Gemini ${model} error ${resp.status}: ${errText}`);
+          console.warn(`[LLM] ${lastError.message} — trying next model if available.`);
+          break; // break retry loop, try next model
+        }
+
+        const data = await resp.json();
+        const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
+
+        if (!text) {
+          console.warn("[LLM] Gemini returned empty response:", JSON.stringify(data));
+        }
+
+        return {
+          text,
+          message: { role: "assistant", content: text },
+          provider: "gemini",
+        };
+      } catch (err) {
+        clearTimeout(timeoutId);
+
+        if (err.name === "AbortError") {
+          lastError = new Error(`Gemini ${model} request timed out (25s)`);
+        } else {
+          lastError = err;
+        }
+
+        if (attempt < MAX_RETRIES) {
+          const delay = 1000 * attempt;
+          console.warn(`[LLM] Gemini ${model} fetch error (attempt ${attempt}/${MAX_RETRIES}): ${lastError.message}. Retrying in ${delay}ms…`);
+          await sleep(delay);
+        } else {
+          console.warn(`[LLM] Gemini ${model} exhausted retries. Trying next model.`);
+        }
       }
-    );
-
-    if (!resp.ok) {
-      const err = await resp.text();
-      throw new Error(`Gemini generateContent error ${resp.status}: ${err}`);
     }
-
-    const data = await resp.json();
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
-
-    if (!text) {
-      console.warn("[LLM] Gemini returned an empty response:", JSON.stringify(data));
-    }
-
-    return {
-      text,
-      message: { role: "assistant", content: text },
-      provider: "gemini",
-    };
-  } finally {
-    clearTimeout(timeoutId);
   }
+
+  // All models and retries exhausted
+  throw lastError ?? new Error("Gemini: all models and retries exhausted.");
 }
+
 
 async function callOpenAI(messages, { temperature, maxTokens, apiKey, tools, tool_choice }) {
   console.log(`[LLM] Calling OpenAI with model: ${OPENAI_MODEL}`);
