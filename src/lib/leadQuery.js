@@ -284,14 +284,17 @@ export function queryLeads(question, fullContext) {
     };
   }
 
-  // Build a compact table for the LLM
+  // Build a compact table for the LLM — include factors so follow-up
+  // questions like "why are they high?" can be answered from the data.
   const displayRows = matched.slice(0, MAX_IDS_IN_PROMPT);
   const table = displayRows
     .map(
       (r) =>
         `Lead ${r.lead_id} | ${r.company_name} | ${r.industry} | ${r.company_size} | ` +
         `Prob: ${(parseFloat(r.conversion_probability) * 100).toFixed(1)}% | ` +
-        `Demo: ${r.demo_requested} | Source: ${r.source}`
+        `Demo: ${r.demo_requested} | Source: ${r.source} | ` +
+        `Rep: ${r.assigned_sales_person || "N/A"} | ` +
+        `Factors: ${r.top_3_contributing_factors || "N/A"}`
     )
     .join("\n");
 
@@ -317,8 +320,8 @@ export function queryLeads(question, fullContext) {
   const dataBlock =
     `STRUCTURED QUERY RESULTS — Filter: ${filterDesc}\n` +
     `Total matching leads: ${count}\n\n` +
-    `Lead ID | Company | Industry | Size | Conv. Probability | Demo Requested | Source\n` +
-    `${"─".repeat(80)}\n` +
+    `Lead ID | Company | Industry | Size | Conv. Prob | Demo | Source | Sales Rep | Top Contributing Factors\n` +
+    `${"─".repeat(100)}\n` +
     `${table}${truncationNote}`;
 
   return { found: true, count, dataBlock, filters };
