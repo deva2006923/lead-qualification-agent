@@ -2,19 +2,26 @@
  * POST /api/chat
  * ==============
  * Input:  { question: string, history?: [{role, content}] }
- * Output: { answer: string, sources: string[], provider: string }
+ * Output: { answer: string, sources: string[], provider: string, queryType: string }
  *
- * General-purpose RAG chatbot for sales reps:
- * 1. Embed the question via NVIDIA NIM
- * 2. Query Pinecone for relevant KB chunks
- * 3. Build grounded prompt and generate answer
- * 4. Return answer + source document names
+ * Dual-path chat assistant:
+ *
+ * PATH A — Structured Data Query (e.g. "which lead IDs have conversion rate above 90%")
+ *   1. Detect query intent via isStructuredLeadQuery()
+ *   2. Run queryLeads() to filter scored_leads.csv
+ *   3. Pass the filtered data table + user question to Gemini for natural-language articulation
+ *
+ * PATH B — RAG / Playbook Coaching (everything else)
+ *   1. Embed question via Gemini embedding API
+ *   2. Query Pinecone for relevant KB chunks
+ *   3. Build grounded prompt and generate answer via Gemini
  */
 
-import { NextResponse } from "next/server";
-import { embedText }    from "@/lib/embeddings";
-import { queryIndex }   from "@/lib/pinecone";
-import { callLLM }      from "@/lib/llm";
+import { NextResponse }            from "next/server";
+import { embedText }               from "@/lib/embeddings";
+import { queryIndex }              from "@/lib/pinecone";
+import { callLLM }                 from "@/lib/llm";
+import { isStructuredLeadQuery, queryLeads } from "@/lib/leadQuery";
 
 export const dynamic = "force-dynamic";
 
@@ -28,14 +35,55 @@ export async function POST(request) {
     }
 
     const repContext = companyName && companyId
-      ? `You are speaking to a representative from ${companyName} (Company ID: ${companyId}). Tailor your answers to help their organization leverage our software features and close customer queries.`
-      : "You are speaking to a customer representative.";
+      ? `You are speaking to a representative from ${companyName} (Company ID: ${companyId}).`
+      : "You are speaking to a sales representative.";
 
-    // ------------------------------------------------------------------
-    // 1. Embed the question and retrieve relevant context
-    // ------------------------------------------------------------------
-    let context = "";
-    let sources  = [];
+    // ----------------------------------------------------------------
+    // PATH A: Structured Lead Data Query
+    // ----------------------------------------------------------------
+    if (isStructuredLeadQuery(question)) {
+      const { found, count, dataBlock } = queryLeads(question);
+
+      const systemPrompt = found
+        ? `You are a data-aware AI sales assistant. ${repContext}
+The user has asked a question that requires querying the leads dataset.
+Below is the EXACT data result from the system — this is real data, not hypothetical.
+
+${dataBlock}
+
+Using ONLY the data above, answer the user's question clearly and concisely.
+- List the lead IDs explicitly (e.g. "Lead 5, Lead 42, Lead 107…").
+- State the total count.
+- If there are more than 20 results, summarize the key patterns (top industries, average probability, etc.) and list the first 20 IDs.
+- Do NOT say "That's a great question" or add filler. Go straight to the answer.`
+        : `You are a data-aware AI sales assistant. ${repContext}
+The user asked a data query but no leads matched the criteria.
+
+${dataBlock}
+
+Tell the user clearly that no leads matched, and suggest they try a broader filter (e.g., lower the threshold or remove one condition).`;
+
+      const messages = [
+        { role: "system", content: systemPrompt },
+        { role: "user",   content: question },
+      ];
+
+      const { text, provider } = await callLLM(messages, { temperature: 0.2, maxTokens: 1500 });
+
+      return NextResponse.json({
+        answer:    text,
+        sources:   [],
+        provider,
+        queryType: "structured_data",
+        count:     found ? count : 0,
+      });
+    }
+
+    // ----------------------------------------------------------------
+    // PATH B: RAG / Playbook Coaching
+    // ----------------------------------------------------------------
+    let context      = "";
+    let sources      = [];
     let contextFound = false;
 
     try {
@@ -54,37 +102,33 @@ export async function POST(request) {
       console.warn("[/api/chat] Embedding/Pinecone error:", embedErr.message);
     }
 
-    // ------------------------------------------------------------------
-    // 2. Build grounded prompt
-    // ------------------------------------------------------------------
     const systemPrompt = contextFound
-      ? `You are a knowledgeable AI sales assistant for a B2B SaaS company. 
+      ? `You are a knowledgeable AI sales assistant for a B2B SaaS company.
 ${repContext}
 Answer questions about our product, pricing, competitors, and case studies using ONLY the provided context.
-If the context doesn't contain the answer, fall back to your general B2B sales coaching knowledge to answer the question helpfully while mentioning it is general advice.
-Always cite the source document name when you use information from it (e.g., "According to our pricing guide...").
-Keep answers clear, concise, and under 200 words.
+If the context doesn't contain the answer, fall back to your general B2B sales coaching knowledge and clearly note it is general advice.
+Always cite the source document name when you use information from it (e.g., "According to our pricing guide…").
+Keep answers clear, professional, and complete — do not truncate.
 
 Context from knowledge base:
 ${context}`
       : `You are a knowledgeable AI sales assistant. ${repContext}
-The specific playbook did not return matches for this query. Answer the user's question using your general B2B sales coaching knowledge and best practices. Give helpful, professional, and practical advice to the sales representative.`;
+No relevant playbook context was found for this query. Answer using your general B2B sales coaching knowledge and best practices.
+Give helpful, professional, and practical advice. Keep answers complete — do not truncate.`;
 
-    // ------------------------------------------------------------------
-    // 3. Build messages with optional conversation history
-    // ------------------------------------------------------------------
     const messages = [
       { role: "system", content: systemPrompt },
-      ...history.slice(-6).map((h) => ({ role: h.role, content: h.content })), // last 3 exchanges
+      ...history.slice(-6).map((h) => ({ role: h.role, content: h.content })),
       { role: "user", content: question },
     ];
 
-    const { text, provider } = await callLLM(messages, { temperature: 0.35, maxTokens: 512 });
+    const { text, provider } = await callLLM(messages, { temperature: 0.35, maxTokens: 1500 });
 
     return NextResponse.json({
-      answer:       text,
+      answer:    text,
       sources,
       provider,
+      queryType: "rag",
       contextFound,
     });
   } catch (err) {
@@ -92,3 +136,4 @@ The specific playbook did not return matches for this query. Answer the user's q
     return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
+

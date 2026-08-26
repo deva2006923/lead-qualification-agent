@@ -63,9 +63,12 @@ export default function ChatMessage({ message }) {
         )}
 
         {/* Provider tag */}
-        {!isUser && message.provider && (
+        {!isUser && message.provider && message.provider !== "unknown" && (
           <span className="text-[10px] text-slate-600 px-1">
-            via {message.provider === "nvidia" ? "NVIDIA NIM" : "Groq"}
+            via {
+              { gemini: "Gemini", nvidia: "NVIDIA NIM", openai: "OpenAI", groq: "Groq" }[message.provider]
+              ?? message.provider
+            }
           </span>
         )}
       </div>

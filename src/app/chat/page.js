@@ -15,6 +15,8 @@ const SUGGESTED = [
   "Do we offer a free trial? What's included?",
   "What's our Enterprise plan price and features?",
   "Which industries convert best according to our case studies?",
+  "Which lead IDs have a conversion rate above 80%?",
+  "Show me leads from the Healthcare industry that requested a demo",
 ];
 
 export default function ChatPage() {
